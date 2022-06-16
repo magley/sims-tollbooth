@@ -1,50 +1,50 @@
 package core.employeeModel;
 
 import core.Entity;
+import core.accountModel.Account;
 
 public class Employee extends Entity {
-	String name;
-	String surname;
-	String email;
-	String password;
+	public enum Type {
+		UNKNOWN, ADMIN, MANAGER, TAG_SELLER, COLLECTOR, STATION_CHEIF
+	}
 	
-	public Employee(String name, String surname, String email, String password) {
+	private String name;
+	private String surname;
+	private Account account;
+	private Type type;
+	public Employee(String name, String surname, Account account, Type type) {
 		super();
 		this.name = name;
 		this.surname = surname;
-		this.email = email;
-		this.password = password;
+		this.account = account;
+		this.type = type;
 	}
-	
 	public String getName() {
 		return name;
 	}
-	
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 	public String getSurname() {
 		return surname;
 	}
-	
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-	
-	public String getEmail() {
-		return email;
+	public Account getAccount() {
+		return account;
 	}
-	
-	public void setEmail(String email) {
-		this.email = email;
+	public void setAccount(Account account) {
+		this.account = account;
 	}
-	
-	public String getPassword() {
-		return password;
+	public Type getType() {
+		return type;
 	}
-	
-	public void setPassword(String password) {
-		this.password = password;
+	public void setType(Type type) {
+		this.type = type;
+	}
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", surname=" + surname + ", account=" + account + ", type=" + type + "]";
 	}
 }

@@ -2,6 +2,8 @@ package core.employeeModel;
 
 import java.util.List;
 
+import core.accountModel.Account;
+
 public class EmployeeService implements IEmployeeService {
 	private IEmployeeRepo repo;
 	
@@ -22,5 +24,10 @@ public class EmployeeService implements IEmployeeService {
 	@Override
 	public void save() {
 		repo.save();
+	}
+
+	@Override
+	public Employee getByAccount(Account account) {
+		return repo.getByAccount(account);
 	}
 }

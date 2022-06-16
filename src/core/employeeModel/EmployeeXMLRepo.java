@@ -2,43 +2,29 @@ package core.employeeModel;
 
 import java.util.List;
 
+import core.accountModel.Account;
+import core.common.DefaultXMLRepo;
 import core.common.MasterXMLRepo;
 
-public class EmployeeXMLRepo implements IEmployeeRepo {
-	private MasterXMLRepo master;
-	
-	public EmployeeXMLRepo(MasterXMLRepo master) { 
-		this.master = master;
+public class EmployeeXMLRepo extends DefaultXMLRepo<Employee> implements IEmployeeRepo {
+	public EmployeeXMLRepo(MasterXMLRepo master) {
+		super(master);
 	}
-	
+
 	@Override
 	public List<Employee> getAll() {
 		return master.getEmployees();
 	}
 
 	@Override
-	public Employee get(int id) {
+	public Employee getByAccount(Account account) {
+		if (account == null)
+			return null;
 		for (Employee e : getAll()) {
-			if (e.getId() == id)
+			if (e.getAccount().getId() == account.getId()) {
 				return e;
+			}
 		}
 		return null;
-	}
-
-	@Override
-	public Employee add(Employee obj) {
-		obj.setId(getAll().size());
-		getAll().add(obj);
-		return obj;
-	}
-
-	@Override
-	public void remove(Employee obj) {
-		getAll().remove(obj);
-	}
-
-	@Override
-	public void save() {
-		master.save();
 	}
 }
