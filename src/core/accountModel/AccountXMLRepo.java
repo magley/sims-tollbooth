@@ -24,4 +24,13 @@ public class AccountXMLRepo extends DefaultXMLRepo<Account> implements IAccountR
 		}
 		return false;
 	}
+
+	@Override
+	public Account getByCredentials(String email, String password) {
+		for (Account a : getAll()) {
+			if (a.getEmail().equals(email) && a.getPassword().equals(password))
+				return a;
+		}
+		return null;
+	}
 }

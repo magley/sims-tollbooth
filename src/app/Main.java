@@ -1,15 +1,13 @@
 package app;
 
 import core.accountModel.Account;
+import core.accountModel.AccountService;
 import core.accountModel.AccountXMLRepo;
 import core.accountModel.IAccountRepo;
+import core.accountModel.IAccountService;
 import core.common.MasterXMLRepo;
-import core.employeeModel.EmployeeController;
-import core.employeeModel.EmployeeService;
 import core.employeeModel.EmployeeXMLRepo;
 import core.employeeModel.IEmployeeRepo;
-import core.employeeModel.IEmployeeService;
-import desktop.employeeModel.EmployeeCRUDView;
 
 public class Main {
 	public static void main(String[] args) {
@@ -17,6 +15,12 @@ public class Main {
 		
 		IEmployeeRepo employeeRepo = new EmployeeXMLRepo(masterRepo);
 		IAccountRepo accountRepo = new AccountXMLRepo(masterRepo);
+		IAccountService accountService = new AccountService(accountRepo);
+		
+		System.out.println(accountService.getByCredentials("man01@sims.com", "man01"));
+		System.out.println(accountService.getByCredentials("man02@sims.com", "man01"));
+		System.out.println(accountService.getByCredentials("man01@sims.com", "man02"));
+		System.out.println(accountService.getByCredentials("man02@sims.com", "man02"));
 
 		if (!accountRepo.emailTaken("man01@sims.com")) {
 			accountRepo.add(new Account("man01@sims.com", "man01"));
@@ -30,5 +34,7 @@ public class Main {
 		//frm.setVisible(true);
 
 		masterRepo.save();
+		
+		System.out.println("Finished successfully");
 	}
 }
