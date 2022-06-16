@@ -17,6 +17,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.thoughtworks.xstream.security.AnyTypePermission;
 
+import core.accountModel.Account;
 import core.employeeModel.Employee;
 
 public class MasterXMLRepo {
@@ -29,17 +30,20 @@ public class MasterXMLRepo {
 	@XStreamOmitField
 	private XStream xstream;
 
-	private List<Employee> employees;
+	private List<Employee> employees = new ArrayList<Employee>();
+	private List<Account> accounts = new ArrayList<Account>();
 
 	public MasterXMLRepo(String directory, String filename) {
 		this.directory = directory;
 		this.filename = filename;
 		this.fullpath = this.directory + File.separator + this.filename;
 		
-		employees = new ArrayList<Employee>();
-		
 		initXStream();
 		load();
+	}
+	
+	public List<Account> getAccounts() {
+		return accounts;
 	}
 	
 	public List<Employee> getEmployees() {

@@ -1,5 +1,8 @@
 package app;
 
+import core.accountModel.Account;
+import core.accountModel.AccountXMLRepo;
+import core.accountModel.IAccountRepo;
 import core.common.MasterXMLRepo;
 import core.employeeModel.EmployeeController;
 import core.employeeModel.EmployeeService;
@@ -13,13 +16,19 @@ public class Main {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
 		
 		IEmployeeRepo employeeRepo = new EmployeeXMLRepo(masterRepo);
-		IEmployeeService employeeService = new EmployeeService(employeeRepo);
-		EmployeeController employeeController = new EmployeeController(employeeService);
-		
-		EmployeeCRUDView frm = new EmployeeCRUDView(employeeService, employeeController);
-		frm.setSize(640, 480);
-		frm.setVisible(true);
+		IAccountRepo accountRepo = new AccountXMLRepo(masterRepo);
 
-		employeeRepo.save();
+		if (!accountRepo.emailTaken("man01@sims.com")) {
+			accountRepo.add(new Account("man01@sims.com", "man01"));
+		}
+		
+		//IEmployeeService employeeService = new EmployeeService(employeeRepo);
+		//EmployeeController employeeController = new EmployeeController(employeeService);
+		
+		//EmployeeCRUDView frm = new EmployeeCRUDView(employeeService, employeeController);
+		//frm.setSize(640, 480);
+		//frm.setVisible(true);
+
+		masterRepo.save();
 	}
 }

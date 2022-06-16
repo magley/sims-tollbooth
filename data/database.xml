@@ -49,4 +49,12 @@
       <password>1234</password>
     </core.employeeModel.Employee>
   </employees>
+  <accounts>
+    <core.accountModel.Account>
+      <id>0</id>
+      <removed>false</removed>
+      <email>man01@sims.com</email>
+      <password>man01</password>
+    </core.accountModel.Account>
+  </accounts>
 </core.common.MasterXMLRepo>
