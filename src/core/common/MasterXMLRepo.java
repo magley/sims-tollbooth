@@ -13,11 +13,13 @@ import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.XStreamException;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.thoughtworks.xstream.security.AnyTypePermission;
 
-import core.employeeModel.Employee;
+import core.account.Account;
+import core.employee.Employee;
 
 public class MasterXMLRepo {
 	@XStreamOmitField
@@ -29,17 +31,20 @@ public class MasterXMLRepo {
 	@XStreamOmitField
 	private XStream xstream;
 
-	private List<Employee> employees;
+	private List<Employee> employees = new ArrayList<Employee>();
+	private List<Account> accounts = new ArrayList<Account>();
 
 	public MasterXMLRepo(String directory, String filename) {
 		this.directory = directory;
 		this.filename = filename;
 		this.fullpath = this.directory + File.separator + this.filename;
 		
-		employees = new ArrayList<Employee>();
-		
 		initXStream();
 		load();
+	}
+	
+	public List<Account> getAccounts() {
+		return accounts;
 	}
 	
 	public List<Employee> getEmployees() {

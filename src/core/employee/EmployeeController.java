@@ -1,4 +1,4 @@
-package core.employeeModel;
+package core.employee;
 
 public class EmployeeController {
 	private IEmployeeService service;
@@ -12,7 +12,7 @@ public class EmployeeController {
 			throw new Exception("Field cannot be blank!");
 		}
 		
-		Employee e = new Employee(name, surname, email, password);
-		service.add(e);
+		//Employee e = new Employee(name, surname, email, password);
+		//service.add(e);
 	}
 }

@@ -1,52 +1,68 @@
 <core.common.MasterXMLRepo>
   <employees>
-    <core.employeeModel.Employee>
+    <core.employee.Employee>
       <id>0</id>
       <removed>false</removed>
-      <name>name</name>
-      <surname>surname</surname>
-      <email>email</email>
-      <password>1234</password>
-    </core.employeeModel.Employee>
-    <core.employeeModel.Employee>
+      <name>person0</name>
+      <surname>lastname0</surname>
+      <account>
+        <id>0</id>
+        <removed>false</removed>
+        <email>user0@sims.com</email>
+        <password>user0</password>
+      </account>
+      <role>ADMIN</role>
+    </core.employee.Employee>
+    <core.employee.Employee>
       <id>1</id>
       <removed>false</removed>
-      <name>name</name>
-      <surname>surname</surname>
-      <email>email</email>
-      <password>1234</password>
-    </core.employeeModel.Employee>
-    <core.employeeModel.Employee>
+      <name>person1</name>
+      <surname>lastname1</surname>
+      <account>
+        <id>1</id>
+        <removed>false</removed>
+        <email>user1@sims.com</email>
+        <password>user1</password>
+      </account>
+      <role>MANAGER</role>
+    </core.employee.Employee>
+    <core.employee.Employee>
       <id>2</id>
       <removed>false</removed>
-      <name>name</name>
-      <surname>surname</surname>
-      <email>email</email>
-      <password>1234</password>
-    </core.employeeModel.Employee>
-    <core.employeeModel.Employee>
+      <name>person2</name>
+      <surname>lastname2</surname>
+      <account>
+        <id>2</id>
+        <removed>false</removed>
+        <email>user2@sims.com</email>
+        <password>user2</password>
+      </account>
+      <role>TAG_SELLER</role>
+    </core.employee.Employee>
+    <core.employee.Employee>
       <id>3</id>
       <removed>false</removed>
-      <name>name</name>
-      <surname>surname</surname>
-      <email>email</email>
-      <password>1234</password>
-    </core.employeeModel.Employee>
-    <core.employeeModel.Employee>
+      <name>person3</name>
+      <surname>lastname3</surname>
+      <account>
+        <id>3</id>
+        <removed>false</removed>
+        <email>user3@sims.com</email>
+        <password>user3</password>
+      </account>
+      <role>COLLECTOR</role>
+    </core.employee.Employee>
+  </employees>
+  <accounts>
+    <core.account.Account reference="../../employees/core.employee.Employee/account"/>
+    <core.account.Account reference="../../employees/core.employee.Employee[2]/account"/>
+    <core.account.Account reference="../../employees/core.employee.Employee[3]/account"/>
+    <core.account.Account reference="../../employees/core.employee.Employee[4]/account"/>
+    <core.account.Account>
       <id>4</id>
       <removed>false</removed>
-      <name>name</name>
-      <surname>surname</surname>
-      <email>email</email>
-      <password>1234</password>
-    </core.employeeModel.Employee>
-    <core.employeeModel.Employee>
-      <id>5</id>
-      <removed>false</removed>
-      <name>bob</name>
-      <surname>jones</surname>
-      <email>bob@mail.com</email>
-      <password>1234</password>
-    </core.employeeModel.Employee>
-  </employees>
+      <email>user4@sims.com</email>
+      <password>user4</password>
+    </core.account.Account>
+  </accounts>
 </core.common.MasterXMLRepo>

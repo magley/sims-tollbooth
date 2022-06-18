@@ -2,8 +2,8 @@ package desktop.employeeModel;
 
 import javax.swing.table.AbstractTableModel;
 
-import core.employeeModel.Employee;
-import core.employeeModel.IEmployeeService;
+import core.employee.Employee;
+import core.employee.IEmployeeService;
 
 public class EmployeeTableModel extends AbstractTableModel {
 	private static final long serialVersionUID = -2875341659571747028L;
@@ -57,9 +57,9 @@ public class EmployeeTableModel extends AbstractTableModel {
 		} else if (columnIndex == 2) {
 			return e.getSurname();
 		} else if (columnIndex == 3) {
-			return e.getEmail();
+			return e.getAccount().getEmail();
 		} else if (columnIndex == 4) {
-			return e.getPassword();
+			return e.getAccount().getPassword();
 		} else {
 			return null;
 		}
