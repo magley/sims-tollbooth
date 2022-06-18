@@ -1,5 +1,6 @@
 package core.employee;
 
+import java.util.Collections;
 import java.util.List;
 
 import core.account.Account;
@@ -18,7 +19,7 @@ public class EmployeeService implements IEmployeeService {
 	
 	@Override
 	public List<Employee> getAll() {
-		return repo.getAll();
+		return Collections.unmodifiableList(repo.getAll());
 	}
 	
 	@Override
