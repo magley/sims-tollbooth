@@ -13,13 +13,15 @@ import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.XStreamException;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.thoughtworks.xstream.security.AnyTypePermission;
 
-import core.accountModel.Account;
-import core.employeeModel.Employee;
+import core.account.Account;
+import core.employee.Employee;
 
+@XStreamAlias("MasterXMLRepo")
 public class MasterXMLRepo {
 	@XStreamOmitField
 	private String directory;

@@ -1,4 +1,4 @@
-package core.accountModel;
+package core.account;
 
 public interface IAccountService {
 	public Account getByCredentials(String email, String password);

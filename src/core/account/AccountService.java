@@ -1,4 +1,4 @@
-package core.accountModel;
+package core.account;
 
 public class AccountService implements IAccountService {
 	private IAccountRepo repo;

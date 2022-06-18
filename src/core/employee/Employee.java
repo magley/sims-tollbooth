@@ -1,8 +1,11 @@
-package core.employeeModel;
+package core.employee;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import core.Entity;
-import core.accountModel.Account;
+import core.account.Account;
 
+@XStreamAlias("Employee")
 public class Employee extends Entity {
 	public enum Type {
 		UNKNOWN, ADMIN, MANAGER, TAG_SELLER, COLLECTOR, STATION_CHEIF

@@ -1,7 +1,10 @@
-package core.accountModel;
+package core.account;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 import core.Entity;
 
+@XStreamAlias("Account")
 public class Account extends Entity {
 	private String email;
 	private String password;

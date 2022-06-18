@@ -1,4 +1,4 @@
-package core.employeeModel;
+package core.employee;
 
 public class EmployeeController {
 	private IEmployeeService service;

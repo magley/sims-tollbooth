@@ -1,8 +1,8 @@
-package core.employeeModel;
+package core.employee;
 
 import java.util.List;
 
-import core.accountModel.Account;
+import core.account.Account;
 
 public class EmployeeService implements IEmployeeService {
 	private IEmployeeRepo repo;

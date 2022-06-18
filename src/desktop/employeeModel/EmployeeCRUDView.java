@@ -11,8 +11,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
-import core.employeeModel.EmployeeController;
-import core.employeeModel.IEmployeeService;
+import core.employee.EmployeeController;
+import core.employee.IEmployeeService;
 import net.miginfocom.swing.MigLayout;
 
 public class EmployeeCRUDView extends JFrame {

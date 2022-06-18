@@ -1,16 +1,16 @@
 package app;
 
-import core.accountModel.Account;
-import core.accountModel.AccountService;
-import core.accountModel.AccountXMLRepo;
-import core.accountModel.IAccountRepo;
-import core.accountModel.IAccountService;
+import core.account.Account;
+import core.account.AccountService;
+import core.account.AccountXMLRepo;
+import core.account.IAccountRepo;
+import core.account.IAccountService;
 import core.common.MasterXMLRepo;
-import core.employeeModel.Employee;
-import core.employeeModel.EmployeeService;
-import core.employeeModel.EmployeeXMLRepo;
-import core.employeeModel.IEmployeeRepo;
-import core.employeeModel.IEmployeeService;
+import core.employee.Employee;
+import core.employee.EmployeeService;
+import core.employee.EmployeeXMLRepo;
+import core.employee.IEmployeeRepo;
+import core.employee.IEmployeeService;
 
 public class Main {
 	public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Main {
 		
 		IEmployeeRepo employeeRepo = new EmployeeXMLRepo(masterRepo);
 		IEmployeeService employeeService = new EmployeeService(employeeRepo);
-
+		
 		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@sims.com", "user0")));
 		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@TYPO.com", "user0")));
 		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user4@sims.com", "user4")));

@@ -1,6 +1,6 @@
-<core.common.MasterXMLRepo>
+<MasterXMLRepo>
   <employees>
-    <core.employeeModel.Employee>
+    <Employee>
       <id>0</id>
       <removed>false</removed>
       <name>person0</name>
@@ -12,8 +12,8 @@
         <password>user0</password>
       </account>
       <type>ADMIN</type>
-    </core.employeeModel.Employee>
-    <core.employeeModel.Employee>
+    </Employee>
+    <Employee>
       <id>1</id>
       <removed>false</removed>
       <name>person1</name>
@@ -25,8 +25,8 @@
         <password>user1</password>
       </account>
       <type>MANAGER</type>
-    </core.employeeModel.Employee>
-    <core.employeeModel.Employee>
+    </Employee>
+    <Employee>
       <id>2</id>
       <removed>false</removed>
       <name>person2</name>
@@ -38,8 +38,8 @@
         <password>user2</password>
       </account>
       <type>TAG_SELLER</type>
-    </core.employeeModel.Employee>
-    <core.employeeModel.Employee>
+    </Employee>
+    <Employee>
       <id>3</id>
       <removed>false</removed>
       <name>person3</name>
@@ -51,18 +51,18 @@
         <password>user3</password>
       </account>
       <type>COLLECTOR</type>
-    </core.employeeModel.Employee>
+    </Employee>
   </employees>
   <accounts>
-    <core.accountModel.Account reference="../../employees/core.employeeModel.Employee/account"/>
-    <core.accountModel.Account reference="../../employees/core.employeeModel.Employee[2]/account"/>
-    <core.accountModel.Account reference="../../employees/core.employeeModel.Employee[3]/account"/>
-    <core.accountModel.Account reference="../../employees/core.employeeModel.Employee[4]/account"/>
-    <core.accountModel.Account>
+    <Account reference="../../employees/Employee/account"/>
+    <Account reference="../../employees/Employee[2]/account"/>
+    <Account reference="../../employees/Employee[3]/account"/>
+    <Account reference="../../employees/Employee[4]/account"/>
+    <Account>
       <id>4</id>
       <removed>false</removed>
       <email>user4@sims.com</email>
       <password>user4</password>
-    </core.accountModel.Account>
+    </Account>
   </accounts>
-</core.common.MasterXMLRepo>
+</MasterXMLRepo>

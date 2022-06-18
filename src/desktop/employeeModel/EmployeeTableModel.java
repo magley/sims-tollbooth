@@ -2,8 +2,8 @@ package desktop.employeeModel;
 
 import javax.swing.table.AbstractTableModel;
 
-import core.employeeModel.Employee;
-import core.employeeModel.IEmployeeService;
+import core.employee.Employee;
+import core.employee.IEmployeeService;
 
 public class EmployeeTableModel extends AbstractTableModel {
 	private static final long serialVersionUID = -2875341659571747028L;

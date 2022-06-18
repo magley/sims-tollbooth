@@ -1,6 +1,6 @@
-package core.employeeModel;
+package core.employee;
 
-import core.accountModel.Account;
+import core.account.Account;
 import core.common.IRepo;
 
 public interface IEmployeeRepo extends IRepo<Employee> {

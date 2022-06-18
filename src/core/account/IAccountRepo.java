@@ -1,4 +1,4 @@
-package core.accountModel;
+package core.account;
 
 import core.common.IRepo;
 
