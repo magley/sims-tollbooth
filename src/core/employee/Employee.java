@@ -4,20 +4,20 @@ import core.Entity;
 import core.account.Account;
 
 public class Employee extends Entity {
-	public enum Type {
+	public enum Role {
 		UNKNOWN, ADMIN, MANAGER, TAG_SELLER, COLLECTOR, STATION_CHEIF
 	}
 	
 	private String name;
 	private String surname;
 	private Account account;
-	private Type type;
-	public Employee(String name, String surname, Account account, Type type) {
+	private Role role;
+	public Employee(String name, String surname, Account account, Role role) {
 		super();
 		this.name = name;
 		this.surname = surname;
 		this.account = account;
-		this.type = type;
+		this.role = role;
 	}
 	public String getName() {
 		return name;
@@ -37,14 +37,14 @@ public class Employee extends Entity {
 	public void setAccount(Account account) {
 		this.account = account;
 	}
-	public Type getType() {
-		return type;
+	public Role getRole() {
+		return role;
 	}
-	public void setType(Type type) {
-		this.type = type;
+	public void setRole(Role role) {
+		this.role = role;
 	}
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", surname=" + surname + ", account=" + account + ", type=" + type + "]";
+		return "Employee [name=" + name + ", surname=" + surname + ", account=" + account + ", role=" + role + "]";
 	}
 }

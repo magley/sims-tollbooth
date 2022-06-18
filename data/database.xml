@@ -11,7 +11,7 @@
         <email>user0@sims.com</email>
         <password>user0</password>
       </account>
-      <type>ADMIN</type>
+      <role>ADMIN</role>
     </core.employee.Employee>
     <core.employee.Employee>
       <id>1</id>
@@ -24,7 +24,7 @@
         <email>user1@sims.com</email>
         <password>user1</password>
       </account>
-      <type>MANAGER</type>
+      <role>MANAGER</role>
     </core.employee.Employee>
     <core.employee.Employee>
       <id>2</id>
@@ -37,7 +37,7 @@
         <email>user2@sims.com</email>
         <password>user2</password>
       </account>
-      <type>TAG_SELLER</type>
+      <role>TAG_SELLER</role>
     </core.employee.Employee>
     <core.employee.Employee>
       <id>3</id>
@@ -50,39 +50,7 @@
         <email>user3@sims.com</email>
         <password>user3</password>
       </account>
-      <type>COLLECTOR</type>
-    </core.employee.Employee>
-    <core.employee.Employee>
-      <id>4</id>
-      <removed>false</removed>
-      <name>person0</name>
-      <surname>lastname0</surname>
-      <account reference="../../core.employee.Employee/account"/>
-      <type>ADMIN</type>
-    </core.employee.Employee>
-    <core.employee.Employee>
-      <id>5</id>
-      <removed>false</removed>
-      <name>person1</name>
-      <surname>lastname1</surname>
-      <account reference="../../core.employee.Employee[2]/account"/>
-      <type>MANAGER</type>
-    </core.employee.Employee>
-    <core.employee.Employee>
-      <id>6</id>
-      <removed>false</removed>
-      <name>person2</name>
-      <surname>lastname2</surname>
-      <account reference="../../core.employee.Employee[3]/account"/>
-      <type>TAG_SELLER</type>
-    </core.employee.Employee>
-    <core.employee.Employee>
-      <id>7</id>
-      <removed>false</removed>
-      <name>person3</name>
-      <surname>lastname3</surname>
-      <account reference="../../core.employee.Employee[4]/account"/>
-      <type>COLLECTOR</type>
+      <role>COLLECTOR</role>
     </core.employee.Employee>
   </employees>
   <accounts>

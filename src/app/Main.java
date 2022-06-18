@@ -42,7 +42,7 @@ public class Main {
 		}
 		
 		for (int i = 0; i < 4; i++) {
-			Employee e = new Employee("person" + i, "lastname" + i, accountService.get(i), Employee.Type.values()[1 + i]);
+			Employee e = new Employee("person" + i, "lastname" + i, accountService.get(i), Employee.Role.values()[1 + i]);
 			employeeService.add(e);
 		}
 	}
