@@ -21,7 +21,6 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 import core.account.Account;
 import core.employee.Employee;
 
-@XStreamAlias("MasterXMLRepo")
 public class MasterXMLRepo {
 	@XStreamOmitField
 	private String directory;

@@ -19,12 +19,7 @@ public class EmployeeXMLRepo extends DefaultXMLRepo<Employee> implements IEmploy
 	@Override
 	public Employee getByAccount(Account account) {
 		if (account == null)
-			return null;
-		for (Employee e : getAll()) {
-			if (e.getAccount().getId() == account.getId()) {
-				return e;
-			}
-		}
-		return null;
+			return null;		
+		return getAll().stream().filter(e -> e.getAccount().getId() == account.getId()).findFirst().orElse(null);
 	}
 }

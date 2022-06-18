@@ -1,6 +1,6 @@
-<MasterXMLRepo>
+<core.common.MasterXMLRepo>
   <employees>
-    <Employee>
+    <core.employee.Employee>
       <id>0</id>
       <removed>false</removed>
       <name>person0</name>
@@ -12,8 +12,8 @@
         <password>user0</password>
       </account>
       <type>ADMIN</type>
-    </Employee>
-    <Employee>
+    </core.employee.Employee>
+    <core.employee.Employee>
       <id>1</id>
       <removed>false</removed>
       <name>person1</name>
@@ -25,8 +25,8 @@
         <password>user1</password>
       </account>
       <type>MANAGER</type>
-    </Employee>
-    <Employee>
+    </core.employee.Employee>
+    <core.employee.Employee>
       <id>2</id>
       <removed>false</removed>
       <name>person2</name>
@@ -38,8 +38,8 @@
         <password>user2</password>
       </account>
       <type>TAG_SELLER</type>
-    </Employee>
-    <Employee>
+    </core.employee.Employee>
+    <core.employee.Employee>
       <id>3</id>
       <removed>false</removed>
       <name>person3</name>
@@ -51,18 +51,50 @@
         <password>user3</password>
       </account>
       <type>COLLECTOR</type>
-    </Employee>
+    </core.employee.Employee>
+    <core.employee.Employee>
+      <id>4</id>
+      <removed>false</removed>
+      <name>person0</name>
+      <surname>lastname0</surname>
+      <account reference="../../core.employee.Employee/account"/>
+      <type>ADMIN</type>
+    </core.employee.Employee>
+    <core.employee.Employee>
+      <id>5</id>
+      <removed>false</removed>
+      <name>person1</name>
+      <surname>lastname1</surname>
+      <account reference="../../core.employee.Employee[2]/account"/>
+      <type>MANAGER</type>
+    </core.employee.Employee>
+    <core.employee.Employee>
+      <id>6</id>
+      <removed>false</removed>
+      <name>person2</name>
+      <surname>lastname2</surname>
+      <account reference="../../core.employee.Employee[3]/account"/>
+      <type>TAG_SELLER</type>
+    </core.employee.Employee>
+    <core.employee.Employee>
+      <id>7</id>
+      <removed>false</removed>
+      <name>person3</name>
+      <surname>lastname3</surname>
+      <account reference="../../core.employee.Employee[4]/account"/>
+      <type>COLLECTOR</type>
+    </core.employee.Employee>
   </employees>
   <accounts>
-    <Account reference="../../employees/Employee/account"/>
-    <Account reference="../../employees/Employee[2]/account"/>
-    <Account reference="../../employees/Employee[3]/account"/>
-    <Account reference="../../employees/Employee[4]/account"/>
-    <Account>
+    <core.account.Account reference="../../employees/core.employee.Employee/account"/>
+    <core.account.Account reference="../../employees/core.employee.Employee[2]/account"/>
+    <core.account.Account reference="../../employees/core.employee.Employee[3]/account"/>
+    <core.account.Account reference="../../employees/core.employee.Employee[4]/account"/>
+    <core.account.Account>
       <id>4</id>
       <removed>false</removed>
       <email>user4@sims.com</email>
       <password>user4</password>
-    </Account>
+    </core.account.Account>
   </accounts>
-</MasterXMLRepo>
+</core.common.MasterXMLRepo>

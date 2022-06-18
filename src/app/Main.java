@@ -22,6 +22,8 @@ public class Main {
 		IEmployeeRepo employeeRepo = new EmployeeXMLRepo(masterRepo);
 		IEmployeeService employeeService = new EmployeeService(employeeRepo);
 		
+		//generateAccountsAndEmployees(accountService, employeeService);
+		
 		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@sims.com", "user0")));
 		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@TYPO.com", "user0")));
 		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user4@sims.com", "user4")));

@@ -17,20 +17,11 @@ public class AccountXMLRepo extends DefaultXMLRepo<Account> implements IAccountR
 	
 	@Override
 	public boolean emailTaken(String email) {
-		for (Account a : getAll()) {
-			if (a.getEmail().equals(email)) {
-				return true;
-			}
-		}
-		return false;
+		return getAll().stream().anyMatch(a -> a.getEmail().equals(email));
 	}
 
 	@Override
 	public Account getByCredentials(String email, String password) {
-		for (Account a : getAll()) {
-			if (a.getEmail().equals(email) && a.getPassword().equals(password))
-				return a;
-		}
-		return null;
+ 		return getAll().stream().filter(a -> a.getEmail().equals(email) && a.getPassword().equals(password)).findFirst().orElse(null);
 	}
 }
