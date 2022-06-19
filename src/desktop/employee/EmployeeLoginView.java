@@ -13,8 +13,10 @@ import core.common.FieldEmptyException;
 import core.employee.Employee;
 import core.employee.EmployeeController;
 import core.employee.exception.NoEmployeeWithAccountException;
+import desktop.GenericEmployeeView;
 
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 import java.awt.event.ActionListener;
@@ -69,6 +71,14 @@ public class EmployeeLoginView extends JFrame {
 			Employee e = employeeController.getByAccount(acc);
 			
 			System.out.println(e);
+			
+			JFrame d = new GenericEmployeeView(this, e);
+			d.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+			//d.setModal(true);
+			d.setSize(this.getSize());
+			d.setLocationRelativeTo(this);
+			d.setVisible(true);
+			this.setVisible(false);
 		} catch (AccountNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "Email or password invalid.", "Error", JOptionPane.ERROR_MESSAGE);
 		} catch (FieldEmptyException e) {
