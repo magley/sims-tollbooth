@@ -4,15 +4,23 @@ import javax.swing.JPanel;
 import net.miginfocom.swing.MigLayout;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
+import core.account.Account;
+import core.account.AccountController;
+import core.account.exception.AccountNotFoundException;
+import core.common.FieldEmptyException;
+import core.employee.Employee;
 import core.employee.EmployeeController;
+import core.employee.exception.NoEmployeeWithAccountException;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class EmployeeLoginView extends JPanel {
+	private AccountController accountController;
 	private EmployeeController employeeController;
 	
 	private static final long serialVersionUID = -8759366384873309375L;
@@ -20,7 +28,8 @@ public class EmployeeLoginView extends JPanel {
 	private JTextField txtPassword;
 	private JButton btnLogin;
 	
-	public EmployeeLoginView(EmployeeController employeeController) {
+	public EmployeeLoginView(AccountController accountController, EmployeeController employeeController) {
+		this.accountController = accountController;
 		this.employeeController = employeeController;
 		
 		setLayout(new MigLayout("", "[20%,grow][][grow][20%,grow]", "[30%,grow][][][][30%,grow]"));
@@ -54,6 +63,17 @@ public class EmployeeLoginView extends JPanel {
 		String email = txtEmail.getText();
 		String password = txtPassword.getText();
 		
-		System.out.println(email + " " + password);
+		try {
+			Account acc = accountController.login(email, password);
+			Employee e = employeeController.getByAccount(acc);
+			
+			System.out.println(e);
+		} catch (AccountNotFoundException e) {
+			JOptionPane.showMessageDialog(null, "Email or password invalid.", "Error", JOptionPane.ERROR_MESSAGE);
+		} catch (FieldEmptyException e) {
+			JOptionPane.showMessageDialog(null, "Field can't be empty.", "Error", JOptionPane.ERROR_MESSAGE);
+		} catch (NoEmployeeWithAccountException e) {
+			JOptionPane.showMessageDialog(null, "No employee found for this account.", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 }

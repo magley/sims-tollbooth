@@ -1,5 +1,8 @@
 package core.employee;
 
+import core.account.Account;
+import core.employee.exception.NoEmployeeWithAccountException;
+
 public class EmployeeController {
 	private IEmployeeService service;
 	
@@ -7,12 +10,13 @@ public class EmployeeController {
 		this.service = service;
 	}
 	
-	public void add(String name, String surname, String email, String password) throws Exception {
-		if (name.isBlank() || surname.isBlank() || email.isBlank() || password.isBlank()) {
-			throw new Exception("Field cannot be blank!");
+	public Employee getByAccount(Account acc) throws NoEmployeeWithAccountException {
+		Employee e = service.getByAccount(acc);
+		
+		if (e == null) {
+			throw new NoEmployeeWithAccountException();
 		}
 		
-		//Employee e = new Employee(name, surname, email, password);
-		//service.add(e);
+		return e;
 	}
 }

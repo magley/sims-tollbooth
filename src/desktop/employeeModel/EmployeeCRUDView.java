@@ -106,7 +106,7 @@ public class EmployeeCRUDView extends JFrame {
 	
 	private void addEmployee() {	
 		try {
-			controller.add(txtName.getText(), txtSurname.getText(), txtEmail.getText(), txtPassword.getText());
+			//controller.add(txtName.getText(), txtSurname.getText(), txtEmail.getText(), txtPassword.getText());
 			((EmployeeTableModel)(table.getModel())).fireTableDataChanged();
 			table.setRowSelectionInterval(table.getRowCount() - 1, table.getRowCount() - 1);
 		} catch (Exception e) {

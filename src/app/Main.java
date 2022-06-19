@@ -3,12 +3,14 @@ package app;
 import javax.swing.JFrame;
 
 import core.account.Account;
+import core.account.AccountController;
 import core.account.AccountService;
 import core.account.AccountXMLRepo;
 import core.account.IAccountRepo;
 import core.account.IAccountService;
 import core.common.MasterXMLRepo;
 import core.employee.Employee;
+import core.employee.EmployeeController;
 import core.employee.EmployeeService;
 import core.employee.EmployeeXMLRepo;
 import core.employee.IEmployeeRepo;
@@ -25,8 +27,11 @@ public class Main {
 		IEmployeeRepo employeeRepo = new EmployeeXMLRepo(masterRepo);
 		IEmployeeService employeeService = new EmployeeService(employeeRepo);
 		
+		AccountController accountController = new AccountController(accountService);
+		EmployeeController employeeController = new EmployeeController(employeeService);
+		
 		JFrame frame = new JFrame();
-		frame.add(new EmployeeLoginView(null));
+		frame.add(new EmployeeLoginView(accountController, employeeController));
 		frame.setSize(800, 600);  
         frame.setLocationRelativeTo(null);  
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
