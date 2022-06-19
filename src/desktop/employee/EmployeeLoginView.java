@@ -1,6 +1,5 @@
 package desktop.employee;
 
-import javax.swing.JPanel;
 import net.miginfocom.swing.MigLayout;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -16,10 +15,12 @@ import core.employee.EmployeeController;
 import core.employee.exception.NoEmployeeWithAccountException;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class EmployeeLoginView extends JPanel {
+public class EmployeeLoginView extends JFrame {
 	private AccountController accountController;
 	private EmployeeController employeeController;
 	

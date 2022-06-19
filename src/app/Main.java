@@ -30,8 +30,7 @@ public class Main {
 		AccountController accountController = new AccountController(accountService);
 		EmployeeController employeeController = new EmployeeController(employeeService);
 		
-		JFrame frame = new JFrame();
-		frame.add(new EmployeeLoginView(accountController, employeeController));
+		JFrame frame = new EmployeeLoginView(accountController, employeeController);
 		frame.setSize(800, 600);  
         frame.setLocationRelativeTo(null);  
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
