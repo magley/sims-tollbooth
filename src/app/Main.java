@@ -31,13 +31,18 @@ public class Main {
         frame.setLocationRelativeTo(null);  
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         frame.setVisible(true);
-
+        
+        frame.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+        		masterRepo.save();
+        		System.out.println("Finished successfully");
+            }
+        });
+   
 		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@sims.com", "user0")));
 		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@TYPO.com", "user0")));
 		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user4@sims.com", "user4")));
-		
-		masterRepo.save();
-		System.out.println("Finished successfully");
 	}
 	
 	private static void generateAccountsAndEmployees(IAccountService accountService, IEmployeeService employeeService) {
