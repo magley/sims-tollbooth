@@ -1,5 +1,7 @@
 package app;
 
+import javax.swing.JFrame;
+
 import core.account.Account;
 import core.account.AccountService;
 import core.account.AccountXMLRepo;
@@ -11,6 +13,7 @@ import core.employee.EmployeeService;
 import core.employee.EmployeeXMLRepo;
 import core.employee.IEmployeeRepo;
 import core.employee.IEmployeeService;
+import desktop.employee.EmployeeLoginView;
 
 public class Main {
 	public static void main(String[] args) {
@@ -22,9 +25,16 @@ public class Main {
 		IEmployeeRepo employeeRepo = new EmployeeXMLRepo(masterRepo);
 		IEmployeeService employeeService = new EmployeeService(employeeRepo);
 		
-		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@sims.com", "user0")));
-		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@TYPO.com", "user0")));
-		System.out.println(employeeService.getByAccount(accountService.getByCredentials("user4@sims.com", "user4")));
+		JFrame frame = new JFrame();
+		frame.add(new EmployeeLoginView(null));
+		frame.setSize(800, 600);  
+        frame.setLocationRelativeTo(null);  
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        frame.setVisible(true);
+
+		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@sims.com", "user0")));
+		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@TYPO.com", "user0")));
+		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user4@sims.com", "user4")));
 		
 		masterRepo.save();
 		System.out.println("Finished successfully");
