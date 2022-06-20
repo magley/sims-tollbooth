@@ -4,6 +4,7 @@ import net.miginfocom.swing.MigLayout;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
 
 import core.account.Account;
@@ -32,7 +33,7 @@ public class EmployeeLoginView extends JFrame {
 
 	private static final long serialVersionUID = -8759366384873309375L;
 	private JTextField txtEmail;
-	private JTextField txtPassword;
+	private JPasswordField txtPassword;
 	private JButton btnLogin;
 
 	public EmployeeLoginView(AccountController accountController, EmployeeController employeeController) {
@@ -53,7 +54,7 @@ public class EmployeeLoginView extends JFrame {
 		lblPassword.setHorizontalAlignment(SwingConstants.CENTER);
 		getContentPane().add(lblPassword, "cell 1 2,growx");
 
-		txtPassword = new JTextField();
+		txtPassword = new JPasswordField();
 		getContentPane().add(txtPassword, "cell 2 2,growx");
 		txtPassword.setColumns(10);
 
