@@ -23,6 +23,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class EmployeeLoginView extends JFrame {
 	private AccountController accountController;
@@ -37,22 +39,22 @@ public class EmployeeLoginView extends JFrame {
 		this.accountController = accountController;
 		this.employeeController = employeeController;
 
-		setLayout(new MigLayout("", "[20%,grow][][grow][20%,grow]", "[30%,grow][][][][30%,grow]"));
+		getContentPane().setLayout(new MigLayout("", "[20%,grow][][grow][20%,grow]", "[30%,grow][][][][30%,grow]"));
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
-		add(lblEmail, "cell 1 1,growx");
+		getContentPane().add(lblEmail, "cell 1 1,growx");
 
 		txtEmail = new JTextField();
-		add(txtEmail, "cell 2 1,growx");
+		getContentPane().add(txtEmail, "cell 2 1,growx");
 		txtEmail.setColumns(10);
 
 		JLabel lblPassword = new JLabel("Password:");
 		lblPassword.setHorizontalAlignment(SwingConstants.CENTER);
-		add(lblPassword, "cell 1 2,growx");
+		getContentPane().add(lblPassword, "cell 1 2,growx");
 
 		txtPassword = new JTextField();
-		add(txtPassword, "cell 2 2,growx");
+		getContentPane().add(txtPassword, "cell 2 2,growx");
 		txtPassword.setColumns(10);
 
 		btnLogin = new JButton("Login");
@@ -61,7 +63,8 @@ public class EmployeeLoginView extends JFrame {
 				login();
 			}
 		});
-		add(btnLogin, "cell 1 4 2 1,growx");
+		getContentPane().add(btnLogin, "cell 1 4 2 1,growx");
+		getRootPane().setDefaultButton(btnLogin);
 	}
 
 	private void login() {
