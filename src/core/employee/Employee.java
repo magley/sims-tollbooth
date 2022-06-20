@@ -10,14 +10,12 @@ public class Employee extends Entity {
 
 	private String name;
 	private String surname;
-	private Account account;
 	private Role role;
 
-	public Employee(String name, String surname, Account account, Role role) {
+	public Employee(String name, String surname, Role role) {
 		super();
 		this.name = name;
 		this.surname = surname;
-		this.account = account;
 		this.role = role;
 	}
 
@@ -37,14 +35,6 @@ public class Employee extends Entity {
 		this.surname = surname;
 	}
 
-	public Account getAccount() {
-		return account;
-	}
-
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-
 	public Role getRole() {
 		return role;
 	}
@@ -55,6 +45,6 @@ public class Employee extends Entity {
 
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", surname=" + surname + ", account=" + account + ", role=" + role + "]";
+		return "Employee [name=" + name + ", surname=" + surname + ", role=" + role + "]";
 	}
 }

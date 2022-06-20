@@ -74,7 +74,7 @@ public class EmployeeLoginView extends JFrame {
 
 		try {
 			Account acc = accountController.login(email, password);
-			Employee e = employeeController.getByAccount(acc);
+			Employee e = acc.getEmployee();
 
 			txtEmail.setText("");
 			txtPassword.setText("");
@@ -97,9 +97,6 @@ public class EmployeeLoginView extends JFrame {
 			JOptionPane.showMessageDialog(null, "Email or password invalid.", "Error", JOptionPane.ERROR_MESSAGE);
 		} catch (FieldEmptyException e) {
 			JOptionPane.showMessageDialog(null, "Field can't be empty.", "Error", JOptionPane.ERROR_MESSAGE);
-		} catch (NoEmployeeWithAccountException e) {
-			JOptionPane.showMessageDialog(null, "No employee found for this account.", "Error",
-					JOptionPane.ERROR_MESSAGE);
 		}
 	}
 }

@@ -26,9 +26,4 @@ public class EmployeeService implements IEmployeeService {
 	public void save() {
 		repo.save();
 	}
-
-	@Override
-	public Employee getByAccount(Account account) {
-		return repo.getByAccount(account);
-	}
 }
