@@ -37,7 +37,7 @@ public class GenericEmployeeView extends JFrame {
 		getContentPane().add(btnLogout, "cell 1 4,growx");
 	}
 	
-	private void logOut() {
+	public void logOut() {
 		setVisible(false);
 		dispose();
 		parent.setVisible(true);

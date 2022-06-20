@@ -74,11 +74,19 @@ public class EmployeeLoginView extends JFrame {
 			txtPassword.setText("");
 			
 			JFrame d = new GenericEmployeeView(this, e);
-			d.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+			d.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 			d.setSize(this.getSize());
 			d.setLocationRelativeTo(this);
 			d.setVisible(true);
 			this.setVisible(false);
+			
+			d.addWindowListener(new java.awt.event.WindowAdapter() {
+	            @Override
+	            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+	            	((GenericEmployeeView) d).logOut();
+	            }
+	        });
+			
 		} catch (AccountNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "Email or password invalid.", "Error", JOptionPane.ERROR_MESSAGE);
 		} catch (FieldEmptyException e) {
