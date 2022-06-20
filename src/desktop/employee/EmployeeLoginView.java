@@ -19,6 +19,8 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -80,9 +82,9 @@ public class EmployeeLoginView extends JFrame {
 			d.setVisible(true);
 			this.setVisible(false);
 
-			d.addWindowListener(new java.awt.event.WindowAdapter() {
+			d.addWindowListener(new WindowAdapter() {
 				@Override
-				public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+				public void windowClosing(WindowEvent windowEvent) {
 					((GenericEmployeeView) d).logOut();
 				}
 			});
