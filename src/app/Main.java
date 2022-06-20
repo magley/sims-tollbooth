@@ -20,28 +20,28 @@ import desktop.employee.EmployeeLoginView;
 public class Main {
 	public static void main(String[] args) {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
-		
+
 		IAccountRepo accountRepo = new AccountXMLRepo(masterRepo);
 		IAccountService accountService = new AccountService(accountRepo);
-		
+
 		IEmployeeRepo employeeRepo = new EmployeeXMLRepo(masterRepo);
 		IEmployeeService employeeService = new EmployeeService(employeeRepo);
-		
+
 		AccountController accountController = new AccountController(accountService);
 		EmployeeController employeeController = new EmployeeController(employeeService);
-		
+
 		JFrame frame = new EmployeeLoginView(accountController, employeeController);
-		frame.setSize(800, 600);  
-        frame.setLocationRelativeTo(null);  
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
-        frame.setVisible(true);
-        
-        frame.addWindowListener(new java.awt.event.WindowAdapter() {
-            @Override
-            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
-        		masterRepo.save();
-        		System.out.println("Finished successfully");
-            }
-        });
+		frame.setSize(800, 600);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+
+		frame.addWindowListener(new java.awt.event.WindowAdapter() {
+			@Override
+			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+				masterRepo.save();
+				System.out.println("Finished successfully");
+			}
+		});
 	}
 }

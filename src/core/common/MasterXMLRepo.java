@@ -38,19 +38,19 @@ public class MasterXMLRepo {
 		this.directory = directory;
 		this.filename = filename;
 		this.fullpath = this.directory + File.separator + this.filename;
-		
+
 		initXStream();
 		load();
 	}
-	
+
 	public List<Account> getAccounts() {
 		return accounts;
 	}
-	
+
 	public List<Employee> getEmployees() {
 		return employees;
 	}
-	
+
 	public void save() {
 		try {
 			Writer writer = new BufferedWriter(new FileWriter(new File(fullpath)));
@@ -60,7 +60,7 @@ public class MasterXMLRepo {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void load() {
 		try {
 			new File(this.directory).mkdirs();
@@ -68,7 +68,7 @@ public class MasterXMLRepo {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		try {
 			Reader reader = new BufferedReader(new FileReader(new File(fullpath)));
 			xstream.fromXML(reader, this);
@@ -79,7 +79,7 @@ public class MasterXMLRepo {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void initXStream() {
 		xstream = new XStream(new DomDriver());
 		xstream.autodetectAnnotations(true);

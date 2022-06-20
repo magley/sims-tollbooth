@@ -17,16 +17,16 @@ public class GenericEmployeeView extends JFrame {
 	private Employee employee;
 	private JFrame parent;
 	private static final long serialVersionUID = -6746602820794452880L;
-	
+
 	public GenericEmployeeView(JFrame parent, Employee employee) {
 		this.parent = parent;
 		this.employee = employee;
-		
+
 		getContentPane().setLayout(new MigLayout("", "[grow][grow][grow]", "[][][][][]"));
-		
+
 		JLabel lblNameOfPerson = new JLabel("Name: " + employee.getName() + " " + employee.getSurname());
 		getContentPane().add(lblNameOfPerson, "cell 1 2");
-		
+
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.addMouseListener(new MouseAdapter() {
 			@Override
@@ -36,7 +36,7 @@ public class GenericEmployeeView extends JFrame {
 		});
 		getContentPane().add(btnLogout, "cell 1 4,growx");
 	}
-	
+
 	public void logOut() {
 		setVisible(false);
 		dispose();
