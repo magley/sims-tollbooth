@@ -15,11 +15,4 @@ public class EmployeeXMLRepo extends DefaultXMLRepo<Employee> implements IEmploy
 	public List<Employee> getAll() {
 		return master.getEmployees();
 	}
-
-	@Override
-	public Employee getByAccount(Account account) {
-		if (account == null)
-			return null;		
-		return getAll().stream().filter(e -> e.getAccount().getId() == account.getId()).findFirst().orElse(null);
-	}
 }

@@ -3,66 +3,74 @@
     <core.employee.Employee>
       <id>0</id>
       <removed>false</removed>
-      <name>person0</name>
-      <surname>lastname0</surname>
-      <account>
-        <id>0</id>
-        <removed>false</removed>
-        <email>user0@sims.com</email>
-        <password>user0</password>
-      </account>
+      <name>Jay</name>
+      <surname>Cobson</surname>
       <role>ADMIN</role>
     </core.employee.Employee>
     <core.employee.Employee>
       <id>1</id>
       <removed>false</removed>
-      <name>person1</name>
-      <surname>lastname1</surname>
-      <account>
-        <id>1</id>
-        <removed>false</removed>
-        <email>user1@sims.com</email>
-        <password>user1</password>
-      </account>
+      <name>John</name>
+      <surname>Yesgem</surname>
       <role>MANAGER</role>
     </core.employee.Employee>
     <core.employee.Employee>
       <id>2</id>
       <removed>false</removed>
-      <name>person2</name>
-      <surname>lastname2</surname>
-      <account>
-        <id>2</id>
-        <removed>false</removed>
-        <email>user2@sims.com</email>
-        <password>user2</password>
-      </account>
-      <role>TAG_SELLER</role>
+      <name>Martin</name>
+      <surname>Chud</surname>
+      <role>COLLECTOR</role>
     </core.employee.Employee>
     <core.employee.Employee>
       <id>3</id>
       <removed>false</removed>
-      <name>person3</name>
-      <surname>lastname3</surname>
-      <account>
-        <id>3</id>
-        <removed>false</removed>
-        <email>user3@sims.com</email>
-        <password>user3</password>
-      </account>
-      <role>COLLECTOR</role>
+      <name>Soot</name>
+      <surname>Cado</surname>
+      <role>STATION_CHEIF</role>
+    </core.employee.Employee>
+    <core.employee.Employee>
+      <id>4</id>
+      <removed>false</removed>
+      <name>Bob</name>
+      <surname>Jones</surname>
+      <role>TAG_SELLER</role>
     </core.employee.Employee>
   </employees>
   <accounts>
-    <core.account.Account reference="../../employees/core.employee.Employee/account"/>
-    <core.account.Account reference="../../employees/core.employee.Employee[2]/account"/>
-    <core.account.Account reference="../../employees/core.employee.Employee[3]/account"/>
-    <core.account.Account reference="../../employees/core.employee.Employee[4]/account"/>
+    <core.account.Account>
+      <id>0</id>
+      <removed>false</removed>
+      <email>admin@sims.com</email>
+      <password>123</password>
+      <employee reference="../../../employees/core.employee.Employee"/>
+    </core.account.Account>
+    <core.account.Account>
+      <id>1</id>
+      <removed>false</removed>
+      <email>manager@sims.com</email>
+      <password>123</password>
+      <employee reference="../../../employees/core.employee.Employee[2]"/>
+    </core.account.Account>
+    <core.account.Account>
+      <id>2</id>
+      <removed>false</removed>
+      <email>collector@sims.com</email>
+      <password>123</password>
+      <employee reference="../../../employees/core.employee.Employee[3]"/>
+    </core.account.Account>
+    <core.account.Account>
+      <id>3</id>
+      <removed>false</removed>
+      <email>station@sims.com</email>
+      <password>123</password>
+      <employee reference="../../../employees/core.employee.Employee[4]"/>
+    </core.account.Account>
     <core.account.Account>
       <id>4</id>
       <removed>false</removed>
-      <email>user4@sims.com</email>
-      <password>user4</password>
+      <email>tagseller@sims.com</email>
+      <password>123</password>
+      <employee reference="../../../employees/core.employee.Employee[5]"/>
     </core.account.Account>
   </accounts>
 </core.common.MasterXMLRepo>

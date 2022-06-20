@@ -3,18 +3,18 @@ package core.common;
 import core.Entity;
 
 /**
- * Default implementation of IRepo<T> for an XStream data store.
- * Implements all IRepo<T> methods except for getAll(), which has
- * to be done manually.
+ * Default implementation of IRepo<T> for an XStream data store. Implements all
+ * IRepo<T> methods except for getAll(), which has to be done manually.
+ * 
  * @param <T> Has to extend Entity.
  */
 public abstract class DefaultXMLRepo<T extends Entity> implements IRepo<T> {
 	protected MasterXMLRepo master;
-	
+
 	public DefaultXMLRepo(MasterXMLRepo master) {
 		this.master = master;
 	}
-	
+
 	@Override
 	public T get(int id) {
 		for (T e : getAll()) {
