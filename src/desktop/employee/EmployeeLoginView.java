@@ -40,7 +40,7 @@ public class EmployeeLoginView extends JFrame {
 		this.accountController = accountController;
 		this.employeeController = employeeController;
 
-		getContentPane().setLayout(new MigLayout("", "[20%,grow][][grow][20%,grow]", "[30%,grow][][][][30%,grow]"));
+		getContentPane().setLayout(new MigLayout("", "[20%][10%][grow][20%]", "[30%,grow][][][][30%,grow]"));
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
