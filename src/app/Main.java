@@ -43,24 +43,5 @@ public class Main {
         		System.out.println("Finished successfully");
             }
         });
-   
-		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@sims.com", "user0")));
-		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user0@TYPO.com", "user0")));
-		//System.out.println(employeeService.getByAccount(accountService.getByCredentials("user4@sims.com", "user4")));
-	}
-	
-	private static void generateAccountsAndEmployees(IAccountService accountService, IEmployeeService employeeService) {
-		for (int i = 0; i < 5; i++) {
-			String email = "user" + i + "@sims.com";
-			String password = "user" + i;
-			if (!accountService.emailTaken(email)) {
-				accountService.add(new Account(email, password));
-			}
-		}
-		
-		for (int i = 0; i < 4; i++) {
-			Employee e = new Employee("person" + i, "lastname" + i, accountService.get(i), Employee.Role.values()[1 + i]);
-			employeeService.add(e);
-		}
 	}
 }

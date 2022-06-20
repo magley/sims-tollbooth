@@ -70,11 +70,11 @@ public class EmployeeLoginView extends JFrame {
 			Account acc = accountController.login(email, password);
 			Employee e = employeeController.getByAccount(acc);
 			
-			System.out.println(e);
+			txtEmail.setText("");
+			txtPassword.setText("");
 			
 			JFrame d = new GenericEmployeeView(this, e);
 			d.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-			//d.setModal(true);
 			d.setSize(this.getSize());
 			d.setLocationRelativeTo(this);
 			d.setVisible(true);
