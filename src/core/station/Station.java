@@ -11,13 +11,13 @@ public class Station extends Entity {
 
 	private String code;
 	private Type type;
-	private Location place;
+	private Location location;
 	
 	public Station(String code, Type type, Location place) {
 		super();
 		this.code = code;
 		this.type = type;
-		this.place = place;
+		this.location = place;
 	}
 	
 	public String getCode() {
@@ -36,16 +36,16 @@ public class Station extends Entity {
 		this.type = type;
 	}
 	
-	public Location getPlace() {
-		return place;
+	public Location getLocation() {
+		return location;
 	}
 	
-	public void setPlace(Location place) {
-		this.place = place;
+	public void setLocation(Location place) {
+		this.location = place;
 	}
 
 	@Override
 	public String toString() {
-		return "Station [code=" + code + ", type=" + type + ", place=" + place + "]";
+		return "Station [code=" + code + ", type=" + type + ", location=" + location + "]";
 	}
 }
