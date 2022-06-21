@@ -24,4 +24,9 @@ public class PlaceService implements IPlaceService {
 		repo.save();
 	}
 
+	@Override
+	public Place get(int id) {
+		return repo.get(id);
+	}
+
 }

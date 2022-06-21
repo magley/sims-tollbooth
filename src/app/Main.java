@@ -16,6 +16,12 @@ import core.employee.EmployeeService;
 import core.employee.EmployeeXMLRepo;
 import core.employee.IEmployeeRepo;
 import core.employee.IEmployeeService;
+import core.station.IStationRepo;
+import core.station.IStationService;
+import core.station.Station;
+import core.station.Station.Type;
+import core.station.StationService;
+import core.station.StationXMLRepo;
 import core.station.place.IPlaceRepo;
 import core.station.place.IPlaceService;
 import core.station.place.Place;
@@ -38,6 +44,9 @@ public class Main {
 		IPlaceRepo placeRepo = new PlaceXMLRepo(masterRepo);
 		IPlaceService placeService = new PlaceService(placeRepo);
 		
+		IStationRepo stationRepo = new StationXMLRepo(masterRepo);
+		IStationService stationService = new StationService(stationRepo);
+		
 		AccountController accountController = new AccountController(accountService);
 		EmployeeController employeeController = new EmployeeController(employeeService);
 
@@ -48,6 +57,10 @@ public class Main {
 		} else {
 			for (Place place : placeService.getAll()) {
 				System.out.println(place);
+			}
+			
+			for (Station station : stationService.getAll()) {
+				System.out.println(station);
 			}
 			
 			exitApp(masterRepo);

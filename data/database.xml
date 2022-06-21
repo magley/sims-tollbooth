@@ -99,4 +99,62 @@
       <zipCode>4004</zipCode>
     </core.station.place.Place>
   </places>
+  <stations>
+    <core.station.Station>
+      <id>0</id>
+      <removed>false</removed>
+      <code>A01</code>
+      <type>ENTER</type>
+      <place reference="../../../places/core.station.place.Place"/>
+    </core.station.Station>
+    <core.station.Station>
+      <id>1</id>
+      <removed>false</removed>
+      <code>A02</code>
+      <type>EXIT</type>
+      <place reference="../../../places/core.station.place.Place"/>
+    </core.station.Station>
+    <core.station.Station>
+      <id>2</id>
+      <removed>false</removed>
+      <code>B01</code>
+      <type>ENTER</type>
+      <place reference="../../../places/core.station.place.Place[2]"/>
+    </core.station.Station>
+    <core.station.Station>
+      <id>3</id>
+      <removed>false</removed>
+      <code>B02</code>
+      <type>EXIT</type>
+      <place reference="../../../places/core.station.place.Place[2]"/>
+    </core.station.Station>
+    <core.station.Station>
+      <id>4</id>
+      <removed>false</removed>
+      <code>C01</code>
+      <type>ENTER</type>
+      <place reference="../../../places/core.station.place.Place[3]"/>
+    </core.station.Station>
+    <core.station.Station>
+      <id>5</id>
+      <removed>false</removed>
+      <code>C02</code>
+      <type>EXIT</type>
+      <place reference="../../../places/core.station.place.Place[3]"/>
+    </core.station.Station>
+    <core.station.Station>
+      <id>6</id>
+      <removed>false</removed>
+      <code>D01</code>
+      <type>ENTER</type>
+      <place reference="../../../places/core.station.place.Place[4]"/>
+    </core.station.Station>
+    <core.station.Station>
+      <id>7</id>
+      <removed>false</removed>
+      <code>D02</code>
+      <type>EXIT</type>
+      <place reference="../../../places/core.station.place.Place[4]"/>
+    </core.station.Station>
+  </stations>
 </core.common.MasterXMLRepo>
