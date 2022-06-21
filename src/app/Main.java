@@ -20,13 +20,13 @@ import core.station.IStationRepo;
 import core.station.IStationService;
 import core.station.Station;
 import core.station.Station.Type;
+import core.station.location.ILocationRepo;
+import core.station.location.ILocationService;
+import core.station.location.Location;
+import core.station.location.LocationService;
+import core.station.location.LocationXMLRepo;
 import core.station.StationService;
 import core.station.StationXMLRepo;
-import core.station.place.IPlaceRepo;
-import core.station.place.IPlaceService;
-import core.station.place.Place;
-import core.station.place.PlaceService;
-import core.station.place.PlaceXMLRepo;
 import desktop.employee.EmployeeLoginView;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -41,8 +41,8 @@ public class Main {
 		IEmployeeRepo employeeRepo = new EmployeeXMLRepo(masterRepo);
 		IEmployeeService employeeService = new EmployeeService(employeeRepo);
 
-		IPlaceRepo placeRepo = new PlaceXMLRepo(masterRepo);
-		IPlaceService placeService = new PlaceService(placeRepo);
+		ILocationRepo locationRepo = new LocationXMLRepo(masterRepo);
+		ILocationService locationService = new LocationService(locationRepo);
 		
 		IStationRepo stationRepo = new StationXMLRepo(masterRepo);
 		IStationService stationService = new StationService(stationRepo);
@@ -54,8 +54,8 @@ public class Main {
 		
 		if (runApp) {
 			startApp(masterRepo, accountController, employeeController);
-		} else {
-			for (Place place : placeService.getAll()) {
+		} else {		
+			for (Location place : locationService.getAll()) {
 				System.out.println(place);
 			}
 			
@@ -64,7 +64,7 @@ public class Main {
 			}
 			
 			// Add into system.
-			Station s = new Station("TEST", Type.ENTER, placeService.get(0));
+			Station s = new Station("TEST", Type.ENTER, locationService.get(0));
 			stationService.add(s);
 
 			// Update in memory.

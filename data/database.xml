@@ -73,88 +73,88 @@
       <employee reference="../../../employees/core.employee.Employee[5]"/>
     </core.account.Account>
   </accounts>
-  <places>
-    <core.station.place.Place>
+  <locations>
+    <core.station.location.Location>
       <id>0</id>
       <removed>false</removed>
-      <name>City 1</name>
-      <zipCode>1001</zipCode>
-    </core.station.place.Place>
-    <core.station.place.Place>
+      <name>Loc 0</name>
+      <zipCode>001</zipCode>
+    </core.station.location.Location>
+    <core.station.location.Location>
       <id>1</id>
       <removed>false</removed>
-      <name>City 2</name>
-      <zipCode>2002</zipCode>
-    </core.station.place.Place>
-    <core.station.place.Place>
+      <name>Loc 1</name>
+      <zipCode>002</zipCode>
+    </core.station.location.Location>
+    <core.station.location.Location>
       <id>2</id>
       <removed>false</removed>
-      <name>City 3</name>
-      <zipCode>3003</zipCode>
-    </core.station.place.Place>
-    <core.station.place.Place>
+      <name>Loc 2</name>
+      <zipCode>003</zipCode>
+    </core.station.location.Location>
+    <core.station.location.Location>
       <id>3</id>
       <removed>false</removed>
-      <name>City 4</name>
-      <zipCode>4004</zipCode>
-    </core.station.place.Place>
-  </places>
+      <name>Loc 3</name>
+      <zipCode>004</zipCode>
+    </core.station.location.Location>
+  </locations>
   <stations>
     <core.station.Station>
       <id>0</id>
       <removed>false</removed>
-      <code>A01</code>
+      <code>STA00</code>
       <type>ENTER</type>
-      <place reference="../../../places/core.station.place.Place"/>
+      <place reference="../../../locations/core.station.location.Location"/>
     </core.station.Station>
     <core.station.Station>
       <id>1</id>
       <removed>false</removed>
-      <code>A02</code>
+      <code>STA00</code>
       <type>EXIT</type>
-      <place reference="../../../places/core.station.place.Place"/>
+      <place reference="../../../locations/core.station.location.Location"/>
     </core.station.Station>
     <core.station.Station>
       <id>2</id>
       <removed>false</removed>
-      <code>B01</code>
+      <code>STA01</code>
       <type>ENTER</type>
-      <place reference="../../../places/core.station.place.Place[2]"/>
+      <place reference="../../../locations/core.station.location.Location[2]"/>
     </core.station.Station>
     <core.station.Station>
       <id>3</id>
       <removed>false</removed>
-      <code>B02</code>
+      <code>STA01</code>
       <type>EXIT</type>
-      <place reference="../../../places/core.station.place.Place[2]"/>
+      <place reference="../../../locations/core.station.location.Location[2]"/>
     </core.station.Station>
     <core.station.Station>
       <id>4</id>
       <removed>false</removed>
-      <code>C01</code>
+      <code>STA02</code>
       <type>ENTER</type>
-      <place reference="../../../places/core.station.place.Place[3]"/>
+      <place reference="../../../locations/core.station.location.Location[3]"/>
     </core.station.Station>
     <core.station.Station>
       <id>5</id>
       <removed>false</removed>
-      <code>C02</code>
+      <code>STA02</code>
       <type>EXIT</type>
-      <place reference="../../../places/core.station.place.Place[3]"/>
+      <place reference="../../../locations/core.station.location.Location[3]"/>
     </core.station.Station>
     <core.station.Station>
       <id>6</id>
       <removed>false</removed>
-      <code>D01</code>
+      <code>STA03</code>
       <type>ENTER</type>
-      <place reference="../../../places/core.station.place.Place[4]"/>
+      <place reference="../../../locations/core.station.location.Location[4]"/>
     </core.station.Station>
     <core.station.Station>
       <id>7</id>
       <removed>false</removed>
-      <code>D02</code>
+      <code>STA03</code>
       <type>EXIT</type>
-      <place reference="../../../places/core.station.place.Place[4]"/>
+      <place reference="../../../locations/core.station.location.Location[4]"/>
     </core.station.Station>
   </stations>
 </core.common.MasterXMLRepo>

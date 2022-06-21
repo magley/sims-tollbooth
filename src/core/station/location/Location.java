@@ -1,12 +1,12 @@
-package core.station.place;
+package core.station.location;
 
 import core.Entity;
 
-public class Place extends Entity {
+public class Location extends Entity {
 	private String name;
 	private String zipCode;
 	
-	public Place(String name, String zipCode) {
+	public Location(String name, String zipCode) {
 		super();
 		this.name = name;
 		this.zipCode = zipCode;
@@ -30,6 +30,6 @@ public class Place extends Entity {
 	
 	@Override
 	public String toString() {
-		return "Place [name=" + name + ", zipCode=" + zipCode + "]";
+		return "Location [name=" + name + ", zipCode=" + zipCode + "]";
 	}
 }

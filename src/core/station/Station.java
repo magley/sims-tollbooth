@@ -1,7 +1,7 @@
 package core.station;
 
 import core.Entity;
-import core.station.place.Place;
+import core.station.location.Location;
 
 public class Station extends Entity {
 	public enum Type {
@@ -11,9 +11,9 @@ public class Station extends Entity {
 
 	private String code;
 	private Type type;
-	private Place place;
+	private Location place;
 	
-	public Station(String code, Type type, Place place) {
+	public Station(String code, Type type, Location place) {
 		super();
 		this.code = code;
 		this.type = type;
@@ -36,11 +36,11 @@ public class Station extends Entity {
 		this.type = type;
 	}
 	
-	public Place getPlace() {
+	public Location getPlace() {
 		return place;
 	}
 	
-	public void setPlace(Place place) {
+	public void setPlace(Location place) {
 		this.place = place;
 	}
 

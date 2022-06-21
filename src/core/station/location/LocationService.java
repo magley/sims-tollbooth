@@ -1,22 +1,22 @@
-package core.station.place;
+package core.station.location;
 
 import java.util.Collections;
 import java.util.List;
 
-public class PlaceService implements IPlaceService {
-	private IPlaceRepo repo;
+public class LocationService implements ILocationService {
+	private ILocationRepo repo;
 	
-	public PlaceService(IPlaceRepo repo) {
+	public LocationService(ILocationRepo repo) {
 		this.repo = repo;
 	}
 	
 	@Override
-	public Place add(Place obj) {
+	public Location add(Location obj) {
 		return repo.add(obj);
 	}
 
 	@Override
-	public List<Place> getAll() {
+	public List<Location> getAll() {
 		return Collections.unmodifiableList(repo.getAll());
 	}
 
@@ -26,7 +26,7 @@ public class PlaceService implements IPlaceService {
 	}
 
 	@Override
-	public Place get(int id) {
+	public Location get(int id) {
 		return repo.get(id);
 	}
 

@@ -20,7 +20,7 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 import core.account.Account;
 import core.employee.Employee;
 import core.station.Station;
-import core.station.place.Place;
+import core.station.location.Location;
 
 public class MasterXMLRepo {
 	@XStreamOmitField
@@ -34,7 +34,7 @@ public class MasterXMLRepo {
 
 	private List<Employee> employees = new ArrayList<Employee>();
 	private List<Account> accounts = new ArrayList<Account>();
-	private List<Place> places = new ArrayList<Place>();
+	private List<Location> locations = new ArrayList<Location>();
 	private List<Station> stations = new ArrayList<Station>();
 
 	public MasterXMLRepo(String directory, String filename) {
@@ -54,8 +54,8 @@ public class MasterXMLRepo {
 		return employees;
 	}
 
-	public List<Place> getPlaces() {
-		return places;
+	public List<Location> getLocations() {
+		return locations;
 	}
 
 	public List<Station> getStations() {
