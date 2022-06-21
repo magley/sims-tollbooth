@@ -1,5 +1,6 @@
 package core.station.place;
 
+import java.util.Collections;
 import java.util.List;
 
 public class PlaceService implements IPlaceService {
@@ -16,7 +17,7 @@ public class PlaceService implements IPlaceService {
 
 	@Override
 	public List<Place> getAll() {
-		return repo.getAll();
+		return Collections.unmodifiableList(repo.getAll());
 	}
 
 	@Override

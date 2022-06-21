@@ -1,5 +1,6 @@
 package core.station;
 
+import java.util.Collections;
 import java.util.List;
 
 public class StationService implements IStationService {
@@ -16,7 +17,7 @@ public class StationService implements IStationService {
 
 	@Override
 	public List<Station> getAll() {
-		return repo.getAll();
+		return Collections.unmodifiableList(repo.getAll());
 	}
 
 	@Override
