@@ -20,4 +20,6 @@ public interface IRepo<T extends Entity> {
 	public void remove(T obj);
 
 	public void save();
+
+	public T update(T obj);
 }

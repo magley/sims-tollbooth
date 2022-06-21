@@ -31,6 +31,16 @@ public abstract class DefaultXMLRepo<T extends Entity> implements IRepo<T> {
 		getAll().add(obj);
 		return obj;
 	}
+	
+	@Override
+	public T update(T obj) {
+		for (T e : getAll()) {
+			if (e.getId() == obj.getId()) {
+				e = obj;
+			}
+		}
+		return obj;
+	}
 
 	@Override
 	public void remove(T obj) {
