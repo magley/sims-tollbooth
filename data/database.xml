@@ -73,4 +73,30 @@
       <employee reference="../../../employees/core.employee.Employee[5]"/>
     </core.account.Account>
   </accounts>
+  <places>
+    <core.station.place.Place>
+      <id>0</id>
+      <removed>false</removed>
+      <name>City 1</name>
+      <zipCode>1001</zipCode>
+    </core.station.place.Place>
+    <core.station.place.Place>
+      <id>1</id>
+      <removed>false</removed>
+      <name>City 2</name>
+      <zipCode>2002</zipCode>
+    </core.station.place.Place>
+    <core.station.place.Place>
+      <id>2</id>
+      <removed>false</removed>
+      <name>City 3</name>
+      <zipCode>3003</zipCode>
+    </core.station.place.Place>
+    <core.station.place.Place>
+      <id>3</id>
+      <removed>false</removed>
+      <name>City 4</name>
+      <zipCode>4004</zipCode>
+    </core.station.place.Place>
+  </places>
 </core.common.MasterXMLRepo>

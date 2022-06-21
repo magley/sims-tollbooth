@@ -1,4 +1,4 @@
-package core.station;
+package core.station.place;
 
 import core.Entity;
 

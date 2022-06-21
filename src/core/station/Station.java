@@ -1,6 +1,7 @@
 package core.station;
 
 import core.Entity;
+import core.station.place.Place;
 
 public class Station extends Entity {
 	public enum Type {

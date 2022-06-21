@@ -13,13 +13,13 @@ import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.XStreamException;
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.thoughtworks.xstream.security.AnyTypePermission;
 
 import core.account.Account;
 import core.employee.Employee;
+import core.station.place.Place;
 
 public class MasterXMLRepo {
 	@XStreamOmitField
@@ -33,6 +33,7 @@ public class MasterXMLRepo {
 
 	private List<Employee> employees = new ArrayList<Employee>();
 	private List<Account> accounts = new ArrayList<Account>();
+	private List<Place> places = new ArrayList<Place>();
 
 	public MasterXMLRepo(String directory, String filename) {
 		this.directory = directory;
@@ -49,6 +50,10 @@ public class MasterXMLRepo {
 
 	public List<Employee> getEmployees() {
 		return employees;
+	}
+
+	public List<Place> getPlaces() {
+		return places;
 	}
 
 	public void save() {
