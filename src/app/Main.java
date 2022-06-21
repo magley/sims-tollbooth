@@ -63,6 +63,21 @@ public class Main {
 				System.out.println(station);
 			}
 			
+			// Add into system.
+			Station s = new Station("TEST", Type.ENTER, placeService.get(0));
+			stationService.add(s);
+
+			// Update in memory.
+			s.setType(Type.EXIT);
+			s.setCode("TEST UPDATED");
+			
+			// Update in datastore.
+			stationService.update(s);
+			System.out.println(stationService.get(8));
+			
+			// Remove.
+			stationService.remove(s);
+			
 			exitApp(masterRepo);
 		}
 

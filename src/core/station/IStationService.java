@@ -7,4 +7,6 @@ public interface IStationService {
 	public List<Station> getAll();
 	public void save();
 	public Station get(int id);
+	public void remove(Station obj);
+	public Station update(Station obj);
 }

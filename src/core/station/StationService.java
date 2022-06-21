@@ -28,4 +28,14 @@ public class StationService implements IStationService {
 	public Station get(int id) {
 		return repo.get(id);
 	}
+
+	@Override
+	public void remove(Station obj) {
+		repo.remove(obj);
+	}
+
+	@Override
+	public Station update(Station obj) {
+		return repo.update(obj);
+	}
 }
