@@ -28,6 +28,9 @@ import core.station.location.LocationXMLRepo;
 import core.station.StationService;
 import core.station.StationXMLRepo;
 import desktop.employee.EmployeeLoginView;
+import desktop.station.StationDashboardView;
+import desktop.station.StationTableModel;
+
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -54,33 +57,21 @@ public class Main {
 		
 		if (runApp) {
 			startApp(masterRepo, accountController, employeeController);
-		} else {		
-			for (Location place : locationService.getAll()) {
-				System.out.println(place);
-			}
-			
-			for (Station station : stationService.getAll()) {
-				System.out.println(station);
-			}
-			
-			// Add into system.
-			Station s = new Station("TEST", Type.ENTER, locationService.get(0));
-			stationService.add(s);
+		} else {	
+			JFrame frame = new JFrame();
+			frame.getContentPane().add(new StationDashboardView(stationService));
+			frame.setSize(800, 600);
+			frame.setLocationRelativeTo(null);
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setVisible(true);
 
-			// Update in memory.
-			s.setType(Type.EXIT);
-			s.setCode("TEST UPDATED");
-			
-			// Update in datastore.
-			stationService.update(s);
-			System.out.println(stationService.get(8));
-			
-			// Remove.
-			stationService.remove(s);
-			
-			exitApp(masterRepo);
+			frame.addWindowListener(new WindowAdapter() {
+				@Override
+				public void windowClosing(WindowEvent windowEvent) {
+					exitApp(masterRepo);
+				}
+			});
 		}
-
 	}
 	
 	private static void startApp(MasterXMLRepo masterRepo, AccountController accountController, EmployeeController employeeController) {
