@@ -52,5 +52,14 @@ public class StationTableModel extends AbstractTableModel {
 			throw new ArrayIndexOutOfBoundsException("Bad column!");
 		}
 	}
+	
+	public Location getLocation(int rowIndex) {
+		Station s = service.get(rowIndex);
+		return s.getLocation();
+	}
+	
+	public Station getStation(int rowIndex) {
+		return service.get((int)getValueAt(rowIndex, 0));
+	}
 
 }

@@ -59,7 +59,7 @@ public class Main {
 			startApp(masterRepo, accountController, employeeController);
 		} else {	
 			JFrame frame = new JFrame();
-			frame.getContentPane().add(new StationDashboardView(stationService));
+			frame.getContentPane().add(new StationDashboardView(stationService, locationService));
 			frame.setSize(800, 600);
 			frame.setLocationRelativeTo(null);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
