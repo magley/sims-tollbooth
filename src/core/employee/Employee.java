@@ -1,7 +1,6 @@
 package core.employee;
 
 import core.Entity;
-import core.account.Account;
 
 public class Employee extends Entity {
 	public enum Role {

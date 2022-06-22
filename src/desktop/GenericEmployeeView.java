@@ -1,17 +1,14 @@
 package desktop;
 
-import javax.swing.JFrame;
-import net.miginfocom.swing.MigLayout;
-import javax.swing.JTextField;
-
-import core.employee.Employee;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import core.employee.Employee;
+import net.miginfocom.swing.MigLayout;
 
 public class GenericEmployeeView extends JFrame {
 	private Employee employee;

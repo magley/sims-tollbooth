@@ -1,33 +1,31 @@
 package desktop.station;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import net.miginfocom.swing.MigLayout;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import javax.swing.event.MouseInputAdapter;
-import javax.swing.event.MouseInputListener;
 
+import core.common.FieldEmptyException;
 import core.station.IStationService;
 import core.station.Station;
+import core.station.StationController;
+import core.station.exception.CodeAlreadyTakenException;
 import core.station.location.ILocationService;
 import core.station.location.Location;
-
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.DefaultListCellRenderer;
-import javax.swing.JButton;
-import javax.swing.JScrollPane;
+import net.miginfocom.swing.MigLayout;
 
 public class StationDashboardView extends JPanel {
-	public StationDashboardView(IStationService service, ILocationService locationService) {
+	public StationDashboardView(IStationService service, ILocationService locationService, StationController controller) {
 		setLayout(new MigLayout("", "[grow]", "[grow][][][][]"));
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -66,15 +64,20 @@ public class StationDashboardView extends JPanel {
 		location = new JComboBox<Location>(locationService.getAll().toArray(new Location[0]));
 		add(location, "cell 0 3,growx");
 		
-		JButton btnNewButton_1 = new JButton("Insert");
-		add(btnNewButton_1, "flowx,cell 0 4");
+		JButton insert = new JButton("Insert");
+		add(insert, "flowx,cell 0 4");
+		insert.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				insert(table.getSelectedRow(), controller);
+			}
+		});
 		
 		update = new JButton("Update");
 		update.setEnabled(false);
 		add(update, "cell 0 4");
 		update.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				update(table.getSelectedRow());
+				update(table.getSelectedRow(), controller);
 			}
 		});
 		
@@ -82,12 +85,21 @@ public class StationDashboardView extends JPanel {
 		add(btnNewButton_3, "cell 0 4");
 	}
 	
-	private void update(int row) {
+	private void insert(int row, StationController controller) {
+		
+	}
+	
+	private void update(int row, StationController controller) {
 		Station station = tableModel.getStation(row);
-		station.setCode(code.getText());
-		station.setType((Station.Type)type.getSelectedItem());
-		station.setLocation((Location)location.getSelectedItem());
-		tableModel.fireTableRowsUpdated(row, row);
+		try {
+			controller.update(station, code.getText(), (Station.Type)type.getSelectedItem(), (Location)location.getSelectedItem());
+			tableModel.fireTableRowsUpdated(row, row);
+		} catch (FieldEmptyException e) {
+			JOptionPane.showMessageDialog(null, "Field cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
+		} catch (CodeAlreadyTakenException e) {
+			JOptionPane.showMessageDialog(null, "Code already taken.", "Error", JOptionPane.ERROR_MESSAGE);
+		}
+		
 	}
 	
 	private static final long serialVersionUID = 4488314020615833614L;
