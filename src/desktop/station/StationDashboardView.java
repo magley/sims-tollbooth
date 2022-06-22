@@ -68,7 +68,7 @@ public class StationDashboardView extends JPanel {
 		add(insert, "flowx,cell 0 4");
 		insert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				insert(table.getSelectedRow(), controller);
+				insert(controller);
 			}
 		});
 		
@@ -85,8 +85,15 @@ public class StationDashboardView extends JPanel {
 		add(btnNewButton_3, "cell 0 4");
 	}
 	
-	private void insert(int row, StationController controller) {
-		
+	private void insert(StationController controller) {
+		try {
+			controller.add(code.getText(), (Station.Type)type.getSelectedItem(), (Location)location.getSelectedItem());
+			tableModel.fireTableRowsInserted(0, 0);
+		} catch (FieldEmptyException e) {
+			JOptionPane.showMessageDialog(null, "Field cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
+		} catch (CodeAlreadyTakenException e) {
+			JOptionPane.showMessageDialog(null, "Code already taken.", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 	
 	private void update(int row, StationController controller) {

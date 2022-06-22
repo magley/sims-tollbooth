@@ -23,4 +23,15 @@ public class StationController {
 		station.setType(type);
 		station.setLocation(location);
 	}
+
+	public void add(String code, Station.Type type, Location location) throws FieldEmptyException, CodeAlreadyTakenException {
+		if (code.isBlank() || type == null || location == null) {
+			throw new FieldEmptyException();
+		}
+		if (service.getAll().stream().anyMatch(s -> s.getCode().equalsIgnoreCase(code))) {
+			throw new CodeAlreadyTakenException();
+		}
+		
+		service.add(new Station(code, type, location));
+	}
 }
