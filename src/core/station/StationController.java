@@ -34,4 +34,11 @@ public class StationController {
 		
 		service.add(new Station(code, type, location));
 	}
+
+	public void remove(Station station) throws FieldEmptyException {
+		if (station == null) {
+			throw new FieldEmptyException();
+		}
+		service.remove(station);
+	}
 }

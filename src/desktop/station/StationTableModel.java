@@ -34,7 +34,7 @@ public class StationTableModel extends AbstractTableModel {
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
-		Station s = service.get(rowIndex);
+		Station s = getStation(rowIndex);
 		switch (columnIndex) {
 		case 0:
 			return s.getId();
@@ -51,12 +51,12 @@ public class StationTableModel extends AbstractTableModel {
 	}
 	
 	public Location getLocation(int rowIndex) {
-		Station s = service.get(rowIndex);
+		Station s = getStation(rowIndex);
 		return s.getLocation();
 	}
 	
 	public Station getStation(int rowIndex) {
-		return service.get((int)getValueAt(rowIndex, 0));
+		return service.getAll().get(rowIndex);
 	}
 
 }

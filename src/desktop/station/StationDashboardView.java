@@ -81,8 +81,14 @@ public class StationDashboardView extends JPanel {
 			}
 		});
 		
-		JButton btnNewButton_3 = new JButton("Delete");
-		add(btnNewButton_3, "cell 0 4");
+		remove = new JButton("Remove");
+		add(remove, "cell 0 4");
+		remove.setEnabled(false);
+		remove.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				remove(table.getSelectedRow(), controller);
+			}
+		});
 	}
 	
 	private void insert(StationController controller) {
@@ -105,8 +111,17 @@ public class StationDashboardView extends JPanel {
 			JOptionPane.showMessageDialog(null, "Field cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
 		} catch (CodeAlreadyTakenException e) {
 			JOptionPane.showMessageDialog(null, "Code already taken.", "Error", JOptionPane.ERROR_MESSAGE);
+		}	
+	}
+	
+	private void remove(int row, StationController controller) {
+		Station station = tableModel.getStation(row);
+		try {
+			controller.remove(station);
+			tableModel.fireTableRowsDeleted(0, 0);
+		} catch (FieldEmptyException e) {
+			JOptionPane.showMessageDialog(null, "Field cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
 		}
-		
 	}
 	
 	private static final long serialVersionUID = 4488314020615833614L;
@@ -116,7 +131,8 @@ public class StationDashboardView extends JPanel {
 	private JComboBox<Station.Type> type;
 	private JComboBox<Location> location;
 	private JButton update;
-
+	private JButton remove;
+	
 	private void tableSelectedRow(int row) {
 		code.setText((String) table.getValueAt(row, 1));
 		type.setSelectedItem((Station.Type) table.getValueAt(row, 2));
@@ -126,6 +142,7 @@ public class StationDashboardView extends JPanel {
 		type.setEnabled(true);
 		location.setEnabled(true);
 		update.setEnabled(true);
+		remove.setEnabled(true);
 	}
 	
 	private void tableDeselectRow() {
@@ -137,5 +154,6 @@ public class StationDashboardView extends JPanel {
 		type.setEnabled(false);
 		location.setEnabled(false);
 		update.setEnabled(false);
+		remove.setEnabled(false);
 	}
 }
