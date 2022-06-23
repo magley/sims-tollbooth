@@ -13,6 +13,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import core.AppContext;
 import core.account.Account;
 import core.account.AccountController;
 import core.account.exception.AccountNotFoundException;
@@ -30,10 +31,12 @@ public class EmployeeLoginView extends JFrame {
 	private JTextField txtEmail;
 	private JPasswordField txtPassword;
 	private JButton btnLogin;
+	private AppContext ctx;
 
-	public EmployeeLoginView(AccountController accountController, EmployeeController employeeController) {
-		this.accountController = accountController;
-		this.employeeController = employeeController;
+	public EmployeeLoginView(AppContext ctx) {
+		this.ctx = ctx;
+		this.accountController = ctx.getAccountController();
+		this.employeeController = ctx.getEmployeeController();
 
 		getContentPane().setLayout(new MigLayout("", "[20%][10%][grow][20%]", "[30%,grow][][][][30%,grow]"));
 
@@ -74,7 +77,7 @@ public class EmployeeLoginView extends JFrame {
 			txtEmail.setText("");
 			txtPassword.setText("");
 
-			JFrame d = new GenericEmployeeView(this, e);
+			GenericEmployeeView d = new GenericEmployeeView(ctx, this, e);
 			d.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 			d.setSize(this.getSize());
 			d.setLocationRelativeTo(this);
