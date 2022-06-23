@@ -1,45 +1,68 @@
 package desktop;
 
+import javax.swing.JDialog;
 import javax.swing.JFrame;
-import net.miginfocom.swing.MigLayout;
-import javax.swing.JTextField;
+import javax.swing.JOptionPane;
+import javax.swing.JTabbedPane;
 
+import core.AppContext;
 import core.employee.Employee;
+import desktop.station.StationDashboardView;
+import net.miginfocom.swing.MigLayout;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class GenericEmployeeView extends JFrame {
 	private Employee employee;
 	private JFrame parent;
 	private static final long serialVersionUID = -6746602820794452880L;
-
-	public GenericEmployeeView(JFrame parent, Employee employee) {
-		this.parent = parent;
-		this.employee = employee;
-
-		getContentPane().setLayout(new MigLayout("", "[grow][grow][grow]", "[][][][][]"));
-
-		JLabel lblNameOfPerson = new JLabel("Name: " + employee.getName() + " " + employee.getSurname());
-		getContentPane().add(lblNameOfPerson, "cell 1 2");
-
-		JButton btnLogout = new JButton("Logout");
-		btnLogout.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				logOut();
-			}
-		});
-		getContentPane().add(btnLogout, "cell 1 4,growx");
-	}
+	private JTabbedPane tabbedPane;
+	private AppContext ctx;
 
 	public void logOut() {
 		setVisible(false);
 		dispose();
 		parent.setVisible(true);
 	}
+	
+	public GenericEmployeeView(AppContext ctx, JFrame parent, Employee employee) {
+		this.ctx = ctx;
+		this.parent = parent;
+		this.employee = employee;
+
+		getContentPane().setLayout(new MigLayout("", "[grow]", "[][grow]"));
+		
+		JButton btnLogout = new JButton("Log out");
+		getContentPane().add(btnLogout, "cell 0 0");
+		btnLogout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				logOut();
+			}
+		});
+		
+		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		getContentPane().add(tabbedPane, "cell 0 1,grow");
+		
+		switch (employee.getRole()) {
+		case ADMIN:
+			initAdminGUI();
+			break;
+		case COLLECTOR: case MANAGER: case STATION_CHEIF: case TAG_SELLER:
+			JOptionPane.showMessageDialog(this, "No implementation.");
+			break;
+		case UNKNOWN: default:
+			JOptionPane.showMessageDialog(this, "Bad or unknown role!", "Unexpected error", JOptionPane.ERROR_MESSAGE);
+			logOut();
+			break;		
+		}
+	}
+
+	private void initAdminGUI() {
+		StationDashboardView stationDashboardView = new StationDashboardView(ctx.getStationService(), ctx.getLocationService(), ctx.getStationController());
+		tabbedPane.add("Stations", stationDashboardView);
+	}
+	
 }

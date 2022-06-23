@@ -2,7 +2,6 @@ package core.employee;
 
 import java.util.List;
 
-import core.account.Account;
 import core.common.DefaultXMLRepo;
 import core.common.MasterXMLRepo;
 

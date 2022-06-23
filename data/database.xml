@@ -103,58 +103,58 @@
     <core.station.Station>
       <id>0</id>
       <removed>false</removed>
-      <code>STA00</code>
+      <code>A00</code>
       <type>ENTER</type>
-      <place reference="../../../locations/core.station.location.Location"/>
+      <location reference="../../../locations/core.station.location.Location"/>
     </core.station.Station>
     <core.station.Station>
       <id>1</id>
       <removed>false</removed>
-      <code>STA00</code>
+      <code>B00</code>
       <type>EXIT</type>
-      <place reference="../../../locations/core.station.location.Location"/>
+      <location reference="../../../locations/core.station.location.Location"/>
     </core.station.Station>
     <core.station.Station>
       <id>2</id>
       <removed>false</removed>
-      <code>STA01</code>
+      <code>A01</code>
       <type>ENTER</type>
-      <place reference="../../../locations/core.station.location.Location[2]"/>
+      <location reference="../../../locations/core.station.location.Location[2]"/>
     </core.station.Station>
     <core.station.Station>
       <id>3</id>
       <removed>false</removed>
-      <code>STA01</code>
+      <code>B01</code>
       <type>EXIT</type>
-      <place reference="../../../locations/core.station.location.Location[2]"/>
+      <location reference="../../../locations/core.station.location.Location[2]"/>
     </core.station.Station>
     <core.station.Station>
       <id>4</id>
       <removed>false</removed>
-      <code>STA02</code>
+      <code>A02</code>
       <type>ENTER</type>
-      <place reference="../../../locations/core.station.location.Location[3]"/>
+      <location reference="../../../locations/core.station.location.Location[3]"/>
     </core.station.Station>
     <core.station.Station>
       <id>5</id>
       <removed>false</removed>
-      <code>STA02</code>
+      <code>B02</code>
       <type>EXIT</type>
-      <place reference="../../../locations/core.station.location.Location[3]"/>
+      <location reference="../../../locations/core.station.location.Location[3]"/>
     </core.station.Station>
     <core.station.Station>
       <id>6</id>
       <removed>false</removed>
-      <code>STA03</code>
+      <code>A03</code>
       <type>ENTER</type>
-      <place reference="../../../locations/core.station.location.Location[4]"/>
+      <location reference="../../../locations/core.station.location.Location[4]"/>
     </core.station.Station>
     <core.station.Station>
       <id>7</id>
       <removed>false</removed>
-      <code>STA03</code>
+      <code>B03</code>
       <type>EXIT</type>
-      <place reference="../../../locations/core.station.location.Location[4]"/>
+      <location reference="../../../locations/core.station.location.Location[4]"/>
     </core.station.Station>
   </stations>
 </core.common.MasterXMLRepo>

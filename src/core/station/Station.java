@@ -13,11 +13,11 @@ public class Station extends Entity {
 	private Type type;
 	private Location location;
 	
-	public Station(String code, Type type, Location place) {
+	public Station(String code, Type type, Location location) {
 		super();
 		this.code = code;
 		this.type = type;
-		this.location = place;
+		this.location = location;
 	}
 	
 	public String getCode() {
@@ -40,8 +40,8 @@ public class Station extends Entity {
 		return location;
 	}
 	
-	public void setLocation(Location place) {
-		this.location = place;
+	public void setLocation(Location location) {
+		this.location = location;
 	}
 
 	@Override

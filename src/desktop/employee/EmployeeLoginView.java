@@ -1,31 +1,27 @@
 package desktop.employee;
 
-import net.miginfocom.swing.MigLayout;
-import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import core.AppContext;
 import core.account.Account;
 import core.account.AccountController;
 import core.account.exception.AccountNotFoundException;
 import core.common.FieldEmptyException;
 import core.employee.Employee;
 import core.employee.EmployeeController;
-import core.employee.exception.NoEmployeeWithAccountException;
 import desktop.GenericEmployeeView;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import net.miginfocom.swing.MigLayout;
 
 public class EmployeeLoginView extends JFrame {
 	private AccountController accountController;
@@ -35,10 +31,12 @@ public class EmployeeLoginView extends JFrame {
 	private JTextField txtEmail;
 	private JPasswordField txtPassword;
 	private JButton btnLogin;
+	private AppContext ctx;
 
-	public EmployeeLoginView(AccountController accountController, EmployeeController employeeController) {
-		this.accountController = accountController;
-		this.employeeController = employeeController;
+	public EmployeeLoginView(AppContext ctx) {
+		this.ctx = ctx;
+		this.accountController = ctx.getAccountController();
+		this.employeeController = ctx.getEmployeeController();
 
 		getContentPane().setLayout(new MigLayout("", "[20%][10%][grow][20%]", "[30%,grow][][][][30%,grow]"));
 
@@ -79,7 +77,7 @@ public class EmployeeLoginView extends JFrame {
 			txtEmail.setText("");
 			txtPassword.setText("");
 
-			JFrame d = new GenericEmployeeView(this, e);
+			GenericEmployeeView d = new GenericEmployeeView(ctx, this, e);
 			d.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 			d.setSize(this.getSize());
 			d.setLocationRelativeTo(this);

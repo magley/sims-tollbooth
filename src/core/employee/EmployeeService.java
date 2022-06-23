@@ -3,8 +3,6 @@ package core.employee;
 import java.util.Collections;
 import java.util.List;
 
-import core.account.Account;
-
 public class EmployeeService implements IEmployeeService {
 	private IEmployeeRepo repo;
 
