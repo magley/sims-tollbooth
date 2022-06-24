@@ -40,6 +40,7 @@ public class Main {
 			System.out.println(b.getDeviceStatus());
 
 			System.out.println("Finished");
+			masterRepo.save();
 		}
 	}
 	

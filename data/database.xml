@@ -107,6 +107,18 @@
       <type>ENTER</type>
       <location reference="../../../locations/core.station.location.Location"/>
       <tollbooths>
+        <core.booth.Booth>
+          <id>0</id>
+          <removed>false</removed>
+          <code>123</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>1</id>
+          <removed>false</removed>
+          <code>123</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
       </tollbooths>
     </core.station.Station>
     <core.station.Station>
@@ -167,5 +179,7 @@
     </core.station.Station>
   </stations>
   <booths>
+    <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+    <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
   </booths>
 </core.common.MasterXMLRepo>
