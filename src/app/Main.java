@@ -14,15 +14,28 @@ public class Main {
 	public static void main(String[] args) {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
 		AppContext ctx = new AppContext(masterRepo);
-		boolean runApp = true;
+		boolean runApp = false;
 
-		ctx.getBoothRepo().add(new Booth("ABC1", null));
-		ctx.getStationRepo().get(0).addTollBooth(ctx.getBoothRepo().get(0));
-		
+
 		if (runApp) {
 			startApp(masterRepo, ctx);
 		} else {	
-			System.out.println("Nothing to test...");
+			// Add 
+			
+			Booth b = new Booth("Remove me", null);
+			ctx.getBoothService().add(b);
+			
+			ctx.getStationService().get(0).addTollBooth(b);
+			
+			System.out.println(ctx.getStationService().get(0));
+			System.out.println(b);
+			
+			ctx.getStationService().get(0).removeTollBooth(b);
+			
+			System.out.println(ctx.getStationService().get(0));
+			System.out.println(b);
+
+			System.out.println("Finished");
 		}
 	}
 	

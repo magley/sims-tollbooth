@@ -64,6 +64,7 @@ public class Station extends Entity {
 
 	@Override
 	public String toString() {
-		return "Station [code=" + code + ", type=" + type + ", location=" + location + "]";
+		return "Station [code=" + code + ", type=" + type + ", location=" + location + ", tollbooths=" + tollbooths
+				+ "]";
 	}
 }

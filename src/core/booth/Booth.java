@@ -39,6 +39,6 @@ public class Booth extends Entity {
 	}
 	@Override
 	public String toString() {
-		return "Booth [code=" + code + ", station=" + station + ", deviceStatus=" + deviceStatus + "]";
+		return "Booth [code=" + code + ", station.id=" + (station != null ? station.getId() : "null") + ", deviceStatus=" + deviceStatus + "]";
 	}
 }
