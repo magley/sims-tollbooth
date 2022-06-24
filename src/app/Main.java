@@ -6,6 +6,9 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 import core.AppContext;
+import core.booth.Booth;
+import core.booth.DeviceStatus.Status;
+import core.booth.DeviceStatus.Type;
 import core.common.MasterXMLRepo;
 import desktop.employee.EmployeeLoginView;
 
@@ -13,12 +16,31 @@ public class Main {
 	public static void main(String[] args) {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
 		AppContext ctx = new AppContext(masterRepo);
-		boolean runApp = true;
-		
+		boolean runApp = false;
+
+
 		if (runApp) {
 			startApp(masterRepo, ctx);
 		} else {	
-			System.out.println("Nothing to test...");
+			
+			Booth b = new Booth("123", null);
+			ctx.getBoothService().add(b);
+			ctx.getStationService().get(0).addTollBooth(b);
+
+			// Print initial status.
+			
+			System.out.println(b.getDeviceStatus());
+			
+			// Let's pretend the semaphore sent an 'OK' signal
+			
+			b.setDeviceStatus(Type.SEMAPHORE, Status.WORKING);
+			
+			// Print new status
+			
+			System.out.println(b.getDeviceStatus());
+
+			System.out.println("Finished");
+			masterRepo.save();
 		}
 	}
 	

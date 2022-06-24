@@ -106,6 +106,20 @@
       <code>A00</code>
       <type>ENTER</type>
       <location reference="../../../locations/core.station.location.Location"/>
+      <tollbooths>
+        <core.booth.Booth>
+          <id>0</id>
+          <removed>false</removed>
+          <code>123</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>1</id>
+          <removed>false</removed>
+          <code>123</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+      </tollbooths>
     </core.station.Station>
     <core.station.Station>
       <id>1</id>
@@ -113,6 +127,7 @@
       <code>B00</code>
       <type>EXIT</type>
       <location reference="../../../locations/core.station.location.Location"/>
+      <tollbooths/>
     </core.station.Station>
     <core.station.Station>
       <id>2</id>
@@ -120,6 +135,7 @@
       <code>A01</code>
       <type>ENTER</type>
       <location reference="../../../locations/core.station.location.Location[2]"/>
+      <tollbooths/>
     </core.station.Station>
     <core.station.Station>
       <id>3</id>
@@ -127,6 +143,7 @@
       <code>B01</code>
       <type>EXIT</type>
       <location reference="../../../locations/core.station.location.Location[2]"/>
+      <tollbooths/>
     </core.station.Station>
     <core.station.Station>
       <id>4</id>
@@ -134,6 +151,7 @@
       <code>A02</code>
       <type>ENTER</type>
       <location reference="../../../locations/core.station.location.Location[3]"/>
+      <tollbooths/>
     </core.station.Station>
     <core.station.Station>
       <id>5</id>
@@ -141,6 +159,7 @@
       <code>B02</code>
       <type>EXIT</type>
       <location reference="../../../locations/core.station.location.Location[3]"/>
+      <tollbooths/>
     </core.station.Station>
     <core.station.Station>
       <id>6</id>
@@ -148,6 +167,7 @@
       <code>A03</code>
       <type>ENTER</type>
       <location reference="../../../locations/core.station.location.Location[4]"/>
+      <tollbooths/>
     </core.station.Station>
     <core.station.Station>
       <id>7</id>
@@ -155,6 +175,11 @@
       <code>B03</code>
       <type>EXIT</type>
       <location reference="../../../locations/core.station.location.Location[4]"/>
+      <tollbooths/>
     </core.station.Station>
   </stations>
+  <booths>
+    <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+    <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+  </booths>
 </core.common.MasterXMLRepo>
