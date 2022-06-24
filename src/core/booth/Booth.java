@@ -2,8 +2,10 @@ package core.booth;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import core.Entity;
+import core.booth.DeviceStatus.Status;
 import core.station.Station;
 
 public class Booth extends Entity {
@@ -25,9 +27,6 @@ public class Booth extends Entity {
 	public List<DeviceStatus> getDeviceStatus() {
 		return deviceStatus;
 	}
-	public void setDeviceStatus(List<DeviceStatus> deviceStatus) {
-		this.deviceStatus = deviceStatus;
-	}
 	public Booth(String code, Station station) {
 		super();
 		this.code = code;
@@ -36,9 +35,23 @@ public class Booth extends Entity {
 			station.addTollBooth(this);
 		
 		this.deviceStatus = new ArrayList<DeviceStatus>();
+		for (DeviceStatus.Type t : DeviceStatus.Type.values()) {
+			this.deviceStatus.add(new DeviceStatus(t, Status.NOT_WORKING));
+		}
 	}
 	@Override
 	public String toString() {
 		return "Booth [code=" + code + ", station.id=" + (station != null ? station.getId() : "null") + ", deviceStatus=" + deviceStatus + "]";
+	}
+	
+	public void setDeviceStatus(DeviceStatus.Type deviceType, DeviceStatus.Status status) {
+		Optional<DeviceStatus> o = deviceStatus.stream().filter(ds -> ds.getType() == deviceType).findAny();
+		
+		if (o.isEmpty()) {
+			System.err.println("Device not found! Ignoring...");
+		} else {
+			DeviceStatus ds = o.get();
+			ds.setStatus(status);
+		}
 	}
 }

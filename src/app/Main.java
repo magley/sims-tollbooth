@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 
 import core.AppContext;
 import core.booth.Booth;
+import core.booth.DeviceStatus.Status;
+import core.booth.DeviceStatus.Type;
 import core.common.MasterXMLRepo;
 import desktop.employee.EmployeeLoginView;
 
@@ -20,20 +22,22 @@ public class Main {
 		if (runApp) {
 			startApp(masterRepo, ctx);
 		} else {	
-			// Add 
 			
-			Booth b = new Booth("Remove me", null);
+			Booth b = new Booth("123", null);
 			ctx.getBoothService().add(b);
-			
 			ctx.getStationService().get(0).addTollBooth(b);
+
+			// Print initial status.
 			
-			System.out.println(ctx.getStationService().get(0));
-			System.out.println(b);
+			System.out.println(b.getDeviceStatus());
 			
-			ctx.getStationService().get(0).removeTollBooth(b);
+			// Let's pretend the semaphore sent an 'OK' signal
 			
-			System.out.println(ctx.getStationService().get(0));
-			System.out.println(b);
+			b.setDeviceStatus(Type.SEMAPHORE, Status.WORKING);
+			
+			// Print new status
+			
+			System.out.println(b.getDeviceStatus());
 
 			System.out.println("Finished");
 		}
