@@ -6,6 +6,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 import core.AppContext;
+import core.booth.Booth;
 import core.common.MasterXMLRepo;
 import desktop.employee.EmployeeLoginView;
 
@@ -14,6 +15,9 @@ public class Main {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
 		AppContext ctx = new AppContext(masterRepo);
 		boolean runApp = true;
+
+		ctx.getBoothRepo().add(new Booth("ABC1", null));
+		ctx.getStationRepo().get(0).addTollBooth(ctx.getBoothRepo().get(0));
 		
 		if (runApp) {
 			startApp(masterRepo, ctx);

@@ -5,6 +5,10 @@ import core.account.AccountService;
 import core.account.AccountXMLRepo;
 import core.account.IAccountRepo;
 import core.account.IAccountService;
+import core.booth.BoothService;
+import core.booth.BoothXMLRepo;
+import core.booth.IBoothRepo;
+import core.booth.IBoothService;
 import core.common.MasterXMLRepo;
 import core.employee.EmployeeController;
 import core.employee.EmployeeService;
@@ -37,22 +41,43 @@ public class AppContext {
 	IStationService stationService;
 	StationController stationController;
 	
+	IBoothRepo boothRepo;
+	IBoothService boothService;
+	
 	public AppContext(MasterXMLRepo masterRepo) {
 		accountRepo = new AccountXMLRepo(masterRepo);
 		accountService = new AccountService(accountRepo);
+		accountController = new AccountController(accountService);
 
 		employeeRepo = new EmployeeXMLRepo(masterRepo);
 		employeeService = new EmployeeService(employeeRepo);
+		employeeController = new EmployeeController(employeeService);
 
 		locationRepo = new LocationXMLRepo(masterRepo);
 		locationService = new LocationService(locationRepo);
 		
 		stationRepo = new StationXMLRepo(masterRepo);
 		stationService = new StationService(stationRepo);
-		
-		accountController = new AccountController(accountService);
-		employeeController = new EmployeeController(employeeService);
 		stationController = new StationController(stationService);
+		
+		boothRepo = new BoothXMLRepo(masterRepo);
+		boothService = new BoothService(boothRepo);
+	}
+	
+	public IBoothRepo getBoothRepo() {
+		return boothRepo;
+	}
+
+	public void setBoothRepo(IBoothRepo boothRepo) {
+		this.boothRepo = boothRepo;
+	}
+
+	public IBoothService getBoothService() {
+		return boothService;
+	}
+
+	public void setBoothService(IBoothService boothService) {
+		this.boothService = boothService;
 	}
 
 	public IAccountRepo getAccountRepo() {
