@@ -15,10 +15,25 @@ public class BoothController {
 		if (code.isBlank() || station == null) {
 			throw new FieldEmptyException();
 		}
-		if (service.getAll().stream().anyMatch(s -> s.getCode().equalsIgnoreCase(code))) {
+		if (service.getAll().stream().anyMatch(b -> b.getCode().equalsIgnoreCase(code))) {
 			throw new CodeAlreadyTakenException();
 		}
 
 		service.add(new Booth(code, station));
+	}
+	
+	public void update(Booth booth, String code, Station station) throws CodeAlreadyTakenException, FieldEmptyException {
+		if (code.isBlank() || station == null) {
+			throw new FieldEmptyException();
+		}
+		if (service.getAll().stream().anyMatch(b -> b.getCode().equalsIgnoreCase(code) && b.getId() != booth.getId())) {
+			throw new CodeAlreadyTakenException();
+		}
+		
+		booth.setCode(code);	
+		
+		if (booth.getStation() != null)
+			booth.getStation().removeTollBooth(booth);
+		station.addTollBooth(booth);
 	}
 }

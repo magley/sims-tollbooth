@@ -28,7 +28,9 @@ public class Station extends Entity {
 	
 	public void addTollBooth(Booth b) {
 		tollbooths.add(b);
-		b.setStation(this);
+		
+		if (b.getStation() != this)
+			b.setStation(this);
 	}
 	
 	public void removeTollBooth(Booth b) {

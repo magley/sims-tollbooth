@@ -1,5 +1,6 @@
 package core.station;
 
+import core.booth.Booth;
 import core.common.FieldEmptyException;
 import core.station.exception.CodeAlreadyTakenException;
 import core.station.location.Location;

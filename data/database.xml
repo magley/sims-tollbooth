@@ -113,12 +113,6 @@
           <code>123</code>
           <station reference="../../.."/>
         </core.booth.Booth>
-        <core.booth.Booth>
-          <id>1</id>
-          <removed>false</removed>
-          <code>123</code>
-          <station reference="../../.."/>
-        </core.booth.Booth>
       </tollbooths>
     </core.station.Station>
     <core.station.Station>
@@ -127,7 +121,14 @@
       <code>B00</code>
       <type>EXIT</type>
       <location reference="../../../locations/core.station.location.Location"/>
-      <tollbooths/>
+      <tollbooths>
+        <core.booth.Booth>
+          <id>1</id>
+          <removed>false</removed>
+          <code>124</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+      </tollbooths>
     </core.station.Station>
     <core.station.Station>
       <id>2</id>
@@ -180,6 +181,6 @@
   </stations>
   <booths>
     <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
-    <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
   </booths>
 </core.common.MasterXMLRepo>

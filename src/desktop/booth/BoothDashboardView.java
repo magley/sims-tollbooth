@@ -16,6 +16,7 @@ import core.booth.Booth;
 import core.booth.BoothController;
 import core.common.FieldEmptyException;
 import core.station.Station;
+import core.station.StationController;
 import core.station.exception.CodeAlreadyTakenException;
 import core.station.location.Location;
 
@@ -83,6 +84,7 @@ public class BoothDashboardView extends JPanel {
 		btnUpdate.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				update(boothTable.getSelectedRow(), ctx.getBoothController());
 			}
 		});
 		add(btnUpdate, "cell 0 2");
@@ -99,10 +101,12 @@ public class BoothDashboardView extends JPanel {
 	private void tableSelectedRow(int selectedRow) {
 		Booth b = tableModel.getBooth(selectedRow);
 		stationList.setSelectedValue(b.getStation(), true);
+		code.setText(b.getCode());
 	}
 
 	private void tableDeselectRow() {
 		stationList.clearSelection();
+		code.setText("");
 	}
 	
 	private void add(BoothController controller) {
@@ -114,5 +118,17 @@ public class BoothDashboardView extends JPanel {
 		} catch (CodeAlreadyTakenException e) {
 			JOptionPane.showMessageDialog(null, "Code already taken.", "Error", JOptionPane.ERROR_MESSAGE);
 		}
+	}
+	
+	private void update(int row, BoothController controller) {
+		Booth booth = tableModel.getBooth(row);
+		try {
+			controller.update(booth, code.getText(), stationList.getSelectedValue());
+			tableModel.fireTableRowsUpdated(row, row);
+		} catch (FieldEmptyException e) {
+			JOptionPane.showMessageDialog(null, "Field cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
+		} catch (CodeAlreadyTakenException e) {
+			JOptionPane.showMessageDialog(null, "Code already taken.", "Error", JOptionPane.ERROR_MESSAGE);
+		}	
 	}
 }
