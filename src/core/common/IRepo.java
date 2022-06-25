@@ -14,6 +14,8 @@ import core.Entity;
 public interface IRepo<T extends Entity> {
 
 	public List<T> getAll();
+	
+	public List<T> getAll(Predicate<T> pred);
 
 	public T get(Predicate<T> pred);
 

@@ -2,6 +2,7 @@ package core.common;
 
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import core.Entity;
 
@@ -16,6 +17,11 @@ public abstract class DefaultXMLRepo<T extends Entity> implements IRepo<T> {
 
 	public DefaultXMLRepo(MasterXMLRepo master) {
 		this.master = master;
+	}
+	
+	@Override
+	public List<T> getAll(Predicate<T> pred) {
+		return getAll().stream().filter(t -> pred.test(t)).collect(Collectors.toList());
 	}
 
 	@Override
