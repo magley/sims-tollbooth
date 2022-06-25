@@ -5,6 +5,7 @@ import core.account.AccountService;
 import core.account.AccountXMLRepo;
 import core.account.IAccountRepo;
 import core.account.IAccountService;
+import core.booth.BoothController;
 import core.booth.BoothService;
 import core.booth.BoothXMLRepo;
 import core.booth.IBoothRepo;
@@ -43,6 +44,7 @@ public class AppContext {
 	
 	IBoothRepo boothRepo;
 	IBoothService boothService;
+	BoothController boothController;
 	
 	public AppContext(MasterXMLRepo masterRepo) {
 		accountRepo = new AccountXMLRepo(masterRepo);
@@ -62,109 +64,62 @@ public class AppContext {
 		
 		boothRepo = new BoothXMLRepo(masterRepo);
 		boothService = new BoothService(boothRepo);
+		boothController = new BoothController(boothService);
 	}
 	
 	public IBoothRepo getBoothRepo() {
 		return boothRepo;
 	}
 
-	public void setBoothRepo(IBoothRepo boothRepo) {
-		this.boothRepo = boothRepo;
-	}
-
 	public IBoothService getBoothService() {
 		return boothService;
-	}
-
-	public void setBoothService(IBoothService boothService) {
-		this.boothService = boothService;
 	}
 
 	public IAccountRepo getAccountRepo() {
 		return accountRepo;
 	}
 
-	public void setAccountRepo(IAccountRepo accountRepo) {
-		this.accountRepo = accountRepo;
-	}
-
 	public IAccountService getAccountService() {
 		return accountService;
-	}
-
-	public void setAccountService(IAccountService accountService) {
-		this.accountService = accountService;
 	}
 
 	public AccountController getAccountController() {
 		return accountController;
 	}
 
-	public void setAccountController(AccountController accountController) {
-		this.accountController = accountController;
-	}
-
 	public IEmployeeRepo getEmployeeRepo() {
 		return employeeRepo;
-	}
-
-	public void setEmployeeRepo(IEmployeeRepo employeeRepo) {
-		this.employeeRepo = employeeRepo;
 	}
 
 	public IEmployeeService getEmployeeService() {
 		return employeeService;
 	}
 
-	public void setEmployeeService(IEmployeeService employeeService) {
-		this.employeeService = employeeService;
-	}
-
 	public EmployeeController getEmployeeController() {
 		return employeeController;
-	}
-
-	public void setEmployeeController(EmployeeController employeeController) {
-		this.employeeController = employeeController;
 	}
 
 	public ILocationRepo getLocationRepo() {
 		return locationRepo;
 	}
 
-	public void setLocationRepo(ILocationRepo locationRepo) {
-		this.locationRepo = locationRepo;
-	}
-
 	public ILocationService getLocationService() {
 		return locationService;
-	}
-
-	public void setLocationService(ILocationService locationService) {
-		this.locationService = locationService;
 	}
 
 	public IStationRepo getStationRepo() {
 		return stationRepo;
 	}
 
-	public void setStationRepo(IStationRepo stationRepo) {
-		this.stationRepo = stationRepo;
-	}
-
 	public IStationService getStationService() {
 		return stationService;
 	}
-
-	public void setStationService(IStationService stationService) {
-		this.stationService = stationService;
-	}
-
+ 
 	public StationController getStationController() {
 		return stationController;
 	}
-
-	public void setStationController(StationController stationController) {
-		this.stationController = stationController;
+	
+	public BoothController getBoothController() {
+		return boothController;
 	}
 }

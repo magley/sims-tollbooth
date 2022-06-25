@@ -16,7 +16,7 @@ public class Main {
 	public static void main(String[] args) {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
 		AppContext ctx = new AppContext(masterRepo);
-		boolean runApp = false;
+		boolean runApp = true;
 
 
 		if (runApp) {

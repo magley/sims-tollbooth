@@ -4,9 +4,12 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import core.AppContext;
 import core.employee.Employee;
+import desktop.booth.BoothDashboardView;
 import desktop.station.StationDashboardView;
 import net.miginfocom.swing.MigLayout;
 
@@ -44,6 +47,17 @@ public class GenericEmployeeView extends JFrame {
 		});
 		
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				if (!(tabbedPane.getSelectedComponent() instanceof ITabbedPanel)) {
+					System.err.println("All panels from GenericEmployeeView *MUST* implement ITabbedPanel interface");
+					return;
+				}
+				
+				((ITabbedPanel)(tabbedPane.getSelectedComponent())).onShow();
+			}
+		});
 		getContentPane().add(tabbedPane, "cell 0 1,grow");
 		
 		switch (employee.getRole()) {
@@ -61,8 +75,10 @@ public class GenericEmployeeView extends JFrame {
 	}
 
 	private void initAdminGUI() {
-		StationDashboardView stationDashboardView = new StationDashboardView(ctx.getStationService(), ctx.getLocationService(), ctx.getStationController());
+		StationDashboardView stationDashboardView = new StationDashboardView(ctx.getStationService(), ctx.getLocationService(), ctx.getStationController(), ctx.getBoothController());
+		BoothDashboardView boothDashboardView = new BoothDashboardView(ctx);
 		tabbedPane.add("Stations", stationDashboardView);
+		tabbedPane.add("Booths", boothDashboardView);
 	}
 	
 }
