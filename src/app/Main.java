@@ -10,6 +10,8 @@ import core.booth.Booth;
 import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
 import core.common.MasterXMLRepo;
+import core.station.Station;
+import core.station.location.Location;
 import desktop.employee.EmployeeLoginView;
 
 public class Main {
@@ -17,7 +19,6 @@ public class Main {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
 		AppContext ctx = new AppContext(masterRepo);
 		boolean runApp = true;
-
 
 		if (runApp) {
 			startApp(masterRepo, ctx);
@@ -62,5 +63,26 @@ public class Main {
 	private static void exitApp(MasterXMLRepo masterRepo) {
 		masterRepo.save();
 		System.out.println("Finished successfully");
+	}
+	
+	private static void generateStationBoothData(AppContext ctx) {
+		String locationName[] = {"City Aaa", "City Bbb", "City Ccc"};
+		for (int i = 0; i < locationName.length; i++) {
+			ctx.getLocationService().add(new Location(locationName[i], "Zip " + i));
+		}
+		
+		for (int i = 0; i < ctx.getLocationService().getAll().size(); i++) {
+			Location l = ctx.getLocationService().get(i);
+			ctx.getStationService().add(new Station("Station En S0" + i, Station.Type.ENTER, l));
+			ctx.getStationService().add(new Station("Station Ex S0" + i, Station.Type.EXIT, l));
+		}
+		
+		int k = 0;
+		for (Station s : ctx.getStationService().getAll()) {
+			for (int i = 0; i < 3; i++) {
+				Booth b = new Booth(s.getCode() + " Booth " + (k++), s);
+				ctx.getBoothService().add(b);
+			}
+		}
 	}
 }

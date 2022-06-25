@@ -73,7 +73,7 @@ public class BoothDashboardView extends JPanel implements ITabbedPanel {
 		add(lblNewLabel, "flowx,cell 0 1");
 		
 		code = new JTextField();
-		add(code, "cell 0 1");
+		add(code, "cell 0 1 2 1,growx");
 		code.setColumns(10);
 		
 		btnAdd = new JButton("Insert");

@@ -77,40 +77,46 @@
     <core.station.location.Location>
       <id>0</id>
       <removed>false</removed>
-      <name>Loc 0</name>
-      <zipCode>001</zipCode>
+      <name>City Aaa</name>
+      <zipCode>Zip 0</zipCode>
     </core.station.location.Location>
     <core.station.location.Location>
       <id>1</id>
       <removed>false</removed>
-      <name>Loc 1</name>
-      <zipCode>002</zipCode>
+      <name>City Bbb</name>
+      <zipCode>Zip 1</zipCode>
     </core.station.location.Location>
     <core.station.location.Location>
       <id>2</id>
       <removed>false</removed>
-      <name>Loc 2</name>
-      <zipCode>003</zipCode>
-    </core.station.location.Location>
-    <core.station.location.Location>
-      <id>3</id>
-      <removed>false</removed>
-      <name>Loc 3</name>
-      <zipCode>004</zipCode>
+      <name>City Ccc</name>
+      <zipCode>Zip 2</zipCode>
     </core.station.location.Location>
   </locations>
   <stations>
     <core.station.Station>
       <id>0</id>
       <removed>false</removed>
-      <code>A00</code>
+      <code>Station En S00</code>
       <type>ENTER</type>
       <location reference="../../../locations/core.station.location.Location"/>
       <tollbooths>
         <core.booth.Booth>
           <id>0</id>
           <removed>false</removed>
-          <code>123</code>
+          <code>Station En S00 Booth 0</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>1</id>
+          <removed>false</removed>
+          <code>Station En S00 Booth 1</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>2</id>
+          <removed>false</removed>
+          <code>Station En S00 Booth 2</code>
           <station reference="../../.."/>
         </core.booth.Booth>
       </tollbooths>
@@ -118,14 +124,26 @@
     <core.station.Station>
       <id>1</id>
       <removed>false</removed>
-      <code>B00</code>
+      <code>Station Ex S00</code>
       <type>EXIT</type>
       <location reference="../../../locations/core.station.location.Location"/>
       <tollbooths>
         <core.booth.Booth>
-          <id>1</id>
+          <id>3</id>
           <removed>false</removed>
-          <code>124</code>
+          <code>Station Ex S00 Booth 3</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>4</id>
+          <removed>false</removed>
+          <code>Station Ex S00 Booth 4</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>5</id>
+          <removed>false</removed>
+          <code>Station Ex S00 Booth 5</code>
           <station reference="../../.."/>
         </core.booth.Booth>
       </tollbooths>
@@ -133,54 +151,107 @@
     <core.station.Station>
       <id>2</id>
       <removed>false</removed>
-      <code>A01</code>
+      <code>Station En S01</code>
       <type>ENTER</type>
       <location reference="../../../locations/core.station.location.Location[2]"/>
-      <tollbooths/>
+      <tollbooths>
+        <core.booth.Booth>
+          <id>6</id>
+          <removed>false</removed>
+          <code>Station En S01 Booth 6</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>7</id>
+          <removed>false</removed>
+          <code>Station En S01 Booth 7</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>8</id>
+          <removed>false</removed>
+          <code>Station En S01 Booth 8</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+      </tollbooths>
     </core.station.Station>
     <core.station.Station>
       <id>3</id>
       <removed>false</removed>
-      <code>B01</code>
+      <code>Station Ex S01</code>
       <type>EXIT</type>
       <location reference="../../../locations/core.station.location.Location[2]"/>
-      <tollbooths/>
+      <tollbooths>
+        <core.booth.Booth>
+          <id>9</id>
+          <removed>false</removed>
+          <code>Station Ex S01 Booth 9</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>10</id>
+          <removed>false</removed>
+          <code>Station Ex S01 Booth 10</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>11</id>
+          <removed>false</removed>
+          <code>Station Ex S01 Booth 11</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+      </tollbooths>
     </core.station.Station>
     <core.station.Station>
       <id>4</id>
       <removed>false</removed>
-      <code>A02</code>
+      <code>Station En S02</code>
       <type>ENTER</type>
       <location reference="../../../locations/core.station.location.Location[3]"/>
-      <tollbooths/>
+      <tollbooths>
+        <core.booth.Booth>
+          <id>12</id>
+          <removed>false</removed>
+          <code>Station En S02 Booth 12</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>13</id>
+          <removed>false</removed>
+          <code>Station En S02 Booth 13</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>14</id>
+          <removed>false</removed>
+          <code>Station En S02 Booth 14</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+      </tollbooths>
     </core.station.Station>
     <core.station.Station>
       <id>5</id>
       <removed>false</removed>
-      <code>B02</code>
+      <code>Station Ex S02</code>
       <type>EXIT</type>
       <location reference="../../../locations/core.station.location.Location[3]"/>
-      <tollbooths/>
-    </core.station.Station>
-    <core.station.Station>
-      <id>6</id>
-      <removed>false</removed>
-      <code>A03</code>
-      <type>ENTER</type>
-      <location reference="../../../locations/core.station.location.Location[4]"/>
-      <tollbooths/>
-    </core.station.Station>
-    <core.station.Station>
-      <id>7</id>
-      <removed>false</removed>
-      <code>B03</code>
-      <type>EXIT</type>
-      <location reference="../../../locations/core.station.location.Location[4]"/>
       <tollbooths>
         <core.booth.Booth>
-          <id>2</id>
+          <id>15</id>
           <removed>false</removed>
-          <code>hsjahsajh</code>
+          <code>Station Ex S02 Booth 15</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>16</id>
+          <removed>false</removed>
+          <code>Station Ex S02 Booth 16</code>
+          <station reference="../../.."/>
+        </core.booth.Booth>
+        <core.booth.Booth>
+          <id>17</id>
+          <removed>false</removed>
+          <code>Station Ex S02 Booth 17</code>
           <station reference="../../.."/>
         </core.booth.Booth>
       </tollbooths>
@@ -188,6 +259,22 @@
   </stations>
   <booths>
     <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+    <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
     <core.booth.Booth reference="../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[4]/tollbooths/core.booth.Booth"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[4]/tollbooths/core.booth.Booth[2]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[4]/tollbooths/core.booth.Booth[3]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth[2]"/>
+    <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth[3]"/>
   </booths>
 </core.common.MasterXMLRepo>
