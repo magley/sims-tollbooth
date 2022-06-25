@@ -1,5 +1,8 @@
 package core.common;
 
+import java.util.List;
+import java.util.function.Predicate;
+
 import core.Entity;
 
 /**
@@ -16,13 +19,8 @@ public abstract class DefaultXMLRepo<T extends Entity> implements IRepo<T> {
 	}
 
 	@Override
-	public T get(int id) {
-		for (T e : getAll()) {
-			if (e.getId() == id) {
-				return e;
-			}
-		}
-		return null;
+	public T get(Predicate<T> pred) {
+		return getAll().stream().filter(t -> pred.test(t)).findFirst().orElse(null);
 	}
 
 	@Override

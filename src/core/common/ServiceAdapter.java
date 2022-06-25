@@ -28,7 +28,7 @@ public class ServiceAdapter<T extends Entity> extends DefaultService<T> {
 
 	@Override
 	public T get(int id) {
-		return repo.get(id);
+		return repo.get(t -> t.getId() == id);
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 package core.common;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 import core.Entity;
 
@@ -11,9 +12,10 @@ import core.Entity;
  * @param <T> Has to extend Entity.
  */
 public interface IRepo<T extends Entity> {
+
 	public List<T> getAll();
 
-	public T get(int id);
+	public T get(Predicate<T> pred);
 
 	public T add(T obj);
 
