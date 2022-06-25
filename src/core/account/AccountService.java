@@ -9,13 +9,11 @@ public class AccountService extends ServiceAdapter<Account> implements IAccountS
 
 	@Override
 	public Account getByCredentials(String email, String password) {
-		// TODO: Is this avoidable? Is this acceptable?
-		return ((IAccountRepo) repo).getByCredentials(email, password);
+		return repo.get(a -> a.getEmail().equals(email) && a.getPassword().equals(password));
 	}
 
 	@Override
 	public boolean emailTaken(String email) {
-		// TODO: Is this avoidable? Is this acceptable?
-		return ((IAccountRepo) repo).emailTaken(email);
+		return repo.get(a -> a.getEmail().equals(email)) != null;
 	}
 }
