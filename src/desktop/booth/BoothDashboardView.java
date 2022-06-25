@@ -13,7 +13,11 @@ import javax.swing.event.ListSelectionListener;
 
 import core.AppContext;
 import core.booth.Booth;
+import core.booth.BoothController;
+import core.common.FieldEmptyException;
 import core.station.Station;
+import core.station.exception.CodeAlreadyTakenException;
+import core.station.location.Location;
 
 import javax.swing.JButton;
 
@@ -21,13 +25,14 @@ import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.naming.Context;
 import javax.swing.AbstractListModel;
 
 public class BoothDashboardView extends JPanel {
 	private static final long serialVersionUID = -8777392419260987575L;
 	private JTable boothTable;
-	private JTextField textField;
+	private JTextField code;
 	private BoothTableModel tableModel;
 	private JList<Station> stationList;
 
@@ -61,14 +66,15 @@ public class BoothDashboardView extends JPanel {
 		JLabel lblNewLabel = new JLabel("Code:");
 		add(lblNewLabel, "flowx,cell 0 1");
 		
-		textField = new JTextField();
-		add(textField, "cell 0 1");
-		textField.setColumns(10);
+		code = new JTextField();
+		add(code, "cell 0 1");
+		code.setColumns(10);
 		
 		JButton btnAdd = new JButton("Insert");
 		btnAdd.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				add(ctx.getBoothController());
 			}
 		});
 		add(btnAdd, "flowx,cell 0 2");
@@ -90,12 +96,23 @@ public class BoothDashboardView extends JPanel {
 		add(btnRemove, "cell 0 2");
 	}
 
-	protected void tableSelectedRow(int selectedRow) {
+	private void tableSelectedRow(int selectedRow) {
 		Booth b = tableModel.getBooth(selectedRow);
 		stationList.setSelectedValue(b.getStation(), true);
 	}
 
-	protected void tableDeselectRow() {
+	private void tableDeselectRow() {
 		stationList.clearSelection();
+	}
+	
+	private void add(BoothController controller) {
+		try {
+			controller.add(code.getText(), stationList.getSelectedValue());
+			tableModel.fireTableRowsInserted(0, 0);
+		} catch (FieldEmptyException e) {
+			JOptionPane.showMessageDialog(null, "Field cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
+		} catch (CodeAlreadyTakenException e) {
+			JOptionPane.showMessageDialog(null, "Code already taken.", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 }
