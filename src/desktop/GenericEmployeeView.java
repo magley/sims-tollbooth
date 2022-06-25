@@ -7,6 +7,7 @@ import javax.swing.JTabbedPane;
 
 import core.AppContext;
 import core.employee.Employee;
+import desktop.booth.BoothDashboardView;
 import desktop.station.StationDashboardView;
 import net.miginfocom.swing.MigLayout;
 
@@ -62,7 +63,9 @@ public class GenericEmployeeView extends JFrame {
 
 	private void initAdminGUI() {
 		StationDashboardView stationDashboardView = new StationDashboardView(ctx.getStationService(), ctx.getLocationService(), ctx.getStationController());
+		BoothDashboardView boothDashboardView = new BoothDashboardView(ctx);
 		tabbedPane.add("Stations", stationDashboardView);
+		tabbedPane.add("Booths", boothDashboardView);
 	}
 	
 }
