@@ -1,12 +1,6 @@
 package core.station;
 
-import java.util.List;
+import core.common.IService;
 
-public interface IStationService {
-	public Station add(Station obj);
-	public List<Station> getAll();
-	public void save();
-	public Station get(int id);
-	public void remove(Station obj);
-	public Station update(Station obj);
+public interface IStationService extends IService<Station> {
 }

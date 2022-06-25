@@ -1,9 +1,6 @@
 package core.employee;
 
-import java.util.List;
+import core.common.IService;
 
-public interface IEmployeeService {
-	public Employee add(Employee obj);
-	public List<Employee> getAll();
-	public void save();
+public interface IEmployeeService extends IService<Employee> {
 }
