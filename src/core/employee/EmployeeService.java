@@ -1,27 +1,10 @@
 package core.employee;
 
-import java.util.Collections;
-import java.util.List;
+import core.common.ServiceAdapter;
 
-public class EmployeeService implements IEmployeeService {
-	private IEmployeeRepo repo;
+public class EmployeeService extends ServiceAdapter<Employee> implements IEmployeeService {
 
 	public EmployeeService(IEmployeeRepo repo) {
-		this.repo = repo;
-	}
-
-	@Override
-	public Employee add(Employee obj) {
-		return repo.add(obj);
-	}
-
-	@Override
-	public List<Employee> getAll() {
-		return Collections.unmodifiableList(repo.getAll());
-	}
-
-	@Override
-	public void save() {
-		repo.save();
+		super(repo);
 	}
 }
