@@ -14,15 +14,4 @@ public class AccountXMLRepo extends DefaultXMLRepo<Account> implements IAccountR
 	public List<Account> getAll() {
 		return master.getAccounts();
 	}
-
-	@Override
-	public boolean emailTaken(String email) {
-		return getAll().stream().anyMatch(a -> a.getEmail().equals(email));
-	}
-
-	@Override
-	public Account getByCredentials(String email, String password) {
-		return getAll().stream().filter(a -> a.getEmail().equals(email) && a.getPassword().equals(password)).findFirst()
-				.orElse(null);
-	}
 }
