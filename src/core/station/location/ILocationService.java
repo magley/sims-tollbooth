@@ -1,10 +1,6 @@
 package core.station.location;
 
-import java.util.List;
+import core.common.IService;
 
-public interface ILocationService {
-	public Location add(Location obj);
-	public List<Location> getAll();
-	public void save();
-	public Location get(int id);
+public interface ILocationService extends IService<Location> {
 }
