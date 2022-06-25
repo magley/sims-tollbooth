@@ -1,5 +1,6 @@
 package core.common;
 
+import java.util.Collections;
 import java.util.List;
 
 import core.Entity;
@@ -17,7 +18,7 @@ public class ServiceAdapter<T extends Entity> extends DefaultService<T> {
 
 	@Override
 	public List<T> getAll() {
-		return repo.getAll();
+		return Collections.unmodifiableList(repo.getAll());
 	}
 
 	@Override
