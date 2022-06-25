@@ -40,6 +40,10 @@ public class Station extends Entity {
 		}
 	}
 	
+	public List<Booth> getTollBooths() {
+		return tollbooths;
+	}
+	
 	public String getCode() {
 		return code;
 	}

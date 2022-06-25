@@ -15,6 +15,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import core.booth.BoothController;
 import core.common.FieldEmptyException;
 import core.station.IStationService;
 import core.station.Station;
@@ -22,10 +23,11 @@ import core.station.StationController;
 import core.station.exception.CodeAlreadyTakenException;
 import core.station.location.ILocationService;
 import core.station.location.Location;
+import desktop.ITabbedPanel;
 import net.miginfocom.swing.MigLayout;
 
-public class StationDashboardView extends JPanel {
-	public StationDashboardView(IStationService service, ILocationService locationService, StationController controller) {
+public class StationDashboardView extends JPanel implements ITabbedPanel {
+	public StationDashboardView(IStationService service, ILocationService locationService, StationController controller, BoothController boothController) {
 		setLayout(new MigLayout("", "[grow]", "[grow][][][][]"));
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -86,7 +88,7 @@ public class StationDashboardView extends JPanel {
 		remove.setEnabled(false);
 		remove.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				remove(table.getSelectedRow(), controller);
+				remove(table.getSelectedRow(), controller, boothController);
 			}
 		});
 	}
@@ -114,10 +116,16 @@ public class StationDashboardView extends JPanel {
 		}	
 	}
 	
-	private void remove(int row, StationController controller) {
+	private void remove(int row, StationController controller, BoothController boothController) {
 		Station station = tableModel.getStation(row);
 		try {
-			controller.remove(station);
+			
+			int option = JOptionPane.showConfirmDialog(null, "This will remove all booths that belong to this station. Continue?", "Warning", JOptionPane.YES_NO_OPTION);
+			
+			if (option != JOptionPane.YES_OPTION) {
+				return;
+			}
+			controller.remove(station, boothController);
 			tableModel.fireTableRowsDeleted(0, 0);
 		} catch (FieldEmptyException e) {
 			JOptionPane.showMessageDialog(null, "Field cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -150,10 +158,12 @@ public class StationDashboardView extends JPanel {
 		type.setSelectedItem(null);
 		location.setSelectedItem(null);
 		
-		code.setEnabled(false);
-		type.setEnabled(false);
-		location.setEnabled(false);
 		update.setEnabled(false);
 		remove.setEnabled(false);
+	}
+
+	@Override
+	public void onShow() {
+		tableModel.fireTableDataChanged();
 	}
 }

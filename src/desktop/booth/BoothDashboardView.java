@@ -19,6 +19,7 @@ import core.station.Station;
 import core.station.StationController;
 import core.station.exception.CodeAlreadyTakenException;
 import core.station.location.Location;
+import desktop.ITabbedPanel;
 
 import javax.swing.JButton;
 
@@ -30,14 +31,18 @@ import javax.swing.JOptionPane;
 import javax.naming.Context;
 import javax.swing.AbstractListModel;
 
-public class BoothDashboardView extends JPanel {
+public class BoothDashboardView extends JPanel implements ITabbedPanel {
 	private static final long serialVersionUID = -8777392419260987575L;
 	private JTable boothTable;
 	private JTextField code;
 	private BoothTableModel tableModel;
 	private JList<Station> stationList;
+	private AppContext ctx;
+	
+	JButton btnAdd, btnUpdate, btnRemove;
 
 	public BoothDashboardView(AppContext ctx) {
+		this.ctx = ctx;
 		setLayout(new MigLayout("", "[191.00,grow][grow]", "[grow][][]"));
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -71,7 +76,7 @@ public class BoothDashboardView extends JPanel {
 		add(code, "cell 0 1");
 		code.setColumns(10);
 		
-		JButton btnAdd = new JButton("Insert");
+		btnAdd = new JButton("Insert");
 		btnAdd.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -80,7 +85,7 @@ public class BoothDashboardView extends JPanel {
 		});
 		add(btnAdd, "flowx,cell 0 2");
 		
-		JButton btnUpdate = new JButton("Update");
+		btnUpdate = new JButton("Update");
 		btnUpdate.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -89,7 +94,7 @@ public class BoothDashboardView extends JPanel {
 		});
 		add(btnUpdate, "cell 0 2");
 		
-		JButton btnRemove = new JButton("Remove");
+		btnRemove = new JButton("Remove");
 		btnRemove.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -97,6 +102,8 @@ public class BoothDashboardView extends JPanel {
 			}
 		});
 		add(btnRemove, "cell 0 2");
+		
+		tableDeselectRow();
 	}
 
 	protected void remove(int selectedRow, BoothController boothController) {
@@ -113,11 +120,20 @@ public class BoothDashboardView extends JPanel {
 		Booth b = tableModel.getBooth(selectedRow);
 		stationList.setSelectedValue(b.getStation(), true);
 		code.setText(b.getCode());
+		
+		code.setEnabled(true);
+		stationList.setEnabled(true);
+		btnAdd.setEnabled(true);
+		btnUpdate.setEnabled(true);
+		btnRemove.setEnabled(true);
 	}
 
 	private void tableDeselectRow() {
 		stationList.clearSelection();
 		code.setText("");
+		
+		btnUpdate.setEnabled(false);
+		btnRemove.setEnabled(false);		
 	}
 	
 	private void add(BoothController controller) {
@@ -132,7 +148,12 @@ public class BoothDashboardView extends JPanel {
 	}
 	
 	private void update(int row, BoothController controller) {
-		Booth booth = tableModel.getBooth(row);
+		Booth booth = null;
+		try {
+			booth = tableModel.getBooth(row);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Could not fetch.", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 		try {
 			controller.update(booth, code.getText(), stationList.getSelectedValue());
 			tableModel.fireTableRowsUpdated(row, row);
@@ -141,5 +162,11 @@ public class BoothDashboardView extends JPanel {
 		} catch (CodeAlreadyTakenException e) {
 			JOptionPane.showMessageDialog(null, "Code already taken.", "Error", JOptionPane.ERROR_MESSAGE);
 		}	
+	}
+
+	@Override
+	public void onShow() {
+		tableModel.fireTableDataChanged();
+		stationList.setListData(ctx.getStationService().getAll().toArray(new Station[0]));
 	}
 }

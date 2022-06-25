@@ -1,6 +1,7 @@
 package core.station;
 
 import core.booth.Booth;
+import core.booth.BoothController;
 import core.common.FieldEmptyException;
 import core.station.exception.CodeAlreadyTakenException;
 import core.station.location.Location;
@@ -36,10 +37,15 @@ public class StationController {
 		service.add(new Station(code, type, location));
 	}
 
-	public void remove(Station station) throws FieldEmptyException {
+	public void remove(Station station, BoothController boothController) throws FieldEmptyException {
 		if (station == null) {
 			throw new FieldEmptyException();
 		}
+		
+		for (Booth b : station.getTollBooths()) {
+			boothController.remove(b);
+		}
+		
 		service.remove(station);
 	}
 }
