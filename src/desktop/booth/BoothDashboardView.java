@@ -93,9 +93,20 @@ public class BoothDashboardView extends JPanel {
 		btnRemove.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				remove(boothTable.getSelectedRow(), ctx.getBoothController());
 			}
 		});
 		add(btnRemove, "cell 0 2");
+	}
+
+	protected void remove(int selectedRow, BoothController boothController) {
+		Booth station = tableModel.getBooth(selectedRow);
+		try {
+			boothController.remove(station);
+			tableModel.fireTableRowsDeleted(0, 0);
+		} catch (FieldEmptyException e) {
+			JOptionPane.showMessageDialog(null, "Field cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 
 	private void tableSelectedRow(int selectedRow) {

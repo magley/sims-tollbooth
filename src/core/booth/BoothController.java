@@ -36,4 +36,11 @@ public class BoothController {
 			booth.getStation().removeTollBooth(booth);
 		station.addTollBooth(booth);
 	}
+
+	public void remove(Booth booth) throws FieldEmptyException {
+		if (booth == null) {
+			throw new FieldEmptyException();
+		}
+		service.remove(booth);
+	}
 }
