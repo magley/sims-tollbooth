@@ -69,11 +69,9 @@ public class MasterXMLRepo {
 	}
 
 	public void save() {
-		try {
-			Writer writer = new BufferedWriter(new FileWriter(new File(fullpath)));
+		try (Writer writer = new BufferedWriter(new FileWriter(new File(fullpath)))) {
 			writer.write(xstream.toXML(this));
 			writer.flush();
-			writer.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -87,10 +85,8 @@ public class MasterXMLRepo {
 			e.printStackTrace();
 		}
 
-		try {
-			Reader reader = new BufferedReader(new FileReader(new File(fullpath)));
+		try (Reader reader = new BufferedReader(new FileReader(new File(fullpath)))) {
 			xstream.fromXML(reader, this);
-			reader.close();
 		} catch (XStreamException e) {
 			// Do nothing, this object is already default-initialized.
 			// The file will sort itself out on next save.
