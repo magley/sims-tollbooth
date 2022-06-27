@@ -277,4 +277,5 @@
     <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth[2]"/>
     <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth[3]"/>
   </booths>
+  <pricelistEntries/>
 </core.common.MasterXMLRepo>
