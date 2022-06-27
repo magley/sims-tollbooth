@@ -2,6 +2,7 @@ package app;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.List;
 import java.util.Random;
 
 import javax.swing.JFrame;
@@ -90,11 +91,13 @@ public class Main {
 
 	private static void generatePricelistEntryData(AppContext ctx) {
 		Random rnd = new Random();
+
+		List<Station> entryStations = ctx.getStationService().getByType(Station.Type.ENTER);
+		List<Station> exitStations = ctx.getStationService().getByType(Station.Type.EXIT);
+
 		for (int i = 0; i < 10; ++i) {
 			int price;
 			PricelistEntry.Currency currency;
-			PricelistEntry.VehicleCategory category;
-
 			if (i % 2 == 0) {
 				price = Math.abs(rnd.nextInt()) % 1000;
 				currency = PricelistEntry.Currency.RSD;
@@ -102,9 +105,13 @@ public class Main {
 				price = Math.abs(rnd.nextInt()) % 10;
 				currency = PricelistEntry.Currency.EUR;
 			}
-			category = PricelistEntry.VehicleCategory.values()[i % PricelistEntry.VehicleCategory.values().length];
 
-			ctx.getPricelistEntryService().add(new PricelistEntry(price, currency, category));
+			PricelistEntry.VehicleCategory category = PricelistEntry.VehicleCategory.values()[i
+					% PricelistEntry.VehicleCategory.values().length];
+			Station entry = entryStations.get(i % entryStations.size());
+			Station exit = exitStations.get(i % exitStations.size());
+
+			ctx.getPricelistEntryService().add(new PricelistEntry(price, currency, category, entry, exit));
 		}
 	}
 }

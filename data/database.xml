@@ -281,72 +281,92 @@
     <core.pricelistEntry.PricelistEntry>
       <id>0</id>
       <removed>false</removed>
-      <price>845</price>
+      <price>544</price>
       <currency>RSD</currency>
       <category>A</category>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>1</id>
       <removed>false</removed>
-      <price>5</price>
+      <price>2</price>
       <currency>EUR</currency>
       <category>B</category>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>2</id>
       <removed>false</removed>
-      <price>318</price>
+      <price>208</price>
       <currency>RSD</currency>
       <category>C</category>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>3</id>
       <removed>false</removed>
-      <price>1</price>
+      <price>2</price>
       <currency>EUR</currency>
       <category>D</category>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>4</id>
       <removed>false</removed>
-      <price>998</price>
+      <price>300</price>
       <currency>RSD</currency>
       <category>F</category>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>5</id>
       <removed>false</removed>
-      <price>1</price>
+      <price>6</price>
       <currency>EUR</currency>
       <category>M</category>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>6</id>
       <removed>false</removed>
-      <price>160</price>
+      <price>943</price>
       <currency>RSD</currency>
       <category>A</category>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>7</id>
       <removed>false</removed>
-      <price>3</price>
+      <price>9</price>
       <currency>EUR</currency>
       <category>B</category>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>8</id>
       <removed>false</removed>
-      <price>51</price>
+      <price>607</price>
       <currency>RSD</currency>
       <category>C</category>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
     </core.pricelistEntry.PricelistEntry>
     <core.pricelistEntry.PricelistEntry>
       <id>9</id>
       <removed>false</removed>
-      <price>9</price>
+      <price>1</price>
       <currency>EUR</currency>
       <category>D</category>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
     </core.pricelistEntry.PricelistEntry>
   </pricelistEntries>
 </core.common.MasterXMLRepo>
