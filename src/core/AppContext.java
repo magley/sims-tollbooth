@@ -16,6 +16,11 @@ import core.employee.EmployeeService;
 import core.employee.EmployeeXMLRepo;
 import core.employee.IEmployeeRepo;
 import core.employee.IEmployeeService;
+import core.pricelist.IPricelistRepo;
+import core.pricelist.IPricelistService;
+import core.pricelist.PricelistController;
+import core.pricelist.PricelistService;
+import core.pricelist.PricelistXMLRepo;
 import core.pricelist.entry.IPricelistEntryRepo;
 import core.pricelist.entry.IPricelistEntryService;
 import core.pricelist.entry.PricelistEntryController;
@@ -55,6 +60,10 @@ public class AppContext {
 	IPricelistEntryService pricelistEntryService;
 	PricelistEntryController pricelistEntryController;
 
+	IPricelistRepo pricelistRepo;
+	IPricelistService pricelistService;
+	PricelistController pricelistController;
+
 	public AppContext(MasterXMLRepo masterRepo) {
 		accountRepo = new AccountXMLRepo(masterRepo);
 		accountService = new AccountService(accountRepo);
@@ -78,6 +87,10 @@ public class AppContext {
 		pricelistEntryRepo = new PricelistEntryXMLRepo(masterRepo);
 		pricelistEntryService = new PricelistEntryService(pricelistEntryRepo);
 		pricelistEntryController = new PricelistEntryController(pricelistEntryService);
+
+		pricelistRepo = new PricelistXMLRepo(masterRepo);
+		pricelistService = new PricelistService(pricelistRepo);
+		pricelistController = new PricelistController(pricelistService);
 	}
 	
 	public IBoothRepo getBoothRepo() {
@@ -146,5 +159,17 @@ public class AppContext {
 
 	public PricelistEntryController getPricelistEntryController() {
 		return pricelistEntryController;
+	}
+
+	public IPricelistRepo getPricelistRepo() {
+		return pricelistRepo;
+	}
+
+	public IPricelistService getPricelistService() {
+		return pricelistService;
+	}
+
+	public PricelistController getPricelistController() {
+		return pricelistController;
 	}
 }
