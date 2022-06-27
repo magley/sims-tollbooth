@@ -13,6 +13,7 @@ import javax.swing.event.ChangeListener;
 import core.AppContext;
 import core.employee.Employee;
 import desktop.booth.BoothDashboardView;
+import desktop.pricelist.PricelistDashboardView;
 import desktop.pricelist.entry.PricelistEntryDashboardView;
 import desktop.station.StationDashboardView;
 import net.miginfocom.swing.MigLayout;
@@ -85,7 +86,9 @@ public class GenericEmployeeView extends JFrame {
 	
 	private void initManagerGUI() {
 		PricelistEntryDashboardView pricelistEntryDashboardView = new PricelistEntryDashboardView(ctx);
+		PricelistDashboardView pricelistDashboardView = new PricelistDashboardView(ctx);
 		tabbedPane.add("Pricelist entries", pricelistEntryDashboardView);
+		tabbedPane.add("Pricelists", pricelistDashboardView);
 	}
 	
 }
