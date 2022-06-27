@@ -2,6 +2,8 @@ package app;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -12,6 +14,7 @@ import core.booth.Booth;
 import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
 import core.common.MasterXMLRepo;
+import core.pricelist.Pricelist;
 import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
@@ -112,6 +115,24 @@ public class Main {
 			Station exit = exitStations.get(i % exitStations.size());
 
 			ctx.getPricelistEntryService().add(new PricelistEntry(entry, exit, category, currency, price));
+		}
+	}
+
+	private static void generatePricelistData(AppContext ctx) {
+		Random rnd = new Random();
+		List<PricelistEntry> allEntries = new ArrayList<PricelistEntry>(ctx.getPricelistEntryService().getAll());
+		for (int i = 0; i < 3; ++i) {
+			List<PricelistEntry> entries = new ArrayList<PricelistEntry>();
+
+			PricelistEntry entry = allEntries.get(Math.abs(rnd.nextInt()) % allEntries.size());
+			entries.add(entry);
+
+			allEntries.remove(entry);
+
+			entry = allEntries.get(Math.abs(rnd.nextInt()) % allEntries.size());
+			entries.add(entry);
+
+			ctx.getPricelistService().add(new Pricelist(LocalDateTime.now().plusDays(i), entries));
 		}
 	}
 }
