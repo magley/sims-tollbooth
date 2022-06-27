@@ -373,29 +373,32 @@
     <core.pricelist.Pricelist>
       <id>0</id>
       <removed>false</removed>
-      <start>2022-06-27T18:33:03.6157538</start>
+      <start>2022-06-27T19:56:20.5095669</start>
       <entries>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[6]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[2]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
       </entries>
+      <active>NO</active>
     </core.pricelist.Pricelist>
     <core.pricelist.Pricelist>
       <id>1</id>
       <removed>false</removed>
-      <start>2022-06-28T18:33:03.6177554</start>
+      <start>2022-06-28T19:56:20.5115682</start>
       <entries>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[5]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[3]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[8]"/>
       </entries>
+      <active>NO</active>
     </core.pricelist.Pricelist>
     <core.pricelist.Pricelist>
       <id>2</id>
       <removed>false</removed>
-      <start>2022-06-29T18:33:03.6177554</start>
+      <start>2022-06-29T19:56:20.5115682</start>
       <entries>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[2]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[9]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[4]"/>
       </entries>
+      <active>YES</active>
     </core.pricelist.Pricelist>
   </pricelists>
 </core.common.MasterXMLRepo>

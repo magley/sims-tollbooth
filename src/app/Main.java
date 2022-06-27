@@ -132,7 +132,7 @@ public class Main {
 			entry = allEntries.get(Math.abs(rnd.nextInt()) % allEntries.size());
 			entries.add(entry);
 
-			ctx.getPricelistService().add(new Pricelist(LocalDateTime.now().plusDays(i), entries));
+			ctx.getPricelistService().add(new Pricelist(LocalDateTime.now().plusDays(i), entries, Pricelist.Active.NO));
 		}
 	}
 }

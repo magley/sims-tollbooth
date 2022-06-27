@@ -9,7 +9,7 @@ import core.pricelist.entry.PricelistEntry;
 public class PricelistTableModel extends AbstractTableModel {
 
 	private static final long serialVersionUID = 4462780930360261660L;
-	private static final String[] cols = { "ID", "Start" };
+	private static final String[] cols = { "ID", "Start", "Active" };
 
 	private IPricelistService service;
 
@@ -41,6 +41,8 @@ public class PricelistTableModel extends AbstractTableModel {
 			return p.getId();
 		case 1:
 			return p.getStart();
+		case 2:
+			return p.getActive();
 		default:
 			throw new ArrayIndexOutOfBoundsException("Bad column!");
 		}

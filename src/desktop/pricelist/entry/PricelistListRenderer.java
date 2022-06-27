@@ -29,7 +29,7 @@ public class PricelistListRenderer extends JCheckBox implements ListCellRenderer
 			this.setSelected(false);
 		}
 
-		this.setText(value.getStart().toString());
+		this.setText(value.getStart().toString() + " Active: " + value.getActive());
 		return this;
 	}
 
