@@ -1,8 +1,11 @@
 package desktop.pricelist.entry;
 
+import java.util.List;
+
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
@@ -13,6 +16,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import core.AppContext;
+import core.pricelist.Pricelist;
 import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import desktop.ITabbedPanel;
@@ -27,6 +31,7 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 	private PricelistEntryTableModel tableModel;
 	private JTable table;
 
+	private JList<Pricelist> lstPricelist;
 	private JComboBox<Station> cbEntry;
 	private JComboBox<Station> cbExit;
 	private JComboBox<PricelistEntry.VehicleCategory> cbCategory;
@@ -46,6 +51,9 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent event) {
+				if (event.getValueIsAdjusting()) {
+					return;
+				}
 				if (table.getSelectedRow() >= 0 && table.getSelectedRowCount() == 1)
 					tableSelectedRow(table.getSelectedRow());
 				else
@@ -53,6 +61,14 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 			}
 		});
 		scrollPane.setViewportView(table);
+
+		JScrollPane scrollPaneList = new JScrollPane();
+		add(scrollPaneList, "cell 1 0,grow");
+
+		lstPricelist = new JList<Pricelist>(ctx.getPricelistService().getAll().toArray(new Pricelist[0]));
+		lstPricelist.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		lstPricelist.setCellRenderer(new PricelistListRenderer());
+		scrollPaneList.setViewportView(lstPricelist);
 
 		JLabel lblEntry = new JLabel("Entry: ");
 		add(lblEntry, "flowx,cell 0 1");
@@ -99,12 +115,15 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 	}
 
 	private void tableSelectedRow(int row) {
-		PricelistEntry p = tableModel.getPricelistEntry(row);
-		cbEntry.setSelectedItem(p.getEntry());
-		cbExit.setSelectedItem(p.getExit());
-		cbCategory.setSelectedItem(p.getCategory());
-		cbCurrency.setSelectedItem(p.getCurrency());
-		spnPrice.setValue(p.getPrice());
+		PricelistEntry entry = tableModel.getPricelistEntry(row);
+
+		selectPricelistIndices(entry);
+
+		cbEntry.setSelectedItem(entry.getEntry());
+		cbExit.setSelectedItem(entry.getExit());
+		cbCategory.setSelectedItem(entry.getCategory());
+		cbCurrency.setSelectedItem(entry.getCurrency());
+		spnPrice.setValue(entry.getPrice());
 	}
 
 	private void tableDeselectRow() {
@@ -113,6 +132,15 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 		cbCategory.setSelectedItem(null);
 		cbCurrency.setSelectedItem(null);
 		spnPrice.setValue(0);
+	}
+
+	private void selectPricelistIndices(PricelistEntry entry) {
+		List<Pricelist> found = ctx.getPricelistService().getContaining(entry);
+		int indices[] = new int[found.size()];
+		for (int i = 0; i < found.size(); ++i) {
+			indices[i] = found.get(i).getId();
+		}
+		lstPricelist.setSelectedIndices(indices);
 	}
 
 	@Override
