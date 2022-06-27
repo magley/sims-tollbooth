@@ -13,7 +13,7 @@ import javax.swing.event.ChangeListener;
 import core.AppContext;
 import core.employee.Employee;
 import desktop.booth.BoothDashboardView;
-import desktop.pricelistEntry.PricelistEntryDashboardView;
+import desktop.pricelist.entry.PricelistEntryDashboardView;
 import desktop.station.StationDashboardView;
 import net.miginfocom.swing.MigLayout;
 

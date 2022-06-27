@@ -20,7 +20,7 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 import core.account.Account;
 import core.booth.Booth;
 import core.employee.Employee;
-import core.pricelistEntry.PricelistEntry;
+import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
 

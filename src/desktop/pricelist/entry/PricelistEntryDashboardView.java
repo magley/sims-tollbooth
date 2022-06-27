@@ -1,4 +1,4 @@
-package desktop.pricelistEntry;
+package desktop.pricelist.entry;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -13,7 +13,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import core.AppContext;
-import core.pricelistEntry.PricelistEntry;
+import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import desktop.ITabbedPanel;
 import net.miginfocom.swing.MigLayout;

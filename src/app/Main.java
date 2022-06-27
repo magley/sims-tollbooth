@@ -12,7 +12,7 @@ import core.booth.Booth;
 import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
 import core.common.MasterXMLRepo;
-import core.pricelistEntry.PricelistEntry;
+import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
 import desktop.employee.EmployeeLoginView;

@@ -1,9 +1,9 @@
-package desktop.pricelistEntry;
+package desktop.pricelist.entry;
 
 import javax.swing.table.AbstractTableModel;
 
-import core.pricelistEntry.IPricelistEntryService;
-import core.pricelistEntry.PricelistEntry;
+import core.pricelist.entry.IPricelistEntryService;
+import core.pricelist.entry.PricelistEntry;
 
 public class PricelistEntryTableModel extends AbstractTableModel {
 

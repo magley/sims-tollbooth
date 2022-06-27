@@ -1,4 +1,4 @@
-package core.pricelistEntry;
+package core.pricelist.entry;
 
 public class PricelistEntryController {
 

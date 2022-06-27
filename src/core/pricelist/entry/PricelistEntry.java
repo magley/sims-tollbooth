@@ -1,4 +1,4 @@
-package core.pricelistEntry;
+package core.pricelist.entry;
 
 import core.Entity;
 import core.station.Station;
