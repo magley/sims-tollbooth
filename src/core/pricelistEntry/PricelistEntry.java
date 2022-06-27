@@ -4,6 +4,7 @@ import core.Entity;
 import core.station.Station;
 
 public class PricelistEntry extends Entity {
+
 	public enum Currency {
 		RSD, EUR
 	}
@@ -12,43 +13,19 @@ public class PricelistEntry extends Entity {
 		A, B, C, D, F, M
 	}
 
-	private int price;
-	private Currency currency;
-	private VehicleCategory category;
 	private Station entry;
 	private Station exit;
+	private VehicleCategory category;
+	private Currency currency;
+	private int price;
 
-	public PricelistEntry(int price, Currency currency, VehicleCategory category, Station entry, Station exit) {
+	public PricelistEntry(Station entry, Station exit, VehicleCategory category, Currency currency, int price) {
 		super();
-		this.price = price;
-		this.currency = currency;
-		this.category = category;
 		this.entry = entry;
 		this.exit = exit;
-	}
-
-	public int getPrice() {
-		return price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
-	}
-
-	public Currency getCurrency() {
-		return currency;
-	}
-
-	public void setCurrency(Currency currency) {
-		this.currency = currency;
-	}
-
-	public VehicleCategory getCategory() {
-		return category;
-	}
-
-	public void setCategory(VehicleCategory category) {
 		this.category = category;
+		this.currency = currency;
+		this.price = price;
 	}
 
 	public Station getEntry() {
@@ -67,10 +44,34 @@ public class PricelistEntry extends Entity {
 		this.exit = exit;
 	}
 
+	public VehicleCategory getCategory() {
+		return category;
+	}
+
+	public void setCategory(VehicleCategory category) {
+		this.category = category;
+	}
+
+	public Currency getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(Currency currency) {
+		this.currency = currency;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
 	@Override
 	public String toString() {
-		return "PricelistEntry [price=" + price + ", currency=" + currency + ", category=" + category + ", entry="
-				+ entry + ", exit=" + exit + "]";
+		return "PricelistEntry [entry=" + entry + ", exit=" + exit + ", category=" + category + ", currency=" + currency
+				+ ", price=" + price + "]";
 	}
 
 }

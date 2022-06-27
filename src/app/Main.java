@@ -111,7 +111,7 @@ public class Main {
 			Station entry = entryStations.get(i % entryStations.size());
 			Station exit = exitStations.get(i % exitStations.size());
 
-			ctx.getPricelistEntryService().add(new PricelistEntry(price, currency, category, entry, exit));
+			ctx.getPricelistEntryService().add(new PricelistEntry(entry, exit, category, currency, price));
 		}
 	}
 }
