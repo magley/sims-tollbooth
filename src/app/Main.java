@@ -2,6 +2,7 @@ package app;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.Random;
 
 import javax.swing.JFrame;
 
@@ -10,6 +11,7 @@ import core.booth.Booth;
 import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
 import core.common.MasterXMLRepo;
+import core.pricelistEntry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
 import desktop.employee.EmployeeLoginView;
@@ -83,6 +85,26 @@ public class Main {
 				Booth b = new Booth(s.getCode() + " Booth " + (k++), s);
 				ctx.getBoothService().add(b);
 			}
+		}
+	}
+
+	private static void generatePricelistEntryData(AppContext ctx) {
+		Random rnd = new Random();
+		for (int i = 0; i < 10; ++i) {
+			int price;
+			PricelistEntry.Currency currency;
+			PricelistEntry.VehicleCategory category;
+
+			if (i % 2 == 0) {
+				price = Math.abs(rnd.nextInt()) % 1000;
+				currency = PricelistEntry.Currency.RSD;
+			} else {
+				price = Math.abs(rnd.nextInt()) % 10;
+				currency = PricelistEntry.Currency.EUR;
+			}
+			category = PricelistEntry.VehicleCategory.values()[i % PricelistEntry.VehicleCategory.values().length];
+
+			ctx.getPricelistEntryService().add(new PricelistEntry(price, currency, category));
 		}
 	}
 }
