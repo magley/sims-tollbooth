@@ -1,10 +1,11 @@
 package desktop.pricelist;
 
+import java.time.format.DateTimeFormatter;
+
 import javax.swing.table.AbstractTableModel;
 
 import core.pricelist.IPricelistService;
 import core.pricelist.Pricelist;
-import core.pricelist.entry.PricelistEntry;
 
 public class PricelistTableModel extends AbstractTableModel {
 
@@ -40,7 +41,8 @@ public class PricelistTableModel extends AbstractTableModel {
 		case 0:
 			return p.getId();
 		case 1:
-			return p.getStart();
+			return p.getStart().toLocalDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " "
+					+ p.getStart().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm"));
 		case 2:
 			return p.getActive();
 		default:

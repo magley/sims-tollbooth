@@ -1,6 +1,7 @@
 package desktop.pricelist.entry;
 
 import java.awt.Component;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.JCheckBox;
 import javax.swing.JList;
@@ -29,7 +30,9 @@ public class PricelistListRenderer extends JCheckBox implements ListCellRenderer
 			this.setSelected(false);
 		}
 
-		this.setText(value.getStart().toString() + " Active: " + value.getActive());
+		String datetime = value.getStart().toLocalDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " "
+				+ value.getStart().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm"));
+		this.setText(datetime + " Active: " + value.getActive());
 		return this;
 	}
 
