@@ -1,5 +1,11 @@
 package desktop.collector;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Random;
+
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -9,6 +15,8 @@ import javax.swing.JTextField;
 import core.AppContext;
 import core.booth.Booth;
 import core.employee.Employee;
+import core.pricelist.entry.PricelistEntry;
+import core.ticket.Ticket;
 import core.util.IObserver;
 import desktop.ITabbedPanel;
 import net.miginfocom.swing.MigLayout;
@@ -22,10 +30,11 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	private Booth booth;
 	private JTextField txtEntryBooth;
 	private JTextField txtArrivedAt;
-	private JTextField txtPrice;
+	private JTextField txtCost;
 	private JTextField txtPaid;
 	private JTextField txtChange;
 	private JTextField txtAverageSpeed;
+	private JComboBox<PricelistEntry.VehicleCategory> cbVehicleCategory;
 
 	public ExitBoothView(AppContext ctx, Employee collector, Booth booth) {
 		if (collector.getRole() != Employee.Role.COLLECTOR) {
@@ -40,7 +49,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	}
 
 	private void initGUI() {
-		setLayout(new MigLayout("", "[]", "[][][][][][][][][]"));
+		setLayout(new MigLayout("", "[grow]", "[][][][]"));
 
 		JLabel lblBooth = new JLabel(String.format("Booth: %s", booth.getCode()));
 		add(lblBooth, "cell 0 0");
@@ -49,48 +58,49 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(lblEntryBooth, "flowx,cell 0 1");
 
 		txtEntryBooth = new JTextField();
-		add(txtEntryBooth, "cell 0 1");
+		add(txtEntryBooth, "cell 0 1,growx");
 		txtEntryBooth.setColumns(10);
 
 		JLabel lblArrivedAt = new JLabel("Arrived here at:");
 		add(lblArrivedAt, "flowx,cell 0 2");
 
 		txtArrivedAt = new JTextField();
-		add(txtArrivedAt, "cell 0 2");
+		add(txtArrivedAt, "cell 0 2,growx");
 		txtArrivedAt.setColumns(10);
 
 		JLabel lblAverageSpeed = new JLabel("Average speed:");
 		add(lblAverageSpeed, "flowx,cell 0 3");
 
 		txtAverageSpeed = new JTextField();
-		add(txtAverageSpeed, "cell 0 3");
+		add(txtAverageSpeed, "cell 0 3,growx");
 		txtAverageSpeed.setColumns(10);
 
 		JLabel lblSelectCategory = new JLabel("Select vehicle category:");
 		add(lblSelectCategory, "flowx,cell 0 4");
 
-		JComboBox cbVehicleCategory = new JComboBox();
-		add(cbVehicleCategory, "cell 0 4");
+		cbVehicleCategory = new JComboBox<PricelistEntry.VehicleCategory>(PricelistEntry.VehicleCategory.values());
+		cbVehicleCategory.setSelectedItem(null);
+		add(cbVehicleCategory, "cell 0 4,growx");
 
 		JLabel lblCost = new JLabel("Cost:");
 		add(lblCost, "flowx,cell 0 5");
 
-		txtPrice = new JTextField();
-		add(txtPrice, "cell 0 5");
-		txtPrice.setColumns(10);
+		txtCost = new JTextField();
+		add(txtCost, "cell 0 5,growx");
+		txtCost.setColumns(10);
 
 		JLabel lblPaid = new JLabel("Paid:");
 		add(lblPaid, "flowx,cell 0 6");
 
 		txtPaid = new JTextField();
-		add(txtPaid, "cell 0 6");
+		add(txtPaid, "cell 0 6,growx");
 		txtPaid.setColumns(10);
 
 		JLabel lblChange = new JLabel("Change:");
 		add(lblChange, "flowx,cell 0 7");
 
 		txtChange = new JTextField();
-		add(txtChange, "cell 0 7");
+		add(txtChange, "cell 0 7,growx");
 		txtChange.setColumns(10);
 
 		JButton btnConfirm = new JButton("Confirm");
