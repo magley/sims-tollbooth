@@ -81,7 +81,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(txtEntryBooth, "cell 0 1,growx");
 		txtEntryBooth.setColumns(10);
 
-		JLabel lblArrivedAt = new JLabel("Arrived here at:");
+		JLabel lblArrivedAt = new JLabel("Arrived at:");
 		add(lblArrivedAt, "flowx,cell 0 2");
 
 		txtArrivedAt = new JTextField();
@@ -215,8 +215,8 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	private void fillFields() {
 		txtEntryBooth.setText(this.processedTicket.getEntryBooth().getCode());
 
-		LocalDateTime now = LocalDateTime.now();
-		String datetime = now.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+		LocalDateTime enteredAt = this.processedTicket.getEnteredAt();
+		String datetime = enteredAt.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
 
 		txtArrivedAt.setText(datetime);
 		txtAverageSpeed.setText(String.valueOf(Math.abs(new Random().nextInt()) % 60 + 1));
