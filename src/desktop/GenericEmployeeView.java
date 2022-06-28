@@ -11,7 +11,9 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import core.AppContext;
+import core.booth.Booth;
 import core.employee.Employee;
+import core.util.TicketStream;
 import desktop.booth.BoothDashboardView;
 import desktop.collector.ExitBoothView;
 import desktop.pricelist.PricelistDashboardView;
@@ -99,9 +101,12 @@ public class GenericEmployeeView extends JFrame {
 	}
 
 	private void initCollectorGUI() {
-		ExitBoothView exitBoothView = new ExitBoothView(ctx, employee, ctx.getBoothService().get(3));
+		Booth booth = ctx.getBoothService().get(3);
+		ExitBoothView exitBoothView = new ExitBoothView(ctx, employee, booth);
 		ctx.getTicketService().registerObserver(exitBoothView);
 		tabbedPane.add("Booth view", exitBoothView);
+		TicketStream stream = new TicketStream(ctx, booth);
+		stream.run();
 	}
 
 }
