@@ -8,4 +8,6 @@ import core.pricelist.entry.PricelistEntry;
 public interface IPricelistService extends IService<Pricelist> {
 
 	public List<Pricelist> getContaining(PricelistEntry entry);
+
+	public Pricelist getActive();
 }

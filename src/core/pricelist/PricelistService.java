@@ -16,4 +16,9 @@ public class PricelistService extends ServiceAdapter<Pricelist> implements IPric
 		return repo.getAll(p -> p.getEntries().contains(entry));
 	}
 
+	@Override
+	public Pricelist getActive() {
+		return repo.get(p -> p.getActive() == Pricelist.Active.YES);
+	}
+
 }
