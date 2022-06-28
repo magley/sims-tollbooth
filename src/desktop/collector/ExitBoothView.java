@@ -242,6 +242,10 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		}
 
 		getPricelistEntry();
+		if (this.entryForTicket == null) {
+			JOptionPane.showMessageDialog(null, "Couldn't find pricelist entry.");
+			return;
+		}
 
 		txtCost.setText(String.valueOf(this.entryForTicket.getPrice()));
 
