@@ -167,6 +167,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				loadNextTicket();
+				fillPaymentFields();
 			}
 		});
 		add(btnNextTicket, "flowx,cell 0 9");
