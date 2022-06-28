@@ -36,7 +36,7 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 	private Date startDate;
 	private Date endDate;
 
-	private JComboBox<Station> cbStation;
+	private JComboBox<String> cbStation;
 	private JComboBox<PricelistEntry.VehicleCategory> cbVehicleCategory;
 	private JComboBox<PricelistEntry.Currency> cbCurrency;
 	private JTextField txtStartDate;
@@ -60,20 +60,22 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 		setLayout(new MigLayout("", "[grow]", "[][][][]"));
 
 		JLabel lblStation = new JLabel("Station:");
-		add(lblStation, "cell 0 0");
-
-		// TODO add option: all stations
-		cbStation = new JComboBox<Station>(ctx.getStationService().getByType(Type.EXIT).toArray(new Station[0]));
+		add(lblStation, "flowx,cell 0 0");
+		List<String> stations = new ArrayList<String>();
+		for (Station s : ctx.getStationService().getByType(Type.EXIT)) {
+			stations.add(s.toString());
+		}
+		stations.add("ALL");
+		cbStation = new JComboBox<String>(stations.toArray(new String[0]));
 		add(cbStation, "cell 0 0,growx");
 		if (station != null) {
-			cbStation.setSelectedItem(station);
+			cbStation.setSelectedItem(station.toString());
 			cbStation.setEnabled(false);
 		}
 
 		JLabel lblSelectCategory = new JLabel("Select vehicle category:");
 		add(lblSelectCategory, "flowx,cell 0 1");
 
-		// TODO add option: all categories
 		cbVehicleCategory = new JComboBox<PricelistEntry.VehicleCategory>(PricelistEntry.VehicleCategory.values());
 		add(cbVehicleCategory, "cell 0 1,growx");
 
@@ -118,13 +120,6 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 	public void onShow() {
 
 	}
-
-	/*
-	 * private void resetFields() { txtStartDate.setText("");
-	 * txtEndDate.setText(""); txtProfit.setText("");
-	 * cbVehicleCategory.setSelectedItem(null); cbCurrency.setSelectedItem(null);
-	 * btnConfirm.setEnabled(false); }
-	 */
 
 	private void validateFields() throws ParseException, FieldEmptyException, DateTimeException {
 		if (cbStation.getSelectedIndex() == -1 || cbCurrency.getSelectedIndex() == -1
@@ -171,12 +166,12 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 		List<Station> stations;
 		List<PricelistEntry.VehicleCategory> categories;
 		
-		if (cbStation.getSelectedItem().toString().equals("ALL")) {
+		if (cbStation.getSelectedItem().equals("ALL")) {
 			stations = ctx.getStationService().getByType(Type.EXIT);
 		}
 		else {
 			stations = new ArrayList<Station>();
-			stations.add((Station) cbStation.getSelectedItem());
+			stations.add((Station) ctx.getStationService().getByString(cbStation.getSelectedItem().toString()));
 		}
 		if (cbVehicleCategory.getSelectedItem().toString().equals("ALL")) {
 			categories = Arrays.asList(PricelistEntry.VehicleCategory.values());
@@ -185,12 +180,11 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 			categories = new ArrayList<PricelistEntry.VehicleCategory>();
 			categories.add((PricelistEntry.VehicleCategory) cbVehicleCategory.getSelectedItem());
 		}
-		PricelistEntry.Currency currency = (PricelistEntry.Currency) cbCurrency.getSelectedItem();
-		txtProfit.setText(String.valueOf("100")); // TODO setProfit with corresponding value
+		PricelistEntry.Currency currency = (PricelistEntry.Currency) cbCurrency.getSelectedItem(); 
 		
-		ReportXChart report;
+		ReportXYChart report;
 		try {
-			report = new ReportXChart(stations, categories, currency, this.startDate, this.endDate, ctx);
+			report = new ReportXYChart(stations, categories, currency, this.startDate, this.endDate, ctx);
 			
 			Thread t = new Thread(new Runnable() {
 				@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -201,6 +195,8 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 				}
 			});
 			t.start();
+			
+			txtProfit.setText(String.valueOf(report.totalProfit));
 		} catch (EmptyAxisException e) {
 			JOptionPane.showMessageDialog(null, "There is no data to show", "Error", JOptionPane.WARNING_MESSAGE);
 		}
