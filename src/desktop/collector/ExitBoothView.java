@@ -9,13 +9,16 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import core.AppContext;
 import core.booth.Booth;
 import core.employee.Employee;
+import core.payment.Payment;
 import core.pricelist.entry.PricelistEntry;
+import core.station.Station;
 import core.ticket.Ticket;
 import core.util.IObserver;
 import desktop.ITabbedPanel;
@@ -36,6 +39,10 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	private JTextField txtAverageSpeed;
 	private JComboBox<PricelistEntry.VehicleCategory> cbVehicleCategory;
 	private JComboBox<PricelistEntry.Currency> cbCurrency;
+	private JButton btnConfirm;
+
+	private Ticket processedTicket;
+	private PricelistEntry entryForTicket;
 
 	public ExitBoothView(AppContext ctx, Employee collector, Booth booth) {
 		if (collector.getRole() != Employee.Role.COLLECTOR) {
@@ -45,6 +52,8 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		this.ctx = ctx;
 		this.collector = collector;
 		this.booth = booth;
+		this.processedTicket = null;
+		this.entryForTicket = null;
 
 		initGUI();
 	}
@@ -81,6 +90,12 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 
 		cbVehicleCategory = new JComboBox<PricelistEntry.VehicleCategory>(PricelistEntry.VehicleCategory.values());
 		cbVehicleCategory.setSelectedItem(null);
+		cbVehicleCategory.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				fillPaymentFields();
+			}
+		});
 		add(cbVehicleCategory, "cell 0 4,growx");
 
 		JLabel lblCurrency = new JLabel("Select currency:");
@@ -88,6 +103,12 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 
 		cbCurrency = new JComboBox<PricelistEntry.Currency>(PricelistEntry.Currency.values());
 		cbCurrency.setSelectedItem(null);
+		cbCurrency.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				fillPaymentFields();
+			}
+		});
 		add(cbCurrency, "cell 0 5,growx");
 
 		JLabel lblCost = new JLabel("Cost:");
@@ -111,11 +132,15 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(txtChange, "cell 0 8,growx");
 		txtChange.setColumns(10);
 
-		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm = new JButton("Confirm");
+		btnConfirm.setEnabled(false);
+		btnConfirm.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				processPayment();
+			}
+		});
 		add(btnConfirm, "flowx,cell 0 9");
-
-		JButton btnReject = new JButton("Reject");
-		add(btnReject, "cell 0 9");
 	}
 
 	@Override
@@ -125,7 +150,77 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 
 	@Override
 	public void update(Object e) {
-		
+		Ticket t = (Ticket) e;
+		if (t.getExitBooth() != this.booth) {
+			return;
+		}
+		this.processedTicket = t;
+		fillFields(t);
+	}
+
+	private void fillFields(Ticket t) {
+		txtEntryBooth.setText(t.getEntryBooth().getCode());
+
+		LocalDateTime now = LocalDateTime.now();
+		String datetime = now.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+
+		txtArrivedAt.setText(datetime);
+		txtAverageSpeed.setText(String.valueOf(Math.abs(new Random().nextInt()) % 60 + 1));
+	}
+
+	private void emptyFields() {
+		txtEntryBooth.setText("");
+		txtArrivedAt.setText("");
+		txtAverageSpeed.setText("");
+		txtCost.setText("");
+		txtPaid.setText("");
+		txtChange.setText("");
+		cbVehicleCategory.setSelectedItem(null);
+		cbCurrency.setSelectedItem(null);
+		btnConfirm.setEnabled(false);
+	}
+
+	private void fillPaymentFields() {
+		if (this.processedTicket == null || cbCurrency.getSelectedIndex() == -1
+				|| cbVehicleCategory.getSelectedIndex() == -1) {
+			return;
+		}
+
+		getPricelistEntry();
+
+		txtCost.setText(String.valueOf(this.entryForTicket.getPrice()));
+
+		int paid = (int) ((Math.random() + 1) * this.entryForTicket.getPrice());
+		txtPaid.setText(String.valueOf(paid));
+
+		int change = paid - this.entryForTicket.getPrice();
+		txtChange.setText(String.valueOf(change));
+
+		this.btnConfirm.setEnabled(true);
+	}
+
+	private void getPricelistEntry() {
+		Station entryStation = processedTicket.getEntryBooth().getStation();
+		Station exitStation = booth.getStation();
+		PricelistEntry.VehicleCategory category = (PricelistEntry.VehicleCategory) cbVehicleCategory.getSelectedItem();
+		PricelistEntry.Currency currency = (PricelistEntry.Currency) cbCurrency.getSelectedItem();
+
+		this.entryForTicket = ctx.getPricelistService().getFor(entryStation, exitStation, category, currency);
+	}
+
+	private void processPayment() {
+		LocalDateTime now = LocalDateTime.now();
+		this.processedTicket.setLeftAt(now);
+
+		int amount = Integer.decode(txtPaid.getText());
+
+		ctx.getPaymentService().add(new Payment(now, entryForTicket, processedTicket, collector, amount));
+
+		this.processedTicket = null;
+		this.entryForTicket = null;
+
+		JOptionPane.showMessageDialog(null, "Successfully processed payment.");
+		emptyFields();
 	}
 
 }
