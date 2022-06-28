@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import javax.swing.JButton;
@@ -40,9 +42,11 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	private JComboBox<PricelistEntry.VehicleCategory> cbVehicleCategory;
 	private JComboBox<PricelistEntry.Currency> cbCurrency;
 	private JButton btnConfirm;
+	private JButton btnNextTicket;
 
 	private Ticket processedTicket;
 	private PricelistEntry entryForTicket;
+	private List<Ticket> queuedTickets;
 
 	public ExitBoothView(AppContext ctx, Employee collector, Booth booth) {
 		if (collector.getRole() != Employee.Role.COLLECTOR) {
@@ -54,6 +58,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		this.booth = booth;
 		this.processedTicket = null;
 		this.entryForTicket = null;
+		this.queuedTickets = new ArrayList<Ticket>();
 
 		initGUI();
 	}
@@ -141,11 +146,31 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 			}
 		});
 		add(btnConfirm, "flowx,cell 0 9");
+
+		btnNextTicket = new JButton("Next ticket");
+		btnNextTicket.setEnabled(true);
+		btnNextTicket.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				loadNextTicket();
+			}
+		});
+		add(btnNextTicket, "flowx,cell 0 9");
 	}
 
 	@Override
 	public void onShow() {
 
+	}
+
+	public void loadNextTicket() {
+		if (this.queuedTickets.size() == 0) {
+			JOptionPane.showMessageDialog(null, "No tickets in queue.");
+			return;
+		}
+		this.processedTicket = this.queuedTickets.remove(0);
+		btnNextTicket.setEnabled(false);
+		fillFields();
 	}
 
 	@Override
@@ -154,12 +179,11 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		if (t.getExitBooth() != this.booth) {
 			return;
 		}
-		this.processedTicket = t;
-		fillFields(t);
+		this.queuedTickets.add(t);
 	}
 
-	private void fillFields(Ticket t) {
-		txtEntryBooth.setText(t.getEntryBooth().getCode());
+	private void fillFields() {
+		txtEntryBooth.setText(this.processedTicket.getEntryBooth().getCode());
 
 		LocalDateTime now = LocalDateTime.now();
 		String datetime = now.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
@@ -168,7 +192,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		txtAverageSpeed.setText(String.valueOf(Math.abs(new Random().nextInt()) % 60 + 1));
 	}
 
-	private void emptyFields() {
+	private void resetFields() {
 		txtEntryBooth.setText("");
 		txtArrivedAt.setText("");
 		txtAverageSpeed.setText("");
@@ -178,6 +202,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		cbVehicleCategory.setSelectedItem(null);
 		cbCurrency.setSelectedItem(null);
 		btnConfirm.setEnabled(false);
+		btnNextTicket.setEnabled(true);
 	}
 
 	private void fillPaymentFields() {
@@ -220,7 +245,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		this.entryForTicket = null;
 
 		JOptionPane.showMessageDialog(null, "Successfully processed payment.");
-		emptyFields();
+		resetFields();
 	}
 
 }
