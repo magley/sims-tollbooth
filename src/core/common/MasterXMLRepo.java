@@ -20,6 +20,7 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 import core.account.Account;
 import core.booth.Booth;
 import core.employee.Employee;
+import core.payment.Payment;
 import core.pricelist.Pricelist;
 import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
@@ -44,6 +45,7 @@ public class MasterXMLRepo {
 	private List<PricelistEntry> pricelistEntries = new ArrayList<PricelistEntry>();
 	private List<Pricelist> pricelists = new ArrayList<Pricelist>();
 	private List<Ticket> tickets = new ArrayList<Ticket>();
+	private List<Payment> payments = new ArrayList<Payment>();
 
 	public MasterXMLRepo(String directory, String filename) {
 		this.directory = directory;
@@ -84,6 +86,10 @@ public class MasterXMLRepo {
 
 	public List<Ticket> getTickets() {
 		return tickets;
+	}
+
+	public List<Payment> getPayments() {
+		return payments;
 	}
 
 	public void save() {

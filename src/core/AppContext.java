@@ -16,6 +16,11 @@ import core.employee.EmployeeService;
 import core.employee.EmployeeXMLRepo;
 import core.employee.IEmployeeRepo;
 import core.employee.IEmployeeService;
+import core.payment.IPaymentRepo;
+import core.payment.IPaymentService;
+import core.payment.PaymentController;
+import core.payment.PaymentService;
+import core.payment.PaymentXMLRepo;
 import core.pricelist.IPricelistRepo;
 import core.pricelist.IPricelistService;
 import core.pricelist.PricelistController;
@@ -73,6 +78,10 @@ public class AppContext {
 	ITicketService ticketService;
 	TicketController ticketController;
 
+	IPaymentRepo paymentRepo;
+	IPaymentService paymentService;
+	PaymentController paymentController;
+	
 	public AppContext(MasterXMLRepo masterRepo) {
 		accountRepo = new AccountXMLRepo(masterRepo);
 		accountService = new AccountService(accountRepo);
@@ -104,6 +113,10 @@ public class AppContext {
 		ticketRepo = new TicketXMLRepo(masterRepo);
 		ticketService = new TicketService(ticketRepo);
 		ticketController = new TicketController(ticketService);
+		
+		paymentRepo = new PaymentXMLRepo(masterRepo);
+		paymentService = new PaymentService(paymentRepo);
+		paymentController = new PaymentController(paymentService);
 	}
 	
 	public IBoothRepo getBoothRepo() {
@@ -196,5 +209,17 @@ public class AppContext {
 
 	public TicketController getTicketController() {
 		return ticketController;
+	}
+
+	public IPaymentRepo getPaymentRepo() {
+		return paymentRepo;
+	}
+
+	public IPaymentService getPaymentService() {
+		return paymentService;
+	}
+
+	public PaymentController getPaymentController() {
+		return paymentController;
 	}
 }
