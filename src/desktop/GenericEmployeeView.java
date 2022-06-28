@@ -106,7 +106,8 @@ public class GenericEmployeeView extends JFrame {
 		ctx.getTicketService().registerObserver(exitBoothView);
 		tabbedPane.add("Booth view", exitBoothView);
 		TicketStream stream = new TicketStream(ctx, booth);
-		stream.run();
+		Thread thread = new Thread(stream);
+		thread.start();
 	}
 
 }

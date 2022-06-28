@@ -9,7 +9,7 @@ import core.booth.Booth;
 import core.station.Station;
 import core.ticket.Ticket;
 
-public class TicketStream extends Thread {
+public class TicketStream implements Runnable {
 
 	private AppContext ctx;
 	private Booth exitBooth;
@@ -37,6 +37,12 @@ public class TicketStream extends Thread {
 
 			ctx.getTicketService()
 					.add(new Ticket(entryBooth, LocalDateTime.now(), this.exitBooth, null, String.valueOf(i)));
+
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+			}
 		}
 	}
 
