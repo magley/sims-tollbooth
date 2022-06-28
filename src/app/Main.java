@@ -2,6 +2,10 @@ package app;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import javax.swing.JFrame;
 
@@ -10,6 +14,8 @@ import core.booth.Booth;
 import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
 import core.common.MasterXMLRepo;
+import core.pricelist.Pricelist;
+import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
 import desktop.employee.EmployeeLoginView;
@@ -83,6 +89,50 @@ public class Main {
 				Booth b = new Booth(s.getCode() + " Booth " + (k++), s);
 				ctx.getBoothService().add(b);
 			}
+		}
+	}
+
+	private static void generatePricelistEntryData(AppContext ctx) {
+		Random rnd = new Random();
+
+		List<Station> entryStations = ctx.getStationService().getByType(Station.Type.ENTER);
+		List<Station> exitStations = ctx.getStationService().getByType(Station.Type.EXIT);
+
+		for (int i = 0; i < 10; ++i) {
+			int price;
+			PricelistEntry.Currency currency;
+			if (i % 2 == 0) {
+				price = Math.abs(rnd.nextInt()) % 1000;
+				currency = PricelistEntry.Currency.RSD;
+			} else {
+				price = Math.abs(rnd.nextInt()) % 10;
+				currency = PricelistEntry.Currency.EUR;
+			}
+
+			PricelistEntry.VehicleCategory category = PricelistEntry.VehicleCategory.values()[i
+					% PricelistEntry.VehicleCategory.values().length];
+			Station entry = entryStations.get(i % entryStations.size());
+			Station exit = exitStations.get(i % exitStations.size());
+
+			ctx.getPricelistEntryService().add(new PricelistEntry(entry, exit, category, currency, price));
+		}
+	}
+
+	private static void generatePricelistData(AppContext ctx) {
+		Random rnd = new Random();
+		List<PricelistEntry> allEntries = new ArrayList<PricelistEntry>(ctx.getPricelistEntryService().getAll());
+		for (int i = 0; i < 3; ++i) {
+			List<PricelistEntry> entries = new ArrayList<PricelistEntry>();
+
+			PricelistEntry entry = allEntries.get(Math.abs(rnd.nextInt()) % allEntries.size());
+			entries.add(entry);
+
+			allEntries.remove(entry);
+
+			entry = allEntries.get(Math.abs(rnd.nextInt()) % allEntries.size());
+			entries.add(entry);
+
+			ctx.getPricelistService().add(new Pricelist(LocalDateTime.now().plusDays(i), entries, Pricelist.Active.NO));
 		}
 	}
 }

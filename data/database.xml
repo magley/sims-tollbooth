@@ -277,4 +277,128 @@
     <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth[2]"/>
     <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth[3]"/>
   </booths>
+  <pricelistEntries>
+    <core.pricelist.entry.PricelistEntry>
+      <id>0</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
+      <category>A</category>
+      <currency>RSD</currency>
+      <price>251</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>1</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
+      <category>B</category>
+      <currency>EUR</currency>
+      <price>2</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>2</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
+      <category>C</category>
+      <currency>RSD</currency>
+      <price>954</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>3</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
+      <category>D</category>
+      <currency>EUR</currency>
+      <price>3</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>4</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
+      <category>F</category>
+      <currency>RSD</currency>
+      <price>253</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>5</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
+      <category>M</category>
+      <currency>EUR</currency>
+      <price>4</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>6</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
+      <category>A</category>
+      <currency>RSD</currency>
+      <price>884</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>7</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
+      <category>B</category>
+      <currency>EUR</currency>
+      <price>8</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>8</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
+      <category>C</category>
+      <currency>RSD</currency>
+      <price>677</price>
+    </core.pricelist.entry.PricelistEntry>
+    <core.pricelist.entry.PricelistEntry>
+      <id>9</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
+      <category>D</category>
+      <currency>EUR</currency>
+      <price>6</price>
+    </core.pricelist.entry.PricelistEntry>
+  </pricelistEntries>
+  <pricelists>
+    <core.pricelist.Pricelist>
+      <id>0</id>
+      <removed>false</removed>
+      <start>2022-06-27T19:56:20.5095669</start>
+      <entries>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[2]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
+      </entries>
+      <active>NO</active>
+    </core.pricelist.Pricelist>
+    <core.pricelist.Pricelist>
+      <id>1</id>
+      <removed>false</removed>
+      <start>2022-06-28T19:56:20.5115682</start>
+      <entries>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[3]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[8]"/>
+      </entries>
+      <active>NO</active>
+    </core.pricelist.Pricelist>
+    <core.pricelist.Pricelist>
+      <id>2</id>
+      <removed>false</removed>
+      <start>2022-06-29T19:56:20.5115682</start>
+      <entries>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[4]"/>
+      </entries>
+      <active>YES</active>
+    </core.pricelist.Pricelist>
+  </pricelists>
 </core.common.MasterXMLRepo>

@@ -1,6 +1,9 @@
 package desktop;
 
-import javax.swing.JDialog;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
@@ -10,13 +13,10 @@ import javax.swing.event.ChangeListener;
 import core.AppContext;
 import core.employee.Employee;
 import desktop.booth.BoothDashboardView;
+import desktop.pricelist.PricelistDashboardView;
+import desktop.pricelist.entry.PricelistEntryDashboardView;
 import desktop.station.StationDashboardView;
 import net.miginfocom.swing.MigLayout;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
 
 public class GenericEmployeeView extends JFrame {
 	private Employee employee;
@@ -64,7 +64,10 @@ public class GenericEmployeeView extends JFrame {
 		case ADMIN:
 			initAdminGUI();
 			break;
-		case COLLECTOR: case MANAGER: case STATION_CHEIF: case TAG_SELLER:
+		case MANAGER:
+			initManagerGUI();
+			break;
+		case COLLECTOR: case STATION_CHEIF: case TAG_SELLER:
 			JOptionPane.showMessageDialog(this, "No implementation.");
 			break;
 		case UNKNOWN: default:
@@ -79,6 +82,13 @@ public class GenericEmployeeView extends JFrame {
 		BoothDashboardView boothDashboardView = new BoothDashboardView(ctx);
 		tabbedPane.add("Stations", stationDashboardView);
 		tabbedPane.add("Booths", boothDashboardView);
+	}
+	
+	private void initManagerGUI() {
+		PricelistEntryDashboardView pricelistEntryDashboardView = new PricelistEntryDashboardView(ctx);
+		PricelistDashboardView pricelistDashboardView = new PricelistDashboardView(ctx);
+		tabbedPane.add("Pricelist entries", pricelistEntryDashboardView);
+		tabbedPane.add("Pricelists", pricelistDashboardView);
 	}
 	
 }
