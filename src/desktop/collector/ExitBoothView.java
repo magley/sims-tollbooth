@@ -73,6 +73,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(lblEntryBooth, "flowx,cell 0 1");
 
 		txtEntryBooth = new JTextField();
+		txtEntryBooth.setEnabled(false);
 		add(txtEntryBooth, "cell 0 1,growx");
 		txtEntryBooth.setColumns(10);
 
@@ -80,6 +81,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(lblArrivedAt, "flowx,cell 0 2");
 
 		txtArrivedAt = new JTextField();
+		txtArrivedAt.setEnabled(false);
 		add(txtArrivedAt, "cell 0 2,growx");
 		txtArrivedAt.setColumns(10);
 
@@ -87,6 +89,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(lblAverageSpeed, "flowx,cell 0 3");
 
 		txtAverageSpeed = new JTextField();
+		txtAverageSpeed.setEnabled(false);
 		add(txtAverageSpeed, "cell 0 3,growx");
 		txtAverageSpeed.setColumns(10);
 
@@ -120,6 +123,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(lblCost, "flowx,cell 0 6");
 
 		txtCost = new JTextField();
+		txtCost.setEnabled(false);
 		add(txtCost, "cell 0 6,growx");
 		txtCost.setColumns(10);
 
@@ -127,6 +131,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(lblPaid, "flowx,cell 0 7");
 
 		txtPaid = new JTextField();
+		txtPaid.setEnabled(false);
 		add(txtPaid, "cell 0 7,growx");
 		txtPaid.setColumns(10);
 
@@ -134,6 +139,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(lblChange, "flowx,cell 0 8");
 
 		txtChange = new JTextField();
+		txtChange.setEnabled(false);
 		add(txtChange, "cell 0 8,growx");
 		txtChange.setColumns(10);
 
