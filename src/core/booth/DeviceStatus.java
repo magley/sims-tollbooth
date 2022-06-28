@@ -1,5 +1,7 @@
 package core.booth;
 
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
 public class DeviceStatus {
 	public enum Type {
 		TAG_READER, TABLE_READER, RAMP, SEMAPHORE, SCREEN
@@ -12,6 +14,21 @@ public class DeviceStatus {
 	private Type type;
 	private Status status;
 	
+	@XStreamOmitField
+	private int flags = 0;
+	
+	public void flipFlags() {
+		flags = (flags + 1) % 2;
+	}
+	
+	public int getFlags() {
+		return flags;
+	}
+
+	public void setFlags(int flags) {
+		this.flags = flags;
+	}
+
 	public Type getType() {
 		return type;
 	}

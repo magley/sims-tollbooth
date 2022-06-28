@@ -13,7 +13,7 @@ import core.station.Station;
 public class Booth extends Entity {
 	private String code;
 	private Station station;
-	
+
 	@XStreamOmitField
 	private List<DeviceStatus> deviceStatus;
 	public String getCode() {
@@ -60,6 +60,38 @@ public class Booth extends Entity {
 		} else {
 			DeviceStatus ds = o.get();
 			ds.setStatus(status);
+		}
+	}
+	
+	// TODO: extract common method
+	public void setDeviceFlags(DeviceStatus.Type deviceType, int flags) {
+		if (deviceStatus == null) {
+			initDeviceStatus();
+		}
+		
+		Optional<DeviceStatus> o = deviceStatus.stream().filter(ds -> ds.getType() == deviceType).findAny();
+		
+		if (o.isEmpty()) {
+			System.err.println("Device not found! Ignoring...");
+		} else {
+			DeviceStatus ds = o.get();
+			ds.setFlags(flags);
+		}
+	}
+	
+	// TODO: extract common method
+	public void flipDeviceFlags(DeviceStatus.Type deviceType) {
+		if (deviceStatus == null) {
+			initDeviceStatus();
+		}
+		
+		Optional<DeviceStatus> o = deviceStatus.stream().filter(ds -> ds.getType() == deviceType).findAny();
+		
+		if (o.isEmpty()) {
+			System.err.println("Device not found! Ignoring...");
+		} else {
+			DeviceStatus ds = o.get();
+			ds.flipFlags();
 		}
 	}
 	
