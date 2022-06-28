@@ -30,8 +30,8 @@ public class PaymentService extends ServiceAdapter<Payment> implements IPaymentS
 		 return payments;
 	}
 
-	private double calculateProfit(List<Payment> payments) {
-		double profit = 0;
+	private Integer calculateProfit(List<Payment> payments) {
+		Integer profit = 0;
 		for (Payment p: payments) {
 			profit += p.getPricelistEntry().getPrice();
 		}
@@ -58,12 +58,12 @@ public class PaymentService extends ServiceAdapter<Payment> implements IPaymentS
 		return ps;
 	}
 
-	public double getProfitForReport(List<Station> stations, List<VehicleCategory> categories, Currency currency,
+	public Integer getProfitForReport(List<Station> stations, List<VehicleCategory> categories, Currency currency,
 			Date currDate) {
 		List<Payment> payments = getByDayAndCurrency(currDate, currency);
 		payments = getByVehicleCategories(payments, categories);
 		payments = getByStations(payments, stations);
-		double profit = calculateProfit(payments);
+		Integer profit = calculateProfit(payments);
 		return profit;
 	}
 

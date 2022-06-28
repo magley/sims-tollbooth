@@ -10,6 +10,6 @@ import core.station.Station;
 
 public interface IPaymentService extends IService<Payment> {
 	
-	double getProfitForReport(List<Station> stations, List<VehicleCategory> categories, Currency currency, Date currDate);
+	Integer getProfitForReport(List<Station> stations, List<VehicleCategory> categories, Currency currency, Date currDate);
 
 }
