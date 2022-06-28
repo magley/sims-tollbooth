@@ -100,6 +100,7 @@ public class GenericEmployeeView extends JFrame {
 
 	private void initCollectorGUI() {
 		ExitBoothView exitBoothView = new ExitBoothView(ctx, employee, ctx.getBoothService().get(3));
+		ctx.getTicketService().registerObserver(exitBoothView);
 		tabbedPane.add("Booth view", exitBoothView);
 	}
 

@@ -9,10 +9,11 @@ import javax.swing.JTextField;
 import core.AppContext;
 import core.booth.Booth;
 import core.employee.Employee;
+import core.util.IObserver;
 import desktop.ITabbedPanel;
 import net.miginfocom.swing.MigLayout;
 
-public class ExitBoothView extends JPanel implements ITabbedPanel {
+public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 
 	private static final long serialVersionUID = 2944929748859554409L;
 
@@ -102,6 +103,11 @@ public class ExitBoothView extends JPanel implements ITabbedPanel {
 	@Override
 	public void onShow() {
 
+	}
+
+	@Override
+	public void update(Object e) {
+		
 	}
 
 }
