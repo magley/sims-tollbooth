@@ -15,7 +15,7 @@ public class DeviceStatus {
 	private Status status;
 	
 	@XStreamOmitField
-	private int flags = 0;
+	private int flags = 0;  // 0 is down, 1 is up
 	
 	public void flipFlags() {
 		flags = (flags + 1) % 2;

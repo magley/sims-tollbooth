@@ -21,6 +21,7 @@ public class Booth extends Entity implements IPublisher {
 	private List<DeviceStatus> deviceStatus;
 	@XStreamOmitField
 	private List<IObserver> observers;
+
 	public String getCode() {
 		return code;
 	}

@@ -67,7 +67,10 @@ public class GenericEmployeeView extends JFrame {
 		case MANAGER:
 			initManagerGUI();
 			break;
-		case COLLECTOR: case STATION_CHEIF: case TAG_SELLER:
+		case STATION_CHEIF:
+			initStationChiefGUI();
+			break;
+		case COLLECTOR: case TAG_SELLER:
 			JOptionPane.showMessageDialog(this, "No implementation.");
 			break;
 		case UNKNOWN: default:
@@ -89,6 +92,11 @@ public class GenericEmployeeView extends JFrame {
 		PricelistDashboardView pricelistDashboardView = new PricelistDashboardView(ctx);
 		tabbedPane.add("Pricelist entries", pricelistEntryDashboardView);
 		tabbedPane.add("Pricelists", pricelistDashboardView);
+	}
+	
+	private void initStationChiefGUI() {
+//		PricelistEntryDashboardView pricelistEntryDashboardView = new PricelistEntryDashboardView(ctx);
+//		tabbedPane.add("Booths", pricelistEntryDashboardView);
 	}
 	
 }
