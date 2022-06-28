@@ -13,7 +13,11 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JSpinner;
 import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import core.AppContext;
 import core.booth.Booth;
@@ -36,7 +40,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	private JTextField txtEntryBooth;
 	private JTextField txtArrivedAt;
 	private JTextField txtCost;
-	private JTextField txtPaid;
+	private JSpinner spnPaid;
 	private JTextField txtChange;
 	private JTextField txtAverageSpeed;
 	private JComboBox<PricelistEntry.VehicleCategory> cbVehicleCategory;
@@ -130,10 +134,14 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		JLabel lblPaid = new JLabel("Paid:");
 		add(lblPaid, "flowx,cell 0 7");
 
-		txtPaid = new JTextField();
-		txtPaid.setEnabled(false);
-		add(txtPaid, "cell 0 7,growx");
-		txtPaid.setColumns(10);
+		spnPaid = new JSpinner(new SpinnerNumberModel(0, 0, null, 1));
+		spnPaid.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				updateChange();
+			}
+		});
+		add(spnPaid, "cell 0 7,growx");
 
 		JLabel lblChange = new JLabel("Change:");
 		add(lblChange, "flowx,cell 0 8");
@@ -167,6 +175,21 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	@Override
 	public void onShow() {
 
+	}
+	
+	private void updateChange() {
+		if (this.entryForTicket == null) return;
+		int change = (int) spnPaid.getValue() - this.entryForTicket.getPrice();
+		txtChange.setText(String.valueOf(change));
+		checkIfCanProcess();
+	}
+	
+	private void checkIfCanProcess() {
+		if (Integer.decode(txtChange.getText()) >= 0) {
+			btnConfirm.setEnabled(true);
+		} else {
+			btnConfirm.setEnabled(false);
+		}
 	}
 
 	public void loadNextTicket() {
@@ -203,7 +226,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		txtArrivedAt.setText("");
 		txtAverageSpeed.setText("");
 		txtCost.setText("");
-		txtPaid.setText("");
+		spnPaid.setValue(0);
 		txtChange.setText("");
 		cbVehicleCategory.setSelectedItem(null);
 		cbCurrency.setSelectedItem(null);
@@ -222,12 +245,12 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		txtCost.setText(String.valueOf(this.entryForTicket.getPrice()));
 
 		int paid = (int) ((Math.random() + 1) * this.entryForTicket.getPrice());
-		txtPaid.setText(String.valueOf(paid));
+		spnPaid.setValue(paid);
 
 		int change = paid - this.entryForTicket.getPrice();
 		txtChange.setText(String.valueOf(change));
 
-		this.btnConfirm.setEnabled(true);
+		checkIfCanProcess();
 	}
 
 	private void getPricelistEntry() {
@@ -243,7 +266,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		LocalDateTime now = LocalDateTime.now();
 		this.processedTicket.setLeftAt(now);
 
-		int amount = Integer.decode(txtPaid.getText());
+		int amount = (int) spnPaid.getValue();
 
 		ctx.getPaymentService().add(new Payment(now, entryForTicket, processedTicket, collector, amount));
 
