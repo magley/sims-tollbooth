@@ -8,14 +8,19 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 import core.Entity;
 import core.booth.DeviceStatus.Status;
+import core.booth.observer.IObserver;
+import core.booth.observer.IPublisher;
+import core.malfunction.Malfunction;
 import core.station.Station;
 
-public class Booth extends Entity {
+public class Booth extends Entity implements IPublisher {
 	private String code;
 	private Station station;
 
 	@XStreamOmitField
 	private List<DeviceStatus> deviceStatus;
+	@XStreamOmitField
+	private List<IObserver> observers;
 	public String getCode() {
 		return code;
 	}
@@ -99,6 +104,23 @@ public class Booth extends Entity {
 		deviceStatus = new ArrayList<DeviceStatus>();
 		for (DeviceStatus.Type t : DeviceStatus.Type.values()) {
 			deviceStatus.add(new DeviceStatus(t, Status.NOT_WORKING));
+		}
+	}
+
+	@Override
+	public void addObserver(IObserver o) {
+		observers.add(o);
+	}
+
+	@Override
+	public void removeObserver(IObserver o) {
+		observers.remove(o);
+	}
+
+	@Override
+	public void notifyObservers(Malfunction malf) {
+		for (IObserver o : observers) {
+			o.notify(malf);
 		}
 	}
 }

@@ -401,4 +401,5 @@
       <active>YES</active>
     </core.pricelist.Pricelist>
   </pricelists>
+  <malfunctions/>
 </core.common.MasterXMLRepo>
