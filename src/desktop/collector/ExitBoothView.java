@@ -35,6 +35,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	private JTextField txtChange;
 	private JTextField txtAverageSpeed;
 	private JComboBox<PricelistEntry.VehicleCategory> cbVehicleCategory;
+	private JComboBox<PricelistEntry.Currency> cbCurrency;
 
 	public ExitBoothView(AppContext ctx, Employee collector, Booth booth) {
 		if (collector.getRole() != Employee.Role.COLLECTOR) {
@@ -68,7 +69,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		add(txtArrivedAt, "cell 0 2,growx");
 		txtArrivedAt.setColumns(10);
 
-		JLabel lblAverageSpeed = new JLabel("Average speed:");
+		JLabel lblAverageSpeed = new JLabel("Average speed (km/h):");
 		add(lblAverageSpeed, "flowx,cell 0 3");
 
 		txtAverageSpeed = new JTextField();
@@ -82,32 +83,39 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		cbVehicleCategory.setSelectedItem(null);
 		add(cbVehicleCategory, "cell 0 4,growx");
 
+		JLabel lblCurrency = new JLabel("Select currency:");
+		add(lblCurrency, "flowx,cell 0 5");
+
+		cbCurrency = new JComboBox<PricelistEntry.Currency>(PricelistEntry.Currency.values());
+		cbCurrency.setSelectedItem(null);
+		add(cbCurrency, "cell 0 5,growx");
+
 		JLabel lblCost = new JLabel("Cost:");
-		add(lblCost, "flowx,cell 0 5");
+		add(lblCost, "flowx,cell 0 6");
 
 		txtCost = new JTextField();
-		add(txtCost, "cell 0 5,growx");
+		add(txtCost, "cell 0 6,growx");
 		txtCost.setColumns(10);
 
 		JLabel lblPaid = new JLabel("Paid:");
-		add(lblPaid, "flowx,cell 0 6");
+		add(lblPaid, "flowx,cell 0 7");
 
 		txtPaid = new JTextField();
-		add(txtPaid, "cell 0 6,growx");
+		add(txtPaid, "cell 0 7,growx");
 		txtPaid.setColumns(10);
 
 		JLabel lblChange = new JLabel("Change:");
-		add(lblChange, "flowx,cell 0 7");
+		add(lblChange, "flowx,cell 0 8");
 
 		txtChange = new JTextField();
-		add(txtChange, "cell 0 7,growx");
+		add(txtChange, "cell 0 8,growx");
 		txtChange.setColumns(10);
 
 		JButton btnConfirm = new JButton("Confirm");
-		add(btnConfirm, "flowx,cell 0 8");
+		add(btnConfirm, "flowx,cell 0 9");
 
 		JButton btnReject = new JButton("Reject");
-		add(btnReject, "cell 0 8");
+		add(btnReject, "cell 0 9");
 	}
 
 	@Override
