@@ -35,6 +35,11 @@ import core.station.location.ILocationRepo;
 import core.station.location.ILocationService;
 import core.station.location.LocationService;
 import core.station.location.LocationXMLRepo;
+import core.ticket.ITicketRepo;
+import core.ticket.ITicketService;
+import core.ticket.TicketController;
+import core.ticket.TicketService;
+import core.ticket.TicketXMLRepo;
 
 public class AppContext {
 	IAccountRepo accountRepo;
@@ -63,6 +68,10 @@ public class AppContext {
 	IPricelistRepo pricelistRepo;
 	IPricelistService pricelistService;
 	PricelistController pricelistController;
+	
+	ITicketRepo ticketRepo;
+	ITicketService ticketService;
+	TicketController ticketController;
 
 	public AppContext(MasterXMLRepo masterRepo) {
 		accountRepo = new AccountXMLRepo(masterRepo);
@@ -91,6 +100,10 @@ public class AppContext {
 		pricelistRepo = new PricelistXMLRepo(masterRepo);
 		pricelistService = new PricelistService(pricelistRepo);
 		pricelistController = new PricelistController(pricelistService);
+		
+		ticketRepo = new TicketXMLRepo(masterRepo);
+		ticketService = new TicketService(ticketRepo);
+		ticketController = new TicketController(ticketService);
 	}
 	
 	public IBoothRepo getBoothRepo() {
@@ -171,5 +184,17 @@ public class AppContext {
 
 	public PricelistController getPricelistController() {
 		return pricelistController;
+	}
+
+	public ITicketRepo getTicketRepo() {
+		return ticketRepo;
+	}
+
+	public ITicketService getTicketService() {
+		return ticketService;
+	}
+
+	public TicketController getTicketController() {
+		return ticketController;
 	}
 }

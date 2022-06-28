@@ -24,6 +24,7 @@ import core.pricelist.Pricelist;
 import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
+import core.ticket.Ticket;
 
 public class MasterXMLRepo {
 	@XStreamOmitField
@@ -42,6 +43,7 @@ public class MasterXMLRepo {
 	private List<Booth> booths = new ArrayList<Booth>();
 	private List<PricelistEntry> pricelistEntries = new ArrayList<PricelistEntry>();
 	private List<Pricelist> pricelists = new ArrayList<Pricelist>();
+	private List<Ticket> tickets = new ArrayList<Ticket>();
 
 	public MasterXMLRepo(String directory, String filename) {
 		this.directory = directory;
@@ -78,6 +80,10 @@ public class MasterXMLRepo {
 
 	public List<Pricelist> getPricelists() {
 		return pricelists;
+	}
+
+	public List<Ticket> getTickets() {
+		return tickets;
 	}
 
 	public void save() {
