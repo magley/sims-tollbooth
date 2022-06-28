@@ -20,7 +20,6 @@ public class PaymentService extends ServiceAdapter<Payment> implements IPaymentS
 	private List<Payment> getByDayAndCurrency(Date date, Currency currency) {
 		List<Payment> payments = new ArrayList<Payment>();
 		
-		//LocalDateTime dateTime = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
 		for (Payment p: this.repo.getAll()) {

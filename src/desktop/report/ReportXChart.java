@@ -21,7 +21,7 @@ import org.knowm.xchart.style.markers.SeriesMarkers;
 public class ReportXChart {
 
 	private AppContext ctx;
-	private List<Date> xAxis; //dates
+	private List<Integer> xAxis; //dates
 	private List<Double> yAxis; //earnings
 	public XYChart chart;
 
@@ -30,16 +30,18 @@ public class ReportXChart {
 			Date endDate, AppContext ctx) throws EmptyAxisException {
 		this.ctx = ctx;
 		this.yAxis = new ArrayList<Double>();
-		this.xAxis = new ArrayList<Date>();
+		this.xAxis = new ArrayList<Integer>();
 		
 		// ukoliko je enddate - startdate == 1 onda ispisuj sate...
 		// odvojiti u posebne funkcije... buvalno ovdje samo dobaviti payment za taj dan
 		
+		int i = 0;
 		for(Date currDate=startDate; currDate.before(endDate); currDate.setDate(currDate.getDate()+1)) {
 			double profit = this.ctx.getPaymentService().getProfitForReport(stations, categories, currency, currDate);
-			if (profit == 0) continue;
+			//if (profit == 0) continue;
 			yAxis.add(profit);
-			xAxis.add(currDate);
+			xAxis.add(i);
+			i++;
 			System.out.println(profit);
 			System.out.println(currDate);
 		}
