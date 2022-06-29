@@ -43,15 +43,16 @@ public class MalfunctionLogTableModel extends AbstractTableModel implements IObs
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
+		int index = malfunctions.size() - rowIndex - 1;
 		switch (columnIndex) {
 		case 0:
-			return malfunctions.get(malfunctions.size() - rowIndex - 1).getWhenCreated();
+			return malfunctions.get(index).getWhenCreated();
 		case 1:
-			return malfunctions.get(malfunctions.size() - rowIndex - 1).getBooth().getCode();
+			return malfunctions.get(index).getBooth().getCode();
 		case 2:
-			return malfunctions.get(malfunctions.size() - rowIndex - 1).getStatus().getType().toString();
+			return malfunctions.get(index).getStatus().getType().toString();
 		case 3:
-			Employee whoReported = malfunctions.get(rowIndex).getWhoReported();
+			Employee whoReported = malfunctions.get(index).getWhoReported();
 			return (whoReported != null) ? whoReported.getName() + " " + whoReported.getSurname() : "/";
 		default:
 			return null;
