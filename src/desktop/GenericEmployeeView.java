@@ -13,11 +13,13 @@ import javax.swing.event.ChangeListener;
 import core.AppContext;
 import core.booth.Booth;
 import core.employee.Employee;
+import core.station.Station;
 import core.util.TicketStream;
 import desktop.booth.BoothDashboardView;
 import desktop.collector.ExitBoothView;
 import desktop.pricelist.PricelistDashboardView;
 import desktop.pricelist.entry.PricelistEntryDashboardView;
+import desktop.report.ReportDashboardView;
 import desktop.station.StationDashboardView;
 import net.miginfocom.swing.MigLayout;
 
@@ -74,6 +76,8 @@ public class GenericEmployeeView extends JFrame {
 			initCollectorGUI();
 			break;
 		case STATION_CHEIF:
+			initStationChief();
+			break;
 		case TAG_SELLER:
 			JOptionPane.showMessageDialog(this, "No implementation.");
 			break;
@@ -96,8 +100,10 @@ public class GenericEmployeeView extends JFrame {
 	private void initManagerGUI() {
 		PricelistEntryDashboardView pricelistEntryDashboardView = new PricelistEntryDashboardView(ctx);
 		PricelistDashboardView pricelistDashboardView = new PricelistDashboardView(ctx);
+		ReportDashboardView reportDashboardView = new ReportDashboardView(ctx);
 		tabbedPane.add("Pricelist entries", pricelistEntryDashboardView);
 		tabbedPane.add("Pricelists", pricelistDashboardView);
+		tabbedPane.add("Reports", reportDashboardView);
 	}
 
 	private void initCollectorGUI() {
@@ -108,6 +114,12 @@ public class GenericEmployeeView extends JFrame {
 		TicketStream stream = new TicketStream(ctx, booth);
 		Thread thread = new Thread(stream);
 		thread.start();
+	}
+	
+	private void initStationChief() {
+		Station station = ctx.getStationService().get(1);
+		ReportDashboardView reportDashboardView = new ReportDashboardView(ctx, station);
+		tabbedPane.add("Reports", reportDashboardView);
 	}
 
 }
