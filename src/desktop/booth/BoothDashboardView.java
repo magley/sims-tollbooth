@@ -6,7 +6,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.ListCellRenderer;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -16,20 +15,15 @@ import core.booth.Booth;
 import core.booth.BoothController;
 import core.common.FieldEmptyException;
 import core.station.Station;
-import core.station.StationController;
 import core.station.exception.CodeAlreadyTakenException;
-import core.station.location.Location;
 import desktop.ITabbedPanel;
 
 import javax.swing.JButton;
 
-import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
-import javax.naming.Context;
-import javax.swing.AbstractListModel;
 
 public class BoothDashboardView extends JPanel implements ITabbedPanel {
 	private static final long serialVersionUID = -8777392419260987575L;

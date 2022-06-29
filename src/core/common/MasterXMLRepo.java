@@ -20,6 +20,7 @@ import com.thoughtworks.xstream.security.AnyTypePermission;
 import core.account.Account;
 import core.booth.Booth;
 import core.employee.Employee;
+import core.malfunction.Malfunction;
 import core.payment.Payment;
 import core.pricelist.Pricelist;
 import core.pricelist.entry.PricelistEntry;
@@ -44,6 +45,7 @@ public class MasterXMLRepo {
 	private List<Booth> booths = new ArrayList<Booth>();
 	private List<PricelistEntry> pricelistEntries = new ArrayList<PricelistEntry>();
 	private List<Pricelist> pricelists = new ArrayList<Pricelist>();
+	private List<Malfunction> malfunctions = new ArrayList<Malfunction>();
 	private List<Ticket> tickets = new ArrayList<Ticket>();
 	private List<Payment> payments = new ArrayList<Payment>();
 
@@ -82,6 +84,10 @@ public class MasterXMLRepo {
 
 	public List<Pricelist> getPricelists() {
 		return pricelists;
+	}
+
+	public List<Malfunction> getMalfunctions() {
+		return malfunctions;
 	}
 
 	public List<Ticket> getTickets() {

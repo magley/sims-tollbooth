@@ -16,6 +16,9 @@ import core.employee.EmployeeService;
 import core.employee.EmployeeXMLRepo;
 import core.employee.IEmployeeRepo;
 import core.employee.IEmployeeService;
+import core.malfunction.IMalfunctionService;
+import core.malfunction.MalfunctionService;
+import core.malfunction.MalfunctionXMLRepo;
 import core.payment.IPaymentRepo;
 import core.payment.IPaymentService;
 import core.payment.PaymentController;
@@ -74,6 +77,8 @@ public class AppContext {
 	IPricelistService pricelistService;
 	PricelistController pricelistController;
 	
+	IMalfunctionService malfunctionService;
+	
 	ITicketRepo ticketRepo;
 	ITicketService ticketService;
 	TicketController ticketController;
@@ -109,6 +114,8 @@ public class AppContext {
 		pricelistRepo = new PricelistXMLRepo(masterRepo);
 		pricelistService = new PricelistService(pricelistRepo);
 		pricelistController = new PricelistController(pricelistService);
+		
+		malfunctionService = new MalfunctionService(new MalfunctionXMLRepo(masterRepo));
 		
 		ticketRepo = new TicketXMLRepo(masterRepo);
 		ticketService = new TicketService(ticketRepo);
@@ -197,6 +204,10 @@ public class AppContext {
 
 	public PricelistController getPricelistController() {
 		return pricelistController;
+	}
+
+	public IMalfunctionService getMalfunctionService() {
+		return malfunctionService;
 	}
 
 	public ITicketRepo getTicketRepo() {

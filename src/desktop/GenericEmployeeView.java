@@ -13,12 +13,15 @@ import javax.swing.event.ChangeListener;
 import core.AppContext;
 import core.booth.Booth;
 import core.employee.Employee;
+import core.station.Station;
 import core.util.TicketStream;
 import desktop.booth.BoothDashboardView;
 import desktop.collector.ExitBoothView;
 import desktop.pricelist.PricelistDashboardView;
 import desktop.pricelist.entry.PricelistEntryDashboardView;
 import desktop.station.StationDashboardView;
+import desktop.stationchief.BoothStatusView;
+import desktop.stationchief.MalfunctionLogView;
 import net.miginfocom.swing.MigLayout;
 
 public class GenericEmployeeView extends JFrame {
@@ -70,10 +73,12 @@ public class GenericEmployeeView extends JFrame {
 		case MANAGER:
 			initManagerGUI();
 			break;
+		case STATION_CHEIF:
+			initStationChiefGUI();
+			break;
 		case COLLECTOR:
 			initCollectorGUI();
 			break;
-		case STATION_CHEIF:
 		case TAG_SELLER:
 			JOptionPane.showMessageDialog(this, "No implementation.");
 			break;
@@ -99,6 +104,15 @@ public class GenericEmployeeView extends JFrame {
 		tabbedPane.add("Pricelist entries", pricelistEntryDashboardView);
 		tabbedPane.add("Pricelists", pricelistDashboardView);
 	}
+	
+	private void initStationChiefGUI() {
+		Station station = ctx.getStationService().get(1);
+		BoothStatusView boothStatusView = new BoothStatusView(station,
+				ctx.getMalfunctionService(), ctx.getEmployeeService());
+		MalfunctionLogView malfunctionLogView = new MalfunctionLogView(station, ctx.getMalfunctionService());
+		tabbedPane.add("Booths", boothStatusView);
+		tabbedPane.add("Malfunctions", malfunctionLogView);
+	}
 
 	private void initCollectorGUI() {
 		Booth booth = ctx.getBoothService().get(3);
@@ -109,5 +123,4 @@ public class GenericEmployeeView extends JFrame {
 		Thread thread = new Thread(stream);
 		thread.start();
 	}
-
 }
