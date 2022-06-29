@@ -56,6 +56,9 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	private JButton btnFlipSemaphore;
 	private JButton btnFlipRamp;
 	private JButton btnFlipScreen;
+	private JButton btnMalfunctionSemaphore;
+	private JButton btnMalfunctionRamp;
+	private JButton btnMalfunctionScreen;
 	private JLabel lblSemaphore;
 	private JLabel lblRamp;
 	private JLabel lblScreen;
@@ -74,6 +77,10 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		this.booth = booth;
 		this.booth.initDeviceStatus();
 		booth.addObserver(this);
+		lblSemaphore = new JLabel();
+		lblRamp = new JLabel();
+		lblScreen = new JLabel();
+
 		booth.activate();
 		this.processedTicket = null;
 		this.entryForTicket = null;
@@ -188,12 +195,8 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		});
 		add(btnNextTicket, "flowx, wrap, cell 0 9, span 3");
 		
-		
-		lblSemaphore = new JLabel();
-		lblRamp = new JLabel();
-		lblScreen = new JLabel();
 		updateDeviceLabels();
-
+		
 		btnFlipSemaphore = new JButton("Toggle");
 		btnFlipSemaphore.setEnabled(true);
 		btnFlipSemaphore.addActionListener(new ActionListener() {
@@ -221,12 +224,45 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 			}
 		});
 		
+
+		btnMalfunctionSemaphore = new JButton("Report Error");
+		btnMalfunctionSemaphore.setEnabled(true);
+		btnMalfunctionSemaphore.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Malfunction malf = new Malfunction(booth.getDeviceStatus(Type.SEMAPHORE), booth, collector);
+				ctx.getMalfunctionService().add(malf);
+			}
+		});
+
+		btnMalfunctionRamp = new JButton("Report Error");
+		btnMalfunctionRamp.setEnabled(true);
+		btnMalfunctionRamp.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Malfunction malf = new Malfunction(booth.getDeviceStatus(Type.RAMP), booth, collector);
+				ctx.getMalfunctionService().add(malf);
+			}
+		});
+
+		btnMalfunctionScreen = new JButton("Report Error");
+		btnMalfunctionScreen.setEnabled(true);
+		btnMalfunctionScreen.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Malfunction malf = new Malfunction(booth.getDeviceStatus(Type.SCREEN), booth, collector);
+				ctx.getMalfunctionService().add(malf);
+			}
+		});
 		add(lblSemaphore, "cell 0 10");
 		add(lblRamp, "cell 1 10");
 		add(lblScreen, "cell 2 10");
 		add(btnFlipSemaphore, "cell 0 11");
 		add(btnFlipRamp, "cell 1 11");
 		add(btnFlipScreen, "cell 2 11");
+		add(btnMalfunctionSemaphore, "cell 0 12");
+		add(btnMalfunctionRamp, "cell 1 12");
+		add(btnMalfunctionScreen, "cell 2 12");
 	}
 	
 	private void updateDeviceLabels() {

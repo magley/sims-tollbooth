@@ -42,13 +42,20 @@ public class Booth extends Entity implements IPublisher {
 	public List<DeviceStatus> getDeviceStatus() {
 		return deviceStatus;
 	}
+
 	public int getDeviceFlags(DeviceStatus.Type type) {
+		DeviceStatus ds = getDeviceStatus(type);
+		return ds != null ? ds.getFlags() : -1;
+	}
+
+	public DeviceStatus getDeviceStatus(DeviceStatus.Type type) {
 		Optional<DeviceStatus> dStatus = this.deviceStatus.stream()
 				.filter(d -> d.getType().equals(type)).findFirst();
 		if (dStatus.isEmpty()) {
-			return -1;
+			return null;
 		}
-		return dStatus.get().getFlags();
+		return dStatus.get();
+		// TODO: use this in next refactor
 	}
 
 	public Booth(String code, Station station) {
