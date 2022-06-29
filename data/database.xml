@@ -3061,6 +3061,25 @@
       </status>
       <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
     </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>64</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T21:07:44.095975016</whenCreated>
+      <status>
+        <type>SEMAPHORE</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>65</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T21:07:49.939134425</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[65]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
+    </core.malfunction.Malfunction>
   </malfunctions>
   <tickets>
     <core.ticket.Ticket>
@@ -4681,6 +4700,126 @@
       <removed>false</removed>
       <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
       <enteredAt>2022-06-29T21:03:25.184893506</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>200</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T21:04:33.211687244</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>201</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T21:04:35.213158278</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>202</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T21:04:37.213460035</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>203</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T21:05:16.46097969</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>204</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T21:05:18.461678073</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>205</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T21:05:20.462053303</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>206</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T21:05:24.40969984</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>207</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T21:05:26.410420991</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>208</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T21:05:28.41076584</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>209</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T21:06:50.866039821</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>210</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T21:06:52.866859588</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>211</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T21:06:54.867204506</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>212</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T21:10:31.407533321</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>213</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T21:10:33.409061974</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>214</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T21:10:35.409493426</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>

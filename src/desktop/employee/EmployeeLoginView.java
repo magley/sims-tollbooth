@@ -71,6 +71,7 @@ public class EmployeeLoginView extends JFrame {
 			@Override
 			public void componentShown(ComponentEvent e) {
 				super.componentShown(e);
+				repaint();
 				txtEmail.requestFocus();
 			}
 		});
