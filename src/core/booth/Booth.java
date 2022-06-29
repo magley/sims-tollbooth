@@ -53,16 +53,12 @@ public class Booth extends Entity implements IPublisher {
 	}
 	@Override
 	public String toString() {
-		if (deviceStatus == null) {
-			initDeviceStatus();
-		}
+		initDeviceStatus();
 		return "Booth [code=" + code + ", station.id=" + (station != null ? station.getId() : "null") + ", deviceStatus=" + deviceStatus + "]";
 	}
 	
 	public void setDeviceStatus(DeviceStatus.Type deviceType, DeviceStatus.Status status) {
-		if (deviceStatus == null) {
-			initDeviceStatus();
-		}
+		initDeviceStatus();
 		
 		Optional<DeviceStatus> o = deviceStatus.stream().filter(ds -> ds.getType() == deviceType).findAny();
 		
@@ -76,9 +72,7 @@ public class Booth extends Entity implements IPublisher {
 	
 	// TODO: extract common method
 	public void setDeviceFlags(DeviceStatus.Type deviceType, int flags) {
-		if (deviceStatus == null) {
-			initDeviceStatus();
-		}
+		initDeviceStatus();
 		
 		Optional<DeviceStatus> o = deviceStatus.stream().filter(ds -> ds.getType() == deviceType).findAny();
 		
@@ -92,9 +86,7 @@ public class Booth extends Entity implements IPublisher {
 	
 	// TODO: extract common method
 	public void flipDeviceFlags(DeviceStatus.Type deviceType) {
-		if (deviceStatus == null) {
-			initDeviceStatus();
-		}
+		initDeviceStatus();
 		
 		Optional<DeviceStatus> o = deviceStatus.stream().filter(ds -> ds.getType() == deviceType).findAny();
 		
@@ -106,13 +98,16 @@ public class Booth extends Entity implements IPublisher {
 		}
 	}
 	
-	private void initDeviceStatus() {
-		deviceStatus = new ArrayList<DeviceStatus>();
-		for (DeviceStatus.Type t : DeviceStatus.Type.values()) {
-			deviceStatus.add(new DeviceStatus(t, Status.NOT_WORKING));
+	public void initDeviceStatus() {
+		if (deviceStatus == null) {
+			deviceStatus = new ArrayList<DeviceStatus>();
+			for (DeviceStatus.Type t : DeviceStatus.Type.values()) {
+				deviceStatus.add(new DeviceStatus(t, Status.NOT_WORKING));
+			}
+			this.observers = new ArrayList<IObserver>();
+			this.state = new BoothDeactivated(this);
+			this.state.entry();
 		}
-		this.state = new BoothDeactivated(this);
-		this.state.entry();
 	}
 
 	@Override

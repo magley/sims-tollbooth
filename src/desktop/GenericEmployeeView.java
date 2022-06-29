@@ -12,10 +12,13 @@ import javax.swing.event.ChangeListener;
 
 import core.AppContext;
 import core.employee.Employee;
+import core.station.Station;
 import desktop.booth.BoothDashboardView;
 import desktop.pricelist.PricelistDashboardView;
 import desktop.pricelist.entry.PricelistEntryDashboardView;
 import desktop.station.StationDashboardView;
+import desktop.stationchief.BoothStatusView;
+import desktop.stationchief.MalfunctionLogView;
 import net.miginfocom.swing.MigLayout;
 
 public class GenericEmployeeView extends JFrame {
@@ -95,8 +98,11 @@ public class GenericEmployeeView extends JFrame {
 	}
 	
 	private void initStationChiefGUI() {
-//		PricelistEntryDashboardView pricelistEntryDashboardView = new PricelistEntryDashboardView(ctx);
-//		tabbedPane.add("Booths", pricelistEntryDashboardView);
+		Station station = ctx.getStationService().get(1);
+//		BoothStatusView boothStatusView = new BoothStatusView(station);
+		MalfunctionLogView malfunctionLogView = new MalfunctionLogView(station);
+//		tabbedPane.add("Booths", boothStatusView);
+		tabbedPane.add("Malfunctions", malfunctionLogView);
 	}
 	
 }
