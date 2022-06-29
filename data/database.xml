@@ -429,5 +429,138 @@
       </status>
       <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
     </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>3</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:22:29.209625903</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>4</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:24.71469577</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>5</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:29.193428601</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>6</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:29.93699475</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[5]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>7</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:30.777905421</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[6]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>8</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:31.394572784</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[5]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>9</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:31.836694089</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[5]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>10</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:32.264587455</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>11</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:33.063270513</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[6]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>12</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:33.29140962</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[5]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>13</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:33.46039026</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[6]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>14</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:33.61028601</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[6]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>15</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:24:33.740988895</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[11]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>16</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:37:56.586115997</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>17</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:38:08.322464743</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>18</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:40:38.626225492</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
   </malfunctions>
 </core.common.MasterXMLRepo>

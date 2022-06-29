@@ -28,7 +28,7 @@ import net.miginfocom.swing.MigLayout;
 
 public class StationDashboardView extends JPanel implements ITabbedPanel {
 	public StationDashboardView(IStationService service, ILocationService locationService, StationController controller, BoothController boothController) {
-		setLayout(new MigLayout("", "[grow]", "[grow][][][][]"));
+		setLayout(new MigLayout("debug", "[grow]", "[grow][][][][]"));
 		
 		JScrollPane scrollPane = new JScrollPane();
 		add(scrollPane, "grow,flowy,cell 0 0");

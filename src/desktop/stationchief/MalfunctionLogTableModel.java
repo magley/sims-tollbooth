@@ -64,4 +64,8 @@ public class MalfunctionLogTableModel extends AbstractTableModel implements IObs
 		fireTableDataChanged();
 	}
 
+	@Override
+	public void notifyState() {
+	}
+
 }

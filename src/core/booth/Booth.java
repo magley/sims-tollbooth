@@ -11,6 +11,7 @@ import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
 import core.booth.observer.IObserver;
 import core.booth.observer.IPublisher;
+import core.booth.state.BoothActive;
 import core.booth.state.BoothDeactivated;
 import core.booth.state.BoothState;
 import core.malfunction.Malfunction;
@@ -102,7 +103,7 @@ public class Booth extends Entity implements IPublisher {
 		if (deviceStatus == null) {
 			deviceStatus = new ArrayList<DeviceStatus>();
 			for (DeviceStatus.Type t : DeviceStatus.Type.values()) {
-				deviceStatus.add(new DeviceStatus(t, Status.NOT_WORKING));
+				deviceStatus.add(new DeviceStatus(t, Status.WORKING));
 			}
 			this.observers = new ArrayList<IObserver>();
 			this.state = new BoothDeactivated(this);
@@ -177,5 +178,16 @@ public class Booth extends Entity implements IPublisher {
 		state.exit();
 		this.state = newState;
 		state.entry();
+	}
+	
+	public Boolean isActive() {
+		return this.state.getClass() != BoothDeactivated.class;
+	}
+
+	@Override
+	public void notifyObservers() {
+		for (IObserver o : observers) {
+			o.notifyState();
+		}
 	}
 }
