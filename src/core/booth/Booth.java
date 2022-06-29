@@ -9,7 +9,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import core.Entity;
 import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
-import core.booth.observer.IObserver;
+import core.booth.observer.IBoothObserver;
 import core.booth.observer.IPublisher;
 import core.booth.state.BoothDeactivated;
 import core.booth.state.BoothState;
@@ -25,7 +25,7 @@ public class Booth extends Entity implements IPublisher {
 	@XStreamOmitField
 	private List<DeviceStatus> deviceStatus;
 	@XStreamOmitField
-	private List<IObserver> observers;
+	private List<IBoothObserver> observers;
 
 	public String getCode() {
 		return code;
@@ -42,6 +42,15 @@ public class Booth extends Entity implements IPublisher {
 	public List<DeviceStatus> getDeviceStatus() {
 		return deviceStatus;
 	}
+	public int getDeviceFlags(DeviceStatus.Type type) {
+		Optional<DeviceStatus> dStatus = this.deviceStatus.stream()
+				.filter(d -> d.getType().equals(type)).findFirst();
+		if (dStatus.isEmpty()) {
+			return -1;
+		}
+		return dStatus.get().getFlags();
+	}
+
 	public Booth(String code, Station station) {
 		super();
 		this.code = code;
@@ -82,6 +91,7 @@ public class Booth extends Entity implements IPublisher {
 			DeviceStatus ds = o.get();
 			ds.setFlags(flags);
 		}
+		notifyObserversDevice();
 	}
 	
 	// TODO: extract common method
@@ -96,6 +106,7 @@ public class Booth extends Entity implements IPublisher {
 			DeviceStatus ds = o.get();
 			ds.flipFlags();
 		}
+		notifyObserversDevice();
 	}
 	
 	public void initDeviceStatus() {
@@ -104,25 +115,25 @@ public class Booth extends Entity implements IPublisher {
 			for (DeviceStatus.Type t : DeviceStatus.Type.values()) {
 				deviceStatus.add(new DeviceStatus(t, Status.WORKING));
 			}
-			this.observers = new ArrayList<IObserver>();
+			this.observers = new ArrayList<IBoothObserver>();
 			this.state = new BoothDeactivated(this);
 			this.state.entry();
 		}
 	}
 
 	@Override
-	public void addObserver(IObserver o) {
+	public void addObserver(IBoothObserver o) {
 		observers.add(o);
 	}
 
 	@Override
-	public void removeObserver(IObserver o) {
+	public void removeObserver(IBoothObserver o) {
 		observers.remove(o);
 	}
 
 	@Override
 	public void notifyObservers(Malfunction malf) {
-		for (IObserver o : observers) {
+		for (IBoothObserver o : observers) {
 			o.notify(malf);
 		}
 	}
@@ -177,7 +188,7 @@ public class Booth extends Entity implements IPublisher {
 		state.exit();
 		this.state = newState;
 		state.entry();
-		notifyObservers();
+		notifyObserversState();
 	}
 	
 	public Boolean isActive() {
@@ -185,9 +196,15 @@ public class Booth extends Entity implements IPublisher {
 	}
 
 	@Override
-	public void notifyObservers() {
-		for (IObserver o : observers) {
+	public void notifyObserversState() {
+		for (IBoothObserver o : observers) {
 			o.notifyState();
+		}
+	}
+	@Override
+	public void notifyObserversDevice() {
+		for (IBoothObserver o : observers) {
+			o.notifyDevice();
 		}
 	}
 }

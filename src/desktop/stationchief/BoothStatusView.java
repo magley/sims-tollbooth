@@ -37,7 +37,7 @@ public class BoothStatusView extends JPanel implements ITabbedPanel {
 			public void actionPerformed(ActionEvent e) {
 				Random rand = new Random();
 				Booth booth = station.getTollBooths().get(rand.nextInt(station.getTollBooths().size()));
-				Malfunction malf = new Malfunction(booth.getDeviceStatus().get(0), booth);
+				Malfunction malf = new Malfunction(booth.getDeviceStatus().get(1), booth);
 				malfunctionService.add(malf);
 			}
 		});
