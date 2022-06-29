@@ -1,5 +1,6 @@
 package app;
 
+import java.awt.Font;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.plaf.FontUIResource;
 
 import core.AppContext;
@@ -55,21 +57,26 @@ public class Main {
 	}
 	
 	private static void startApp(MasterXMLRepo masterRepo, AppContext ctx) {
-		JFrame frame = new EmployeeLoginView(ctx);
-//		for (LookAndFeelInfo el : UIManager.getInstalledLookAndFeels()) {
-//			if ("Nimbus".equals(el.getName()))
-//				try {
-//					UIManager.setLookAndFeel(el.getClassName());
-//				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
-//						| UnsupportedLookAndFeelException e) {
-//					e.printStackTrace();
-//				}
-//		}
-		UIManager.put("Label.font", new FontUIResource(UIManager.getFont("Label.font").deriveFont((float) 22)));
-		UIManager.put("Button.font", new FontUIResource(UIManager.getFont("Button.font").deriveFont((float) 22)));
-		UIManager.put("TextField.font", new FontUIResource(UIManager.getFont("TextField.font").deriveFont((float) 22)));
-		UIManager.put("PasswordField.font", new FontUIResource(UIManager.getFont("PasswordField.font").deriveFont((float) 22)));
-		SwingUtilities.updateComponentTreeUI(frame);
+		try {
+		    UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+		} catch (Exception e) {
+		    // If Nimbus is not available, you can set the GUI to another look and feel.
+		}
+		
+		Font f = new Font("Dialog", Font.PLAIN, 22);
+		
+		UIManager.put("Label.font", new FontUIResource(f));
+		UIManager.put("Button.font", new FontUIResource(f));
+		UIManager.put("TextField.font", new FontUIResource(f));
+		UIManager.put("PasswordField.font", new FontUIResource(f));
+		UIManager.put("Table.font", new FontUIResource(f));
+		UIManager.put("TableHeader.font", new FontUIResource(f));
+		UIManager.put("TabbedPane.font", new FontUIResource(f));
+		UIManager.put("ComboBox.font", new FontUIResource(f));
+		UIManager.put("Spinner.font", new FontUIResource(f));
+		UIManager.put("CheckBox.font", new FontUIResource(f));
+			
+		JFrame frame = new EmployeeLoginView(ctx);	
 		frame.setSize(800, 600);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

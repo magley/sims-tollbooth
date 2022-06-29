@@ -44,6 +44,7 @@ public class BoothDashboardView extends JPanel implements ITabbedPanel {
 		
 		tableModel = new BoothTableModel(ctx.getBoothService());
 		boothTable = new JTable(tableModel);
+		boothTable.setRowHeight(32);
 		boothTable.getTableHeader().setReorderingAllowed(false);
 		boothTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		boothTable.getSelectionModel().addListSelectionListener(new ListSelectionListener(){

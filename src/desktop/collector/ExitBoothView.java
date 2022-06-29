@@ -124,7 +124,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	}
 
 	private void initGUI() {
-		setLayout(new MigLayout("debug", "[grow]", "[][][][]"));
+		setLayout(new MigLayout("", "[grow]", "[][][][]"));
 
 		JLabel lblBooth = new JLabel(String.format("Booth: %s", booth.getCode()));
 		add(lblBooth, "cell 0 0, span 3");

@@ -47,6 +47,7 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 
 		tableModel = new PricelistEntryTableModel(ctx.getPricelistService().getActive().getEntries());
 		table = new JTable(tableModel);
+		table.setRowHeight(32);
 		table.getTableHeader().setReorderingAllowed(false);
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {

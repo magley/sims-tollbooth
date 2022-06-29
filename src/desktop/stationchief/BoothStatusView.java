@@ -27,8 +27,9 @@ public class BoothStatusView extends JPanel implements ITabbedPanel {
 //			throw new Exception("Shouldn't be here");  // TODO: change exception
 //		}
 //		service.get(0);
-		setLayout(new MigLayout("debug", "[grow]", "[grow, fill][]"));
+		setLayout(new MigLayout("", "[grow]", "[grow, fill][]"));
 		BoothStatusTable boothStatusTable = new BoothStatusTable(station);
+		boothStatusTable.setRowHeight(32);
 		JScrollPane scrollTable = new JScrollPane(boothStatusTable);
 		add(scrollTable, "grow, flowy, wrap");
 		JButton btnSimulateMalfunctionReport = new JButton("Simulate malfunction reporting");

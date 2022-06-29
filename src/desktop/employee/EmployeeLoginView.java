@@ -38,7 +38,7 @@ public class EmployeeLoginView extends JFrame {
 		this.accountController = ctx.getAccountController();
 		this.employeeController = ctx.getEmployeeController();
 
-		getContentPane().setLayout(new MigLayout("", "[20%][10%][grow][20%]", "[30%,grow][][][][30%,grow]"));
+		getContentPane().setLayout(new MigLayout("", "[20%][10%][grow][20%]", "[30%,grow][][][20%,grow][20%,grow][20%]"));
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
@@ -62,7 +62,7 @@ public class EmployeeLoginView extends JFrame {
 				login();
 			}
 		});
-		getContentPane().add(btnLogin, "cell 1 4 2 1,growx");
+		getContentPane().add(btnLogin, "cell 1 4 2 1,grow");
 		getRootPane().setDefaultButton(btnLogin);
 	}
 
