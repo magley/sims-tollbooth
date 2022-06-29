@@ -1,5 +1,6 @@
 package desktop.stationchief;
 
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
@@ -46,7 +47,8 @@ public class MalfunctionLogTableModel extends AbstractTableModel implements IObs
 		int index = malfunctions.size() - rowIndex - 1;
 		switch (columnIndex) {
 		case 0:
-			return malfunctions.get(index).getWhenCreated();
+			return malfunctions.get(index).getWhenCreated()
+					.format(DateTimeFormatter.ofPattern("MM-dd    HH:mm:ss"));
 		case 1:
 			return malfunctions.get(index).getBooth().getCode();
 		case 2:
