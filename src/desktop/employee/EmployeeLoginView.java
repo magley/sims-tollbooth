@@ -2,6 +2,9 @@ package desktop.employee;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -38,7 +41,8 @@ public class EmployeeLoginView extends JFrame {
 		this.accountController = ctx.getAccountController();
 		this.employeeController = ctx.getEmployeeController();
 
-		getContentPane().setLayout(new MigLayout("", "[20%][10%][grow][20%]", "[30%,grow][][][][30%,grow]"));
+		getContentPane().setLayout(new MigLayout("", "[20%][10%][grow][20%]", "[30%,grow][][][20%,grow][20%,grow][20%]"));
+		setTitle("Login - Toll System");
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
@@ -62,8 +66,16 @@ public class EmployeeLoginView extends JFrame {
 				login();
 			}
 		});
-		getContentPane().add(btnLogin, "cell 1 4 2 1,growx");
+		getContentPane().add(btnLogin, "cell 1 4 2 1,grow");
 		getRootPane().setDefaultButton(btnLogin);
+		addComponentListener(new ComponentAdapter() {
+			@Override
+			public void componentShown(ComponentEvent e) {
+				super.componentShown(e);
+				repaint();
+				txtEmail.requestFocus();
+			}
+		});
 	}
 
 	private void login() {

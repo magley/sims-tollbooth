@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Random;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
+import javax.swing.plaf.FontUIResource;
 
 import core.AppContext;
 import core.booth.Booth;
@@ -52,8 +54,24 @@ public class Main {
 	}
 	
 	private static void startApp(MasterXMLRepo masterRepo, AppContext ctx) {
-		JFrame frame = new EmployeeLoginView(ctx);
-		frame.setSize(800, 600);
+		try {
+		    UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+		} catch (Exception e) {
+		}
+
+		UIManager.put("Label.font", new FontUIResource(UIManager.getFont("Label.font").deriveFont((float) 22)));
+		UIManager.put("Button.font", new FontUIResource(UIManager.getFont("Button.font").deriveFont((float) 22)));
+		UIManager.put("TextField.font", new FontUIResource(UIManager.getFont("TextField.font").deriveFont((float) 22)));
+		UIManager.put("PasswordField.font", new FontUIResource(UIManager.getFont("PasswordField.font").deriveFont((float) 22)));
+		UIManager.put("Table.font", new FontUIResource(UIManager.getFont("Table.font").deriveFont((float) 22)));
+		UIManager.put("TableHeader.font", new FontUIResource(UIManager.getFont("TableHeader.font").deriveFont((float) 22)));
+		UIManager.put("TabbedPane.font", new FontUIResource(UIManager.getFont("TabbedPane.font").deriveFont((float) 22)));
+		UIManager.put("ComboBox.font", new FontUIResource(UIManager.getFont("ComboBox.font").deriveFont((float) 22)));
+		UIManager.put("Spinner.font", new FontUIResource(UIManager.getFont("Spinner.font").deriveFont((float) 22)));
+		UIManager.put("CheckBox.font", new FontUIResource(UIManager.getFont("CheckBox.font").deriveFont((float) 22)));
+
+		JFrame frame = new EmployeeLoginView(ctx);	
+		frame.setSize(1024, 768);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);

@@ -33,9 +33,10 @@ public class PricelistDashboardView extends JPanel implements ITabbedPanel {
 
 		JScrollPane scrollPane = new JScrollPane();
 		add(scrollPane, "grow,flowy,cell 0 0");
-
+		
 		tableModel = new PricelistTableModel(ctx.getPricelistService());
 		table = new JTable(tableModel);
+		table.setRowHeight(32);
 		table.getTableHeader().setReorderingAllowed(false);
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {

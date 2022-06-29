@@ -42,6 +42,7 @@ public class GenericEmployeeView extends JFrame {
 		this.ctx = ctx;
 		this.parent = parent;
 		this.employee = employee;
+		setTitle("Employee Menu - Toll System");
 
 		getContentPane().setLayout(new MigLayout("", "[grow]", "[][grow]"));
 		
@@ -124,6 +125,7 @@ public class GenericEmployeeView extends JFrame {
 		ExitBoothView exitBoothView = new ExitBoothView(ctx, employee, booth);
 		ctx.getTicketService().registerObserver(exitBoothView);
 		tabbedPane.add("Booth view", exitBoothView);
+		exitBoothView.onAdd();
 		TicketStream stream = new TicketStream(ctx, booth);
 		Thread thread = new Thread(stream);
 		thread.start();

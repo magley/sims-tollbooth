@@ -28,13 +28,14 @@ import net.miginfocom.swing.MigLayout;
 
 public class StationDashboardView extends JPanel implements ITabbedPanel {
 	public StationDashboardView(IStationService service, ILocationService locationService, StationController controller, BoothController boothController) {
-		setLayout(new MigLayout("debug", "[grow]", "[grow][][][][]"));
+		setLayout(new MigLayout("", "[grow]", "[grow][][][][]"));
 		
 		JScrollPane scrollPane = new JScrollPane();
 		add(scrollPane, "grow,flowy,cell 0 0");
 		
 		tableModel = new StationTableModel(service);
 		table = new JTable(tableModel);
+		table.setRowHeight(32);
 		table.getTableHeader().setReorderingAllowed(false);
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		table.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
