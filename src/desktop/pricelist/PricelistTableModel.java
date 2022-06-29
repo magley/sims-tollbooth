@@ -44,7 +44,7 @@ public class PricelistTableModel extends AbstractTableModel {
 			return p.getStart().toLocalDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " "
 					+ p.getStart().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm"));
 		case 2:
-			return p.getActive();
+			return (service.isActive(p)) ? "YES": "NO";
 		default:
 			throw new ArrayIndexOutOfBoundsException("Bad column!");
 		}

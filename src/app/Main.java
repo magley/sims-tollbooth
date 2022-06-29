@@ -118,6 +118,6 @@ public class Main {
 	private static void generatePricelistData(AppContext ctx) {
 		List<PricelistEntry> entries = new ArrayList<PricelistEntry>(ctx.getPricelistEntryService().getAll());
 
-		ctx.getPricelistService().add(new Pricelist(LocalDateTime.now(), entries, Pricelist.Active.YES));
+		ctx.getPricelistService().add(new Pricelist(LocalDateTime.now(), entries));
 	}
 }

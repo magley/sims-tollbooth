@@ -13,6 +13,8 @@ public interface IPricelistService extends IService<Pricelist> {
 	public List<Pricelist> getContaining(PricelistEntry entry);
 
 	public Pricelist getActive();
+	
+	public boolean isActive(Pricelist p);
 
 	public PricelistEntry getFor(Station entry, Station exit, VehicleCategory category, Currency currency);
 }

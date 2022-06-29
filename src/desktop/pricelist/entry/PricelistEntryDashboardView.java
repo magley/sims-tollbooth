@@ -67,7 +67,7 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 
 		lstPricelist = new JList<Pricelist>(ctx.getPricelistService().getAll().toArray(new Pricelist[0]));
 		lstPricelist.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-		lstPricelist.setCellRenderer(new PricelistListRenderer());
+		lstPricelist.setCellRenderer(new PricelistListRenderer(ctx.getPricelistService()));
 		scrollPaneList.setViewportView(lstPricelist);
 
 		JLabel lblEntry = new JLabel("Entry: ");

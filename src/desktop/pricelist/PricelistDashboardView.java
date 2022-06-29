@@ -1,7 +1,6 @@
 package desktop.pricelist;
 
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -25,7 +24,6 @@ public class PricelistDashboardView extends JPanel implements ITabbedPanel {
 	private PricelistTableModel tableModel;
 	private JTable table;
 	private JTextField txtStart;
-	private JComboBox<Pricelist.Active> cbActive;
 
 	public PricelistDashboardView(AppContext ctx) {
 		this.ctx = ctx;
@@ -53,35 +51,27 @@ public class PricelistDashboardView extends JPanel implements ITabbedPanel {
 
 		txtStart = new JTextField();
 		add(txtStart, "cell 0 1,growx");
-		
-		JLabel lblActive = new JLabel("Active");
-		add(lblActive, "flowx, cell 0 2");
-
-		cbActive = new JComboBox<Pricelist.Active>(Pricelist.Active.values());
-		add(cbActive, "cell 0 2,growx");
 
 		JButton btnInsert = new JButton("Insert");
 		btnInsert.setEnabled(false);
-		add(btnInsert, "flowx,cell 0 3");
+		add(btnInsert, "flowx,cell 0 2");
 
 		JButton btnUpdate = new JButton("Update");
 		btnUpdate.setEnabled(false);
-		add(btnUpdate, "flowx,cell 0 3");
+		add(btnUpdate, "flowx,cell 0 2");
 
 		JButton btnDelete = new JButton("Delete");
 		btnDelete.setEnabled(false);
-		add(btnDelete, "flowx,cell 0 3");
+		add(btnDelete, "flowx,cell 0 2");
 	}
 
 	private void tableSelectedRow(int row) {
 		Pricelist p = tableModel.getPricelist(row);
 		txtStart.setText(p.getStart().toString());
-		cbActive.setSelectedItem(p.getActive());
 	}
 
 	private void tableDeselectRow() {
 		txtStart.setText("");
-		cbActive.setSelectedItem(null);
 	}
 
 	@Override

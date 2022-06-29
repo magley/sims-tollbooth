@@ -1366,7 +1366,6 @@
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[107]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[108]"/>
       </entries>
-      <active>YES</active>
     </core.pricelist.Pricelist>
   </pricelists>
   <tickets/>
