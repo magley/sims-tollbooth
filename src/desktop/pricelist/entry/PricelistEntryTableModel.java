@@ -1,8 +1,10 @@
 package desktop.pricelist.entry;
 
+import java.util.Collections;
+import java.util.List;
+
 import javax.swing.table.AbstractTableModel;
 
-import core.pricelist.entry.IPricelistEntryService;
 import core.pricelist.entry.PricelistEntry;
 
 public class PricelistEntryTableModel extends AbstractTableModel {
@@ -10,16 +12,16 @@ public class PricelistEntryTableModel extends AbstractTableModel {
 	private static final long serialVersionUID = 4462780930360261660L;
 	private static final String[] cols = { "ID", "Entry", "Exit", "Category", "Currency", "Price" };
 
-	private IPricelistEntryService service;
+	private List<PricelistEntry> entries;
 
-	public PricelistEntryTableModel(IPricelistEntryService service) {
+	public PricelistEntryTableModel(List<PricelistEntry> entries) {
 		super();
-		this.service = service;
+		this.entries = Collections.unmodifiableList(entries);
 	}
 
 	@Override
 	public int getRowCount() {
-		return service.getAll().size();
+		return entries.size();
 	}
 
 	@Override
@@ -34,7 +36,7 @@ public class PricelistEntryTableModel extends AbstractTableModel {
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
-		PricelistEntry p = service.getAll().get(rowIndex);
+		PricelistEntry p = entries.get(rowIndex);
 		switch (columnIndex) {
 		case 0:
 			return p.getId();
@@ -54,7 +56,7 @@ public class PricelistEntryTableModel extends AbstractTableModel {
 	}
 
 	public PricelistEntry getPricelistEntry(int rowIndex) {
-		return service.getAll().get(rowIndex);
+		return entries.get(rowIndex);
 	}
 
 }
