@@ -24,6 +24,7 @@ public class MalfunctionLogTableModel extends AbstractTableModel implements IBoo
 		for (Booth booth : station.getTollBooths()) {
 			booth.initDeviceStatus();
 			booth.addObserver(this);
+			booth.activate();
 		}
 	}
 

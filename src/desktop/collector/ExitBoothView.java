@@ -74,6 +74,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		this.booth = booth;
 		this.booth.initDeviceStatus();
 		booth.addObserver(this);
+		booth.activate();
 		this.processedTicket = null;
 		this.entryForTicket = null;
 		this.queuedTickets = new ArrayList<Ticket>();
