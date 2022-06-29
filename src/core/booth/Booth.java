@@ -135,6 +135,13 @@ public class Booth extends Entity implements IPublisher {
 		}
 	}
 
+	public void fixAll() {
+		for (DeviceStatus ds : deviceStatus) {
+			ds.setStatus(Status.WORKING);
+		}
+		notifyObserversState();
+	}
+
 	@Override
 	public void addObserver(IBoothObserver o) {
 		observers.add(o);

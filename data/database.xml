@@ -2964,6 +2964,93 @@
       <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <whoReported reference="../../../employees/core.employee.Employee[3]"/>
     </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>54</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:18:33.186362912</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>NOT_WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>55</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:23:22.662522742</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>NOT_WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>56</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:23:59.440570926</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>NOT_WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>57</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:24:23.257409173</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>58</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:25:53.486657915</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>59</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:26:51.854506526</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>60</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:26:59.973360035</whenCreated>
+      <status reference="../../core.malfunction.Malfunction[60]/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>61</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:27:00.586400499</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>62</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T18:27:30.710933062</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
   </malfunctions>
   <tickets>
     <core.ticket.Ticket>
