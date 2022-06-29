@@ -220,7 +220,10 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		btnFlipScreen.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				booth.flipDeviceFlags(Type.SCREEN);
+				if (booth.isActive())
+					booth.pause();
+				else
+					booth.activate();
 			}
 		});
 		
