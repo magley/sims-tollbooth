@@ -48,6 +48,11 @@ public class Booth extends Entity implements IPublisher {
 		DeviceStatus ds = getDeviceStatus(type);
 		return ds != null ? ds.getFlags() : -1;
 	}
+	
+	public Boolean anyDeviceNotWorking() {
+		return getDeviceStatus().stream()
+				.anyMatch(d -> d.getStatus().equals(Status.NOT_WORKING));
+	}
 
 	public DeviceStatus getDeviceStatus(DeviceStatus.Type type) {
 		Optional<DeviceStatus> dStatus = this.deviceStatus.stream()
@@ -85,6 +90,7 @@ public class Booth extends Entity implements IPublisher {
 			DeviceStatus ds = o.get();
 			ds.setStatus(status);
 		}
+		notifyObserversDevice();
 	}
 	
 	// TODO: extract common method

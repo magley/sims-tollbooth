@@ -58,6 +58,9 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	private JButton btnMalfunctionSemaphore;
 	private JButton btnMalfunctionRamp;
 	private JButton btnMalfunctionScreen;
+	private JButton btnFixSemaphore;
+	private JButton btnFixRamp;
+	private JButton btnFixScreen;
 	private JLabel lblSemaphore;
 	private JLabel lblRamp;
 	private JLabel lblScreen;
@@ -91,12 +94,26 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		btnNextTicket = new JButton("Next ticket");
 		btnNextTicket.setEnabled(true);
 
+		btnFlipSemaphore = new JButton("Toggle");
+		btnFlipSemaphore.setEnabled(true);
+		btnFlipRamp = new JButton("Toggle");
+		btnFlipRamp.setEnabled(true);
+		btnFlipScreen = new JButton("Toggle");
+		btnFlipScreen.setEnabled(true);
+
 		btnMalfunctionSemaphore = new JButton("Report Error");
 		btnMalfunctionSemaphore.setEnabled(true);
 		btnMalfunctionRamp = new JButton("Report Error");
 		btnMalfunctionRamp.setEnabled(true);
 		btnMalfunctionScreen = new JButton("Report Error");
 		btnMalfunctionScreen.setEnabled(true);
+
+		btnFixSemaphore = new JButton("Fix");
+		btnFixSemaphore.setEnabled(false);
+		btnFixRamp = new JButton("Fix");
+		btnFixRamp.setEnabled(false);
+		btnFixScreen = new JButton("Fix");
+		btnFixScreen.setEnabled(false);
 
 		booth.activate();
 		this.processedTicket = null;
@@ -207,10 +224,8 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		});
 		add(btnNextTicket, "flowx, wrap, cell 0 9, span 3");
 		
-		updateDeviceLabels();
+		updateDeviceLabelsAndButtons();
 		
-		btnFlipSemaphore = new JButton("Toggle");
-		btnFlipSemaphore.setEnabled(true);
 		btnFlipSemaphore.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -218,8 +233,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 			}
 		});
 
-		btnFlipRamp = new JButton("Toggle");
-		btnFlipRamp.setEnabled(true);
 		btnFlipRamp.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -227,8 +240,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 			}
 		});
 
-		btnFlipScreen = new JButton("Toggle");
-		btnFlipScreen.setEnabled(true);
 		btnFlipScreen.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -247,7 +258,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 				ctx.getMalfunctionService().add(malf);
 			}
 		});
-
 		btnMalfunctionRamp.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -255,7 +265,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 				ctx.getMalfunctionService().add(malf);
 			}
 		});
-
 		btnMalfunctionScreen.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -263,6 +272,26 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 				ctx.getMalfunctionService().add(malf);
 			}
 		});
+
+		btnFixSemaphore.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				booth.setDeviceStatus(Type.SEMAPHORE, Status.WORKING);
+			}
+		});
+		btnFixRamp.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				booth.setDeviceStatus(Type.RAMP, Status.WORKING);
+			}
+		});
+		btnFixScreen.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				booth.setDeviceStatus(Type.SCREEN, Status.WORKING);
+			}
+		});
+
 		add(lblSemaphore, "cell 0 10");
 		add(lblRamp, "cell 1 10");
 		add(lblScreen, "cell 2 10");
@@ -275,9 +304,12 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		add(btnMalfunctionSemaphore, "cell 0 13");
 		add(btnMalfunctionRamp, "cell 1 13");
 		add(btnMalfunctionScreen, "cell 2 13");
+		add(btnFixSemaphore, "cell 0 14");
+		add(btnFixRamp, "cell 1 14");
+		add(btnFixScreen, "cell 2 14");
 	}
 	
-	private void updateDeviceLabels() {
+	private void updateDeviceLabelsAndButtons() {
 		lblSemaphore.setText("Semaphore: " + (booth.getDeviceFlags(Type.SEMAPHORE) == 1 ? "Green" : "Red"));
 		lblRamp.setText("Ramp: " + (booth.getDeviceFlags(Type.RAMP) == 1 ? "Raised" : "Lowered"));
 		lblScreen.setText("Screen: " + (booth.getDeviceFlags(Type.SCREEN) == 1 ? "Active" : "Inactive"));
@@ -287,12 +319,19 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
 		lblScreenWorking.setText(booth.getDeviceStatus(Type.SCREEN).getStatus()
 				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
-		btnMalfunctionSemaphore.setEnabled(booth.getDeviceStatus(Type.SEMAPHORE).getStatus()
-				.equals(Status.WORKING));
-		btnMalfunctionRamp.setEnabled(booth.getDeviceStatus(Type.RAMP).getStatus()
-				.equals(Status.WORKING));
-		btnMalfunctionScreen.setEnabled(booth.getDeviceStatus(Type.SCREEN).getStatus()
-				.equals(Status.WORKING));
+
+		Boolean semaphoreWorking = booth.getDeviceStatus(Type.SEMAPHORE).getStatus().equals(Status.WORKING);
+		btnFlipSemaphore.setEnabled(semaphoreWorking);
+		btnMalfunctionSemaphore.setEnabled(semaphoreWorking);
+		btnFixSemaphore.setEnabled(!semaphoreWorking);
+		Boolean rampWorking = booth.getDeviceStatus(Type.RAMP).getStatus().equals(Status.WORKING);
+		btnFlipRamp.setEnabled(rampWorking);
+		btnMalfunctionRamp.setEnabled(rampWorking);
+		btnFixRamp.setEnabled(!rampWorking);
+		Boolean screenWorking = booth.getDeviceStatus(Type.SCREEN).getStatus().equals(Status.WORKING);
+		btnFlipScreen.setEnabled(screenWorking && !booth.anyDeviceNotWorking());
+		btnMalfunctionScreen.setEnabled(screenWorking);
+		btnFixScreen.setEnabled(!screenWorking);
 	}
 
 	@Override
@@ -423,6 +462,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 
 	@Override
 	public void notify(Malfunction malf) {
+		updateDeviceLabelsAndButtons();
 	}
 
 	@Override
@@ -437,7 +477,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 
 	@Override
 	public void notifyDevice() {
-		updateDeviceLabels();
+		updateDeviceLabelsAndButtons();
 	}
 
 }

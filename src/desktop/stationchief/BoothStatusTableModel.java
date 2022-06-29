@@ -5,7 +5,6 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 import core.booth.Booth;
-import core.booth.DeviceStatus;
 import core.booth.observer.IBoothObserver;
 import core.malfunction.Malfunction;
 import core.station.Station;
@@ -46,8 +45,7 @@ public class BoothStatusTableModel extends AbstractTableModel implements IBoothO
 			return booths.get(rowIndex).getCode();
 			// TODO: rest
 		case 1:
-			if (booths.get(rowIndex).getDeviceStatus().stream()
-					.anyMatch(d -> d.getStatus().equals(DeviceStatus.Status.NOT_WORKING))) {
+			if (booths.get(rowIndex).anyDeviceNotWorking()) {
 				return "NO";
 			}
 			return "YES";
