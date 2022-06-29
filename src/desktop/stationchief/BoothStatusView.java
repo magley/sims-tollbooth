@@ -37,11 +37,12 @@ public class BoothStatusView extends JPanel implements ITabbedPanel {
 			public void actionPerformed(ActionEvent e) {
 				Random rand = new Random();
 				Booth booth = station.getTollBooths().get(rand.nextInt(station.getTollBooths().size()));
-				Malfunction malf = new Malfunction(booth.getDeviceStatus().get(0), booth);
+				Malfunction malf = new Malfunction(booth.getDeviceStatus().get(1), booth);
 				malfunctionService.add(malf);
 			}
 		});
 		JButton btnActivate = new JButton("Activate");
+		JButton btnFix = new JButton("Fix");
 		boothStatusTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
@@ -50,10 +51,17 @@ public class BoothStatusView extends JPanel implements ITabbedPanel {
 				}
 				int selected = boothStatusTable.getSelectedRow();
 				if (selected >= 0 && boothStatusTable.getSelectedRowCount() == 1) {
-					if (boothStatusTable.getValueAt(selected, 2).equals("NOT ACTIVE"))
-						btnActivate.setEnabled(true);
-					else
+					if (boothStatusTable.getValueAt(selected, 1).equals("NO")) {
+						btnFix.setEnabled(true);
 						btnActivate.setEnabled(false);
+					}
+					else {
+						btnFix.setEnabled(false);
+						if (boothStatusTable.getValueAt(selected, 2).equals("NOT ACTIVE"))
+							btnActivate.setEnabled(true);
+						else
+							btnActivate.setEnabled(false);
+					}
 				}
 			}
 		});
@@ -62,11 +70,22 @@ public class BoothStatusView extends JPanel implements ITabbedPanel {
 			public void actionPerformed(ActionEvent e) {
 				Booth booth = boothStatusTable.getBoothAt(boothStatusTable.getSelectedRow());
 				booth.activate();
+				btnActivate.setEnabled(false);
 			}
 		});
 		btnActivate.setEnabled(false);
-		add(btnActivate, "cell 0 1");
+		btnFix.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Booth booth = boothStatusTable.getBoothAt(boothStatusTable.getSelectedRow());
+				booth.fixAll();;
+				btnFix.setEnabled(false);
+			}
+		});
+		btnFix.setEnabled(false);
 		add(btnSimulateMalfunctionReport, "cell 0 1");
+		add(btnActivate, "cell 0 1");
+		add(btnFix, "cell 0 1");
 	}
 
 	@Override

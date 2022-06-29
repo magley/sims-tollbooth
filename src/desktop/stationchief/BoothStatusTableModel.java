@@ -5,12 +5,11 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 import core.booth.Booth;
-import core.booth.DeviceStatus;
-import core.booth.observer.IObserver;
+import core.booth.observer.IBoothObserver;
 import core.malfunction.Malfunction;
 import core.station.Station;
 
-public class BoothStatusTableModel extends AbstractTableModel implements IObserver {
+public class BoothStatusTableModel extends AbstractTableModel implements IBoothObserver {
 	private static final long serialVersionUID = 1330292339212982246L;
 	private List<Booth> booths;
 	private static final String[] cols = {"Code", "Working", "Active"};
@@ -46,13 +45,12 @@ public class BoothStatusTableModel extends AbstractTableModel implements IObserv
 			return booths.get(rowIndex).getCode();
 			// TODO: rest
 		case 1:
-			if (booths.get(rowIndex).getDeviceStatus().stream()
-					.anyMatch(d -> d.getStatus().equals(DeviceStatus.Status.NOT_WORKING))) {
+			if (booths.get(rowIndex).anyDeviceNotWorking()) {
 				return "NO";
 			}
 			return "YES";
 		case 2:
-			if (booths.get(rowIndex).isActive()) {
+			if (booths.get(rowIndex).isNotDeactivated()) {
 				return "ACTIVE";
 			}
 			return "NOT ACTIVE";
@@ -76,4 +74,7 @@ public class BoothStatusTableModel extends AbstractTableModel implements IObserv
 		fireTableDataChanged();
 	}
 
+	@Override
+	public void notifyDevice() {
+	}
 }

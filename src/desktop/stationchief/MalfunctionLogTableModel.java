@@ -6,13 +6,13 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 import core.booth.Booth;
-import core.booth.observer.IObserver;
+import core.booth.observer.IBoothObserver;
 import core.employee.Employee;
 import core.malfunction.IMalfunctionService;
 import core.malfunction.Malfunction;
 import core.station.Station;
 
-public class MalfunctionLogTableModel extends AbstractTableModel implements IObserver {
+public class MalfunctionLogTableModel extends AbstractTableModel implements IBoothObserver {
 
 	private static final long serialVersionUID = 2700365819274952491L;
 	private static final String[] cols = {"Time", "Code", "Device", "Who Reported"};
@@ -24,6 +24,7 @@ public class MalfunctionLogTableModel extends AbstractTableModel implements IObs
 		for (Booth booth : station.getTollBooths()) {
 			booth.initDeviceStatus();
 			booth.addObserver(this);
+			booth.activate();
 		}
 	}
 
@@ -71,4 +72,7 @@ public class MalfunctionLogTableModel extends AbstractTableModel implements IObs
 	public void notifyState() {
 	}
 
+	@Override
+	public void notifyDevice() {
+	}
 }

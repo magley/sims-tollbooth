@@ -3,8 +3,9 @@ package core.booth.observer;
 import core.malfunction.Malfunction;
 
 public interface IPublisher {
-	public void addObserver(IObserver o);
-	public void removeObserver(IObserver o);
+	public void addObserver(IBoothObserver o);
+	public void removeObserver(IBoothObserver o);
 	public void notifyObservers(Malfunction malf);
-	public void notifyObservers();
+	public void notifyObserversState();
+	public void notifyObserversDevice();
 }
