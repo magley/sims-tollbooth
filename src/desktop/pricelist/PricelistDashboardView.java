@@ -69,8 +69,7 @@ public class PricelistDashboardView extends JPanel implements ITabbedPanel {
 
 	private void tableSelectedRow(int row) {
 		Pricelist p = tableModel.getPricelist(row);
-		String datetime = p.getStart().toLocalDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " "
-				+ p.getStart().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm"));
+		String datetime = p.getStart().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
 		txtStart.setText(datetime);
 	}
 

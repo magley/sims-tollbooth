@@ -41,8 +41,7 @@ public class PricelistTableModel extends AbstractTableModel {
 		case 0:
 			return p.getId();
 		case 1:
-			return p.getStart().toLocalDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " "
-					+ p.getStart().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm"));
+			return p.getStart().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
 		case 2:
 			return (service.isActive(p)) ? "YES": "NO";
 		default:
