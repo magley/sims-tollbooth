@@ -14,7 +14,7 @@ public class MalfunctionLogView extends JPanel implements ITabbedPanel {
 	private static final long serialVersionUID = -4685644874677618546L;
 	
 	public MalfunctionLogView(Station station, IMalfunctionService malfunctionService) {
-		setLayout(new MigLayout("debug", "[grow]", "[grow, fill]"));
+		setLayout(new MigLayout("", "[grow]", "[grow, fill]"));
 		MalfunctionLogTableModel mfLogTableModel = new MalfunctionLogTableModel(station, malfunctionService);
 		JTable mfLogTable = new JTable(mfLogTableModel);
 		mfLogTable.setRowHeight(32);
