@@ -1,5 +1,6 @@
 package desktop.collector;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
@@ -326,13 +327,36 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	private void updateDeviceLabelsAndButtons() {
 		lblSemaphore.setText("Semaphore: " + (booth.getDeviceFlags(Type.SEMAPHORE) == 1 ? "Green" : "Red"));
 		lblRamp.setText("Ramp: " + (booth.getDeviceFlags(Type.RAMP) == 1 ? "Raised" : "Lowered"));
-		lblScreen.setText("Screen: " + (booth.getDeviceFlags(Type.SCREEN) == 1 ? "Active" : "Inactive"));
-		lblSemaphoreWorking.setText(booth.getDeviceStatus(Type.SEMAPHORE).getStatus()
-				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
-		lblRampWorking.setText(booth.getDeviceStatus(Type.RAMP).getStatus()
-				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
-		lblScreenWorking.setText(booth.getDeviceStatus(Type.SCREEN).getStatus()
-				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
+
+		if (booth.getDeviceFlags(Type.SCREEN) == 1) {
+			lblScreen.setText("Screen: Active");
+			lblScreen.setForeground(Color.BLACK);
+		} else {
+			lblScreen.setText("Screen: Inactive");
+			lblScreen.setForeground(Color.YELLOW);
+		}
+
+		if (!booth.getDeviceStatus(Type.SEMAPHORE).getStatus().equals(Status.WORKING)) {
+			lblSemaphoreWorking.setText("NOT WORKING");
+			lblSemaphoreWorking.setForeground(Color.RED);
+		} else {
+			lblSemaphoreWorking.setText("Working");
+			lblSemaphoreWorking.setForeground(Color.BLACK);
+		}
+		if (!booth.getDeviceStatus(Type.RAMP).getStatus().equals(Status.WORKING)) {
+			lblRampWorking.setText("NOT WORKING");
+			lblRampWorking.setForeground(Color.RED);
+		} else {
+			lblRampWorking.setText("Working");
+			lblRampWorking.setForeground(Color.BLACK);
+		}
+		if (!booth.getDeviceStatus(Type.SCREEN).getStatus().equals(Status.WORKING)) {
+			lblScreenWorking.setText("NOT WORKING");
+			lblScreenWorking.setForeground(Color.RED);
+		} else {
+			lblScreenWorking.setText("Working");
+			lblScreenWorking.setForeground(Color.BLACK);
+		}
 
 		Boolean semaphoreWorking = booth.getDeviceStatus(Type.SEMAPHORE).getStatus().equals(Status.WORKING);
 		btnFlipSemaphore.setEnabled(semaphoreWorking);
