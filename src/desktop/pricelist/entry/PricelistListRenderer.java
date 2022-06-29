@@ -7,13 +7,17 @@ import javax.swing.JCheckBox;
 import javax.swing.JList;
 import javax.swing.ListCellRenderer;
 
+import core.pricelist.IPricelistService;
 import core.pricelist.Pricelist;
 
 public class PricelistListRenderer extends JCheckBox implements ListCellRenderer<Pricelist> {
 
 	private static final long serialVersionUID = 8125819147830173769L;
 
-	public PricelistListRenderer() {
+	private IPricelistService service;
+
+	public PricelistListRenderer(IPricelistService service) {
+		this.service = service;
 		this.setOpaque(true);
 	}
 
@@ -32,7 +36,7 @@ public class PricelistListRenderer extends JCheckBox implements ListCellRenderer
 
 		String datetime = value.getStart().toLocalDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " "
 				+ value.getStart().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm"));
-		this.setText(datetime + " Active: " + value.getActive());
+		this.setText(datetime + " Active: " + (service.isActive(value) ? "YES" : "NO"));
 		return this;
 	}
 

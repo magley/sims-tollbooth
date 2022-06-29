@@ -45,7 +45,7 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 		JScrollPane scrollPane = new JScrollPane();
 		add(scrollPane, "grow,flowy,cell 0 0");
 
-		tableModel = new PricelistEntryTableModel(ctx.getPricelistEntryService());
+		tableModel = new PricelistEntryTableModel(ctx.getPricelistService().getActive().getEntries());
 		table = new JTable(tableModel);
 		table.getTableHeader().setReorderingAllowed(false);
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -67,7 +67,7 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 
 		lstPricelist = new JList<Pricelist>(ctx.getPricelistService().getAll().toArray(new Pricelist[0]));
 		lstPricelist.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-		lstPricelist.setCellRenderer(new PricelistListRenderer());
+		lstPricelist.setCellRenderer(new PricelistListRenderer(ctx.getPricelistService()));
 		scrollPaneList.setViewportView(lstPricelist);
 
 		JLabel lblEntry = new JLabel("Entry: ");

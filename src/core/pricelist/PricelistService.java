@@ -1,5 +1,7 @@
 package core.pricelist;
 
+import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
 
 import core.common.ServiceAdapter;
@@ -21,7 +23,12 @@ public class PricelistService extends ServiceAdapter<Pricelist> implements IPric
 
 	@Override
 	public Pricelist getActive() {
-		return repo.get(p -> p.getActive() == Pricelist.Active.YES);
+		return repo.getAll(p -> p.getStart().isBefore(LocalDateTime.now())).stream().max(new Comparator<Pricelist>() {
+			@Override
+			public int compare(Pricelist o1, Pricelist o2) {
+				return o1.getStart().compareTo(o2.getStart());
+			}
+		}).orElse(null);
 	}
 
 	@Override
@@ -29,6 +36,11 @@ public class PricelistService extends ServiceAdapter<Pricelist> implements IPric
 		Pricelist active = getActive();
 		return active.getEntries().stream().filter(e -> e.getEntry() == entry && e.getExit() == exit
 				&& e.getCategory() == category && e.getCurrency() == currency).findFirst().orElse(null);
+	}
+
+	@Override
+	public boolean isActive(Pricelist p) {
+		return getActive() == p;
 	}
 
 }

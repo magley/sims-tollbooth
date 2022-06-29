@@ -8,19 +8,13 @@ import core.pricelist.entry.PricelistEntry;
 
 public class Pricelist extends Entity {
 
-	public enum Active {
-		YES, NO
-	}
-
 	private LocalDateTime start;
 	private List<PricelistEntry> entries;
-	private Active active;
 
-	public Pricelist(LocalDateTime start, List<PricelistEntry> entries, Active active) {
+	public Pricelist(LocalDateTime start, List<PricelistEntry> entries) {
 		super();
 		this.start = start;
 		this.entries = entries;
-		this.active = active;
 	}
 
 	public LocalDateTime getStart() {
@@ -39,17 +33,9 @@ public class Pricelist extends Entity {
 		this.entries = entries;
 	}
 
-	public Active getActive() {
-		return active;
-	}
-
-	public void setActive(Active active) {
-		this.active = active;
-	}
-
 	@Override
 	public String toString() {
-		return "Pricelist [start=" + start + ", active=" + active + "]";
+		return "Pricelist [start=" + start + "]";
 	}
 
 }

@@ -101,7 +101,7 @@ public class GenericEmployeeView extends JFrame {
 	private void initManagerGUI() {
 		PricelistEntryDashboardView pricelistEntryDashboardView = new PricelistEntryDashboardView(ctx);
 		PricelistDashboardView pricelistDashboardView = new PricelistDashboardView(ctx);
-		tabbedPane.add("Pricelist entries", pricelistEntryDashboardView);
+		tabbedPane.add("Active pricelist entries", pricelistEntryDashboardView);
 		tabbedPane.add("Pricelists", pricelistDashboardView);
 	}
 	
