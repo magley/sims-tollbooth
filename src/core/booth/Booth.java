@@ -11,7 +11,6 @@ import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
 import core.booth.observer.IObserver;
 import core.booth.observer.IPublisher;
-import core.booth.state.BoothActive;
 import core.booth.state.BoothDeactivated;
 import core.booth.state.BoothState;
 import core.malfunction.Malfunction;
@@ -178,6 +177,7 @@ public class Booth extends Entity implements IPublisher {
 		state.exit();
 		this.state = newState;
 		state.entry();
+		notifyObservers();
 	}
 	
 	public Boolean isActive() {
