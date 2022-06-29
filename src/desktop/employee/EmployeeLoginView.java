@@ -2,6 +2,9 @@ package desktop.employee;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -64,6 +67,13 @@ public class EmployeeLoginView extends JFrame {
 		});
 		getContentPane().add(btnLogin, "cell 1 4 2 1,grow");
 		getRootPane().setDefaultButton(btnLogin);
+		addComponentListener(new ComponentAdapter() {
+			@Override
+			public void componentShown(ComponentEvent e) {
+				super.componentShown(e);
+				txtEmail.requestFocus();
+			}
+		});
 	}
 
 	private void login() {
