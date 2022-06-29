@@ -32,7 +32,11 @@ public class BoothStatusTable extends JTable {
 		else if (!getBoothAt(row).isNotDeactivated()) {
 			c.setForeground(Color.YELLOW);
 		} else {
-			c.setForeground(Color.BLACK);
+			if (isRowSelected(row)) {
+				c.setForeground(Color.WHITE);
+			} else {
+				c.setForeground(Color.BLACK);
+			}
 		}
 		return c;
 	}

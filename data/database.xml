@@ -3195,6 +3195,16 @@
       </status>
       <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
     </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>77</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T22:22:09.016803487</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
   </malfunctions>
   <tickets>
     <core.ticket.Ticket>
