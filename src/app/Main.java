@@ -115,8 +115,20 @@ public class Main {
 		}
 	}
 
-	private static void generatePricelistData(AppContext ctx) {
-		List<PricelistEntry> entries = new ArrayList<PricelistEntry>(ctx.getPricelistEntryService().getAll());
+	private static void generateNewPricelist(AppContext ctx) {
+		int halfSize = ctx.getPricelistEntryService().getAll().size() / 2;
+		List<PricelistEntry> firstHalf = ctx.getPricelistEntryRepo().getAll(p -> p.getId() < halfSize);
+
+		// Entries were generated in such a way that the second half of all pricelists
+		// mirror the first half, but with a different price field. However, this is not
+		// a guarantee.
+		List<PricelistEntry> secondHalf = ctx.getPricelistEntryRepo().getAll(p -> p.getId() >= halfSize);
+
+		List<PricelistEntry> entries = new ArrayList<PricelistEntry>();
+
+		for (int i = 0; i < firstHalf.size(); ++i) {
+			entries.add((Math.random() < 0.7) ? firstHalf.get(i) : secondHalf.get(i));
+		}
 
 		ctx.getPricelistService().add(new Pricelist(LocalDateTime.now(), entries));
 	}
