@@ -401,5 +401,33 @@
       <active>YES</active>
     </core.pricelist.Pricelist>
   </pricelists>
-  <malfunctions/>
+  <malfunctions>
+    <core.malfunction.Malfunction>
+      <id>0</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T10:57:59.365125231</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>NOT_WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>1</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T10:58:22.957133278</whenCreated>
+      <status reference="../../core.malfunction.Malfunction/status"/>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>2</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T11:09:41.644671572</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>NOT_WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+  </malfunctions>
 </core.common.MasterXMLRepo>

@@ -99,9 +99,10 @@ public class GenericEmployeeView extends JFrame {
 	
 	private void initStationChiefGUI() {
 		Station station = ctx.getStationService().get(1);
-//		BoothStatusView boothStatusView = new BoothStatusView(station);
+		BoothStatusView boothStatusView = new BoothStatusView(station,
+				ctx.getMalfunctionService(), ctx.getEmployeeService());
 		MalfunctionLogView malfunctionLogView = new MalfunctionLogView(station);
-//		tabbedPane.add("Booths", boothStatusView);
+		tabbedPane.add("Booths", boothStatusView);
 		tabbedPane.add("Malfunctions", malfunctionLogView);
 	}
 	

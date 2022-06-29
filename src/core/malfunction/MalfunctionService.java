@@ -8,4 +8,11 @@ public class MalfunctionService extends ServiceAdapter<Malfunction> implements I
 	public MalfunctionService(IRepo<Malfunction> repo) {
 		super(repo);
 	}
+
+	@Override
+	public Malfunction add(Malfunction obj) {
+		obj.getBooth().malfunctionOccurred(obj);
+		return super.add(obj);
+	}
+	
 }

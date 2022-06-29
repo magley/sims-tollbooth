@@ -168,6 +168,7 @@ public class Booth extends Entity implements IPublisher {
 	}
 	
 	public void malfunctionOccurred(Malfunction malf) {
+		initDeviceStatus();
 		this.state.malfunctionOccurred(malf);
 		this.notifyObservers(malf);
 	}

@@ -16,6 +16,9 @@ import core.employee.EmployeeService;
 import core.employee.EmployeeXMLRepo;
 import core.employee.IEmployeeRepo;
 import core.employee.IEmployeeService;
+import core.malfunction.IMalfunctionService;
+import core.malfunction.MalfunctionService;
+import core.malfunction.MalfunctionXMLRepo;
 import core.pricelist.IPricelistRepo;
 import core.pricelist.IPricelistService;
 import core.pricelist.PricelistController;
@@ -63,6 +66,8 @@ public class AppContext {
 	IPricelistRepo pricelistRepo;
 	IPricelistService pricelistService;
 	PricelistController pricelistController;
+	
+	IMalfunctionService malfunctionService;
 
 	public AppContext(MasterXMLRepo masterRepo) {
 		accountRepo = new AccountXMLRepo(masterRepo);
@@ -91,6 +96,8 @@ public class AppContext {
 		pricelistRepo = new PricelistXMLRepo(masterRepo);
 		pricelistService = new PricelistService(pricelistRepo);
 		pricelistController = new PricelistController(pricelistService);
+		
+		malfunctionService = new MalfunctionService(new MalfunctionXMLRepo(masterRepo));
 	}
 	
 	public IBoothRepo getBoothRepo() {
@@ -171,5 +178,9 @@ public class AppContext {
 
 	public PricelistController getPricelistController() {
 		return pricelistController;
+	}
+
+	public IMalfunctionService getMalfunctionService() {
+		return malfunctionService;
 	}
 }
