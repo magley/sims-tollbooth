@@ -37,7 +37,7 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 	private Date endDate;
 
 	private JComboBox<String> cbStation;
-	private JComboBox<PricelistEntry.VehicleCategory> cbVehicleCategory;
+	private JComboBox<String> cbVehicleCategory;
 	private JComboBox<PricelistEntry.Currency> cbCurrency;
 	private JTextField txtStartDate;
 	private JTextField txtEndDate;
@@ -76,7 +76,12 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 		JLabel lblSelectCategory = new JLabel("Select vehicle category:");
 		add(lblSelectCategory, "flowx,cell 0 1");
 
-		cbVehicleCategory = new JComboBox<PricelistEntry.VehicleCategory>(PricelistEntry.VehicleCategory.values());
+		List<String> categories = new ArrayList<>();
+		for(PricelistEntry.VehicleCategory vc : PricelistEntry.VehicleCategory.values()) {
+			categories.add(vc.toString());
+		}
+		categories.add("ALL");
+		cbVehicleCategory = new JComboBox<String>(categories.toArray(new String[0]));
 		add(cbVehicleCategory, "cell 0 1,growx");
 
 		JLabel lblCurrency = new JLabel("Select currency:");
@@ -173,12 +178,12 @@ public class ReportDashboardView extends JPanel implements ITabbedPanel {
 			stations = new ArrayList<Station>();
 			stations.add((Station) ctx.getStationService().getByString(cbStation.getSelectedItem().toString()));
 		}
-		if (cbVehicleCategory.getSelectedItem().toString().equals("ALL")) {
+		if (cbVehicleCategory.getSelectedItem().equals("ALL")) {
 			categories = Arrays.asList(PricelistEntry.VehicleCategory.values());
 		}
 		else {
 			categories = new ArrayList<PricelistEntry.VehicleCategory>();
-			categories.add((PricelistEntry.VehicleCategory) cbVehicleCategory.getSelectedItem());
+			categories.add((PricelistEntry.VehicleCategory) PricelistEntry.VehicleCategory.valueOf(cbVehicleCategory.getSelectedItem().toString()));
 		}
 		PricelistEntry.Currency currency = (PricelistEntry.Currency) cbCurrency.getSelectedItem(); 
 		
