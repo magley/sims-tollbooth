@@ -13,6 +13,7 @@ import core.booth.observer.IBoothObserver;
 import core.booth.observer.IPublisher;
 import core.booth.state.BoothDeactivated;
 import core.booth.state.BoothState;
+import core.booth.state.BoothVehiclePassing;
 import core.malfunction.Malfunction;
 import core.station.Station;
 
@@ -200,6 +201,10 @@ public class Booth extends Entity implements IPublisher {
 	
 	public Boolean isActive() {
 		return this.state.getClass() != BoothDeactivated.class;
+	}
+
+	public Boolean isVehiclePassing() {
+		return this.state.getClass() == BoothVehiclePassing.class;
 	}
 
 	@Override

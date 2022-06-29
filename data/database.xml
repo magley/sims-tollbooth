@@ -3285,6 +3285,83 @@
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>72</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:11:21.937183692</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-29T17:11:31.226112905</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>73</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:11:23.93939077</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>74</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T17:11:25.93976585</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>75</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:12:53.571024939</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-29T17:12:58.199493031</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>76</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:12:55.572854387</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>77</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T17:12:57.573332133</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>78</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T17:13:19.567649198</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-29T17:13:34.824673973</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>79</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T17:13:21.570185018</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-29T17:13:46.569249992</leftAt>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>80</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:13:23.570654034</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-29T17:13:54.69720806</leftAt>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
   </tickets>
   <payments>
     <core.payment.Payment>
@@ -3403,6 +3480,51 @@
       <ticket reference="../../../tickets/core.ticket.Ticket[67]"/>
       <collector reference="../../../employees/core.employee.Employee[3]"/>
       <amount>1786</amount>
+    </core.payment.Payment>
+    <core.payment.Payment>
+      <id>13</id>
+      <removed>false</removed>
+      <time>2022-06-29T17:11:31.226112905</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[148]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[73]"/>
+      <collector reference="../../../employees/core.employee.Employee[3]"/>
+      <amount>1</amount>
+    </core.payment.Payment>
+    <core.payment.Payment>
+      <id>14</id>
+      <removed>false</removed>
+      <time>2022-06-29T17:12:58.199493031</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[6]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[76]"/>
+      <collector reference="../../../employees/core.employee.Employee[3]"/>
+      <amount>2</amount>
+    </core.payment.Payment>
+    <core.payment.Payment>
+      <id>15</id>
+      <removed>false</removed>
+      <time>2022-06-29T17:13:34.824673973</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[79]"/>
+      <collector reference="../../../employees/core.employee.Employee[3]"/>
+      <amount>1414</amount>
+    </core.payment.Payment>
+    <core.payment.Payment>
+      <id>16</id>
+      <removed>false</removed>
+      <time>2022-06-29T17:13:46.569249992</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[41]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[80]"/>
+      <collector reference="../../../employees/core.employee.Employee[3]"/>
+      <amount>891</amount>
+    </core.payment.Payment>
+    <core.payment.Payment>
+      <id>17</id>
+      <removed>false</removed>
+      <time>2022-06-29T17:13:54.69720806</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[78]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[81]"/>
+      <collector reference="../../../employees/core.employee.Employee[3]"/>
+      <amount>12</amount>
     </core.payment.Payment>
   </payments>
 </core.common.MasterXMLRepo>

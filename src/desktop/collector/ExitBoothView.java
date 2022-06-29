@@ -1,6 +1,5 @@
 package desktop.collector;
 
-import java.awt.Dialog.ModalityType;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDateTime;
@@ -11,7 +10,6 @@ import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -294,7 +292,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		} catch (NumberFormatException e) {
 			change = -1;
 		}
-		if (booth.isActive() && change >= 0) {
+		if (booth.isActive() && !booth.isVehiclePassing() && change >= 0) {
 			btnConfirm.setEnabled(true);
 		} else {
 			btnConfirm.setEnabled(false);
@@ -382,31 +380,22 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		int amount = (int) spnPaid.getValue();
 
 		ctx.getPaymentService().add(new Payment(now, entryForTicket, processedTicket, collector, amount));
-
-		processedTicket = null;
-		entryForTicket = null;
-		resetFields();
 	}
 
 	private void simulateVehiclePassing() {
-		JOptionPane waitOpt = new JOptionPane("Please wait while vehicle is passing", JOptionPane.PLAIN_MESSAGE,
-				JOptionPane.DEFAULT_OPTION);
-		JDialog waitDialog = waitOpt.createDialog("Please wait");
-		waitDialog.setModalityType(ModalityType.APPLICATION_MODAL);
-		waitDialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 		booth.vehicleStartedPassing();
 		Timer t = new Timer(1500, new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				booth.vehiclePassed();
-				waitDialog.setVisible(false);
-				waitDialog.dispose();
 				JOptionPane.showMessageDialog(null, "Vehicle passed successfully.");
+				processedTicket = null;
+				entryForTicket = null;
+				resetFields();
 			}
 		});
 		t.setRepeats(false);
 		t.start();
-		waitDialog.setVisible(true);
 	}
 
 	@Override
