@@ -88,6 +88,8 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		txtChange = new JTextField();
 		btnConfirm = new JButton("Confirm");
 		btnConfirm.setEnabled(false);
+		btnNextTicket = new JButton("Next ticket");
+		btnNextTicket.setEnabled(true);
 
 		booth.activate();
 		this.processedTicket = null;
@@ -189,8 +191,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		});
 		add(btnConfirm, "flowx,cell 0 9, span 3");
 
-		btnNextTicket = new JButton("Next ticket");
-		btnNextTicket.setEnabled(true);
 		btnNextTicket.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -225,7 +225,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		btnFlipScreen.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (booth.isActive())
+				if (booth.isNotDeactivated())
 					booth.pause();
 				else
 					booth.activate();
@@ -308,7 +308,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		} catch (NumberFormatException e) {
 			change = -1;
 		}
-		if (booth.isActive() && !booth.isVehiclePassing() && change >= 0) {
+		if (booth.isNotDeactivated() && !booth.isVehiclePassing() && change >= 0) {
 			btnConfirm.setEnabled(true);
 		} else {
 			btnConfirm.setEnabled(false);
@@ -324,7 +324,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		btnNextTicket.setEnabled(false);
 		fillFields();
 	}
-
+	
 	@Override
 	public void update(Object e) {
 		Ticket t = (Ticket) e;
@@ -345,6 +345,8 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	}
 
 	private void resetFields() {
+		processedTicket = null;
+		entryForTicket = null;
 		txtEntryBooth.setText("");
 		txtArrivedAt.setText("");
 		txtAverageSpeed.setText("");
@@ -405,8 +407,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 			public void actionPerformed(ActionEvent e) {
 				booth.vehiclePassed();
 				JOptionPane.showMessageDialog(null, "Vehicle passed successfully.");
-				processedTicket = null;
-				entryForTicket = null;
 				resetFields();
 			}
 		});
@@ -421,6 +421,11 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	@Override
 	public void notifyState() {
 		checkIfCanProcess();
+		if (!booth.isNotDeactivated()) {
+			btnNextTicket.setEnabled(false);
+		} else if (processedTicket == null) {
+			btnNextTicket.setEnabled(true);
+		}
 	}
 
 	@Override

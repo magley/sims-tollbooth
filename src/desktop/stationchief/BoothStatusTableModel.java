@@ -52,7 +52,7 @@ public class BoothStatusTableModel extends AbstractTableModel implements IBoothO
 			}
 			return "YES";
 		case 2:
-			if (booths.get(rowIndex).isActive()) {
+			if (booths.get(rowIndex).isNotDeactivated()) {
 				return "ACTIVE";
 			}
 			return "NOT ACTIVE";

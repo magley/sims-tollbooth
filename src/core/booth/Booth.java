@@ -199,7 +199,7 @@ public class Booth extends Entity implements IPublisher {
 		notifyObserversState();
 	}
 	
-	public Boolean isActive() {
+	public Boolean isNotDeactivated() {
 		return this.state.getClass() != BoothDeactivated.class;
 	}
 
