@@ -75,7 +75,7 @@ public class Main {
 		UIManager.put("ComboBox.font", new FontUIResource(f));
 		UIManager.put("Spinner.font", new FontUIResource(f));
 		UIManager.put("CheckBox.font", new FontUIResource(f));
-			
+
 		JFrame frame = new EmployeeLoginView(ctx);	
 		frame.setSize(800, 600);
 		frame.setLocationRelativeTo(null);

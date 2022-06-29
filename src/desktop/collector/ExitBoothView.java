@@ -1,5 +1,7 @@
 package desktop.collector;
 
+import java.awt.Color;
+import java.awt.event.KeyEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDateTime;
@@ -8,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.swing.AbstractAction;
+import javax.swing.InputMap;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -15,10 +19,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.event.MenuKeyEvent;
 
 import core.AppContext;
 import core.booth.Booth;
@@ -307,6 +313,12 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		add(btnFixSemaphore, "cell 0 14");
 		add(btnFixRamp, "cell 1 14");
 		add(btnFixScreen, "cell 2 14");
+		
+		btnNextTicket.requestFocus();
+	}
+	
+	public void onAdd() {
+		getRootPane().setDefaultButton(btnConfirm);
 	}
 	
 	private void updateDeviceLabelsAndButtons() {
