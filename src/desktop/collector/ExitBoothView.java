@@ -91,6 +91,13 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		btnNextTicket = new JButton("Next ticket");
 		btnNextTicket.setEnabled(true);
 
+		btnMalfunctionSemaphore = new JButton("Report Error");
+		btnMalfunctionSemaphore.setEnabled(true);
+		btnMalfunctionRamp = new JButton("Report Error");
+		btnMalfunctionRamp.setEnabled(true);
+		btnMalfunctionScreen = new JButton("Report Error");
+		btnMalfunctionScreen.setEnabled(true);
+
 		booth.activate();
 		this.processedTicket = null;
 		this.entryForTicket = null;
@@ -233,8 +240,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		});
 		
 
-		btnMalfunctionSemaphore = new JButton("Report Error");
-		btnMalfunctionSemaphore.setEnabled(true);
 		btnMalfunctionSemaphore.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -243,8 +248,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 			}
 		});
 
-		btnMalfunctionRamp = new JButton("Report Error");
-		btnMalfunctionRamp.setEnabled(true);
 		btnMalfunctionRamp.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -253,8 +256,6 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 			}
 		});
 
-		btnMalfunctionScreen = new JButton("Report Error");
-		btnMalfunctionScreen.setEnabled(true);
 		btnMalfunctionScreen.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -286,6 +287,12 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
 		lblScreenWorking.setText(booth.getDeviceStatus(Type.SCREEN).getStatus()
 				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
+		btnMalfunctionSemaphore.setEnabled(booth.getDeviceStatus(Type.SEMAPHORE).getStatus()
+				.equals(Status.WORKING));
+		btnMalfunctionRamp.setEnabled(booth.getDeviceStatus(Type.RAMP).getStatus()
+				.equals(Status.WORKING));
+		btnMalfunctionScreen.setEnabled(booth.getDeviceStatus(Type.SCREEN).getStatus()
+				.equals(Status.WORKING));
 	}
 
 	@Override
