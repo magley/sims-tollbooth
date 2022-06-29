@@ -1,5 +1,6 @@
 package desktop.collector;
 
+import java.awt.Dialog.ModalityType;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDateTime;
@@ -10,12 +11,14 @@ import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -60,6 +63,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		this.ctx = ctx;
 		this.collector = collector;
 		this.booth = booth;
+		this.booth.initDeviceStatus();
 		this.processedTicket = null;
 		this.entryForTicket = null;
 		this.queuedTickets = new ArrayList<Ticket>();
@@ -275,11 +279,29 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 
 		ctx.getPaymentService().add(new Payment(now, entryForTicket, processedTicket, collector, amount));
 
-		this.processedTicket = null;
-		this.entryForTicket = null;
-
-		JOptionPane.showMessageDialog(null, "Successfully processed payment.");
+		processedTicket = null;
+		entryForTicket = null;
 		resetFields();
+
+		// simulate vehicle passing
+		JOptionPane waitOpt = new JOptionPane("Please wait while vehicle is passing",
+				JOptionPane.PLAIN_MESSAGE, JOptionPane.DEFAULT_OPTION);
+		JDialog waitDialog = waitOpt.createDialog("Please wait");
+		waitDialog.setModalityType(ModalityType.APPLICATION_MODAL);
+		waitDialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+		booth.vehicleStartedPassing();
+		Timer t = new Timer(1500, new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				booth.vehiclePassed();
+				waitDialog.setVisible(false);
+				waitDialog.dispose();
+				JOptionPane.showMessageDialog(null, "Vehicle passed successfully.");
+			}
+		});
+		t.setRepeats(false);
+		t.start();
+		waitDialog.setVisible(true);
 	}
 
 }
