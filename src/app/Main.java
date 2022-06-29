@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.Random;
 
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.plaf.FontUIResource;
 
 import core.AppContext;
 import core.booth.Booth;
@@ -53,6 +56,20 @@ public class Main {
 	
 	private static void startApp(MasterXMLRepo masterRepo, AppContext ctx) {
 		JFrame frame = new EmployeeLoginView(ctx);
+//		for (LookAndFeelInfo el : UIManager.getInstalledLookAndFeels()) {
+//			if ("Nimbus".equals(el.getName()))
+//				try {
+//					UIManager.setLookAndFeel(el.getClassName());
+//				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+//						| UnsupportedLookAndFeelException e) {
+//					e.printStackTrace();
+//				}
+//		}
+		UIManager.put("Label.font", new FontUIResource(UIManager.getFont("Label.font").deriveFont((float) 22)));
+		UIManager.put("Button.font", new FontUIResource(UIManager.getFont("Button.font").deriveFont((float) 22)));
+		UIManager.put("TextField.font", new FontUIResource(UIManager.getFont("TextField.font").deriveFont((float) 22)));
+		UIManager.put("PasswordField.font", new FontUIResource(UIManager.getFont("PasswordField.font").deriveFont((float) 22)));
+		SwingUtilities.updateComponentTreeUI(frame);
 		frame.setSize(800, 600);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

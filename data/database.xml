@@ -4023,6 +4023,30 @@
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>119</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T18:50:01.018515646</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>120</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T18:50:03.020132845</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>121</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T18:50:05.020482571</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
   </tickets>
   <payments>
     <core.payment.Payment>
