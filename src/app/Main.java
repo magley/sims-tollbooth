@@ -58,10 +58,10 @@ public class Main {
 	
 	private static void startApp(MasterXMLRepo masterRepo, AppContext ctx) {
 		try {
-		    UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+		    UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
 		} catch (Exception e) {
 		}
-		
+
 		UIManager.put("Label.font", new FontUIResource(UIManager.getFont("Label.font").deriveFont((float) 22)));
 		UIManager.put("Button.font", new FontUIResource(UIManager.getFont("Button.font").deriveFont((float) 22)));
 		UIManager.put("TextField.font", new FontUIResource(UIManager.getFont("TextField.font").deriveFont((float) 22)));
