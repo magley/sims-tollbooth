@@ -1,5 +1,6 @@
 package desktop.stationchief;
 
+import java.awt.Color;
 import java.awt.Component;
 
 import javax.swing.JTable;
@@ -25,6 +26,14 @@ public class BoothStatusTable extends JTable {
 	@Override
 	public Component prepareRenderer(TableCellRenderer renderer, int row, int column) {
 		Component c = super.prepareRenderer(renderer, row, column);
+		if (getBoothAt(row).anyDeviceNotWorking()) {
+			c.setForeground(Color.RED);
+		}
+		else if (!getBoothAt(row).isNotDeactivated()) {
+			c.setForeground(Color.YELLOW);
+		} else {
+			c.setForeground(Color.BLACK);
+		}
 		return c;
 	}
 	

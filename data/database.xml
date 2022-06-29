@@ -3165,6 +3165,36 @@
       <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <whoReported reference="../../../employees/core.employee.Employee[3]"/>
     </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>74</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T22:16:04.292783031</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>75</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T22:16:33.027593995</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>76</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T22:17:03.194297414</whenCreated>
+      <status>
+        <type>TABLE_READER</type>
+        <status>NOT_WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
   </malfunctions>
   <tickets>
     <core.ticket.Ticket>
