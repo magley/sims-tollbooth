@@ -11,9 +11,12 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import core.AppContext;
+import core.booth.Booth;
 import core.employee.Employee;
 import core.station.Station;
+import core.util.TicketStream;
 import desktop.booth.BoothDashboardView;
+import desktop.collector.ExitBoothView;
 import desktop.pricelist.PricelistDashboardView;
 import desktop.pricelist.entry.PricelistEntryDashboardView;
 import desktop.station.StationDashboardView;
@@ -73,10 +76,14 @@ public class GenericEmployeeView extends JFrame {
 		case STATION_CHEIF:
 			initStationChiefGUI();
 			break;
-		case COLLECTOR: case TAG_SELLER:
+		case COLLECTOR:
+			initCollectorGUI();
+			break;
+		case TAG_SELLER:
 			JOptionPane.showMessageDialog(this, "No implementation.");
 			break;
-		case UNKNOWN: default:
+		case UNKNOWN:
+		default:
 			JOptionPane.showMessageDialog(this, "Bad or unknown role!", "Unexpected error", JOptionPane.ERROR_MESSAGE);
 			logOut();
 			break;		
@@ -84,7 +91,8 @@ public class GenericEmployeeView extends JFrame {
 	}
 
 	private void initAdminGUI() {
-		StationDashboardView stationDashboardView = new StationDashboardView(ctx.getStationService(), ctx.getLocationService(), ctx.getStationController(), ctx.getBoothController());
+		StationDashboardView stationDashboardView = new StationDashboardView(ctx.getStationService(),
+				ctx.getLocationService(), ctx.getStationController(), ctx.getBoothController());
 		BoothDashboardView boothDashboardView = new BoothDashboardView(ctx);
 		tabbedPane.add("Stations", stationDashboardView);
 		tabbedPane.add("Booths", boothDashboardView);
@@ -105,5 +113,14 @@ public class GenericEmployeeView extends JFrame {
 		tabbedPane.add("Booths", boothStatusView);
 		tabbedPane.add("Malfunctions", malfunctionLogView);
 	}
-	
+
+	private void initCollectorGUI() {
+		Booth booth = ctx.getBoothService().get(3);
+		ExitBoothView exitBoothView = new ExitBoothView(ctx, employee, booth);
+		ctx.getTicketService().registerObserver(exitBoothView);
+		tabbedPane.add("Booth view", exitBoothView);
+		TicketStream stream = new TicketStream(ctx, booth);
+		Thread thread = new Thread(stream);
+		thread.start();
+	}
 }

@@ -19,6 +19,11 @@ import core.employee.IEmployeeService;
 import core.malfunction.IMalfunctionService;
 import core.malfunction.MalfunctionService;
 import core.malfunction.MalfunctionXMLRepo;
+import core.payment.IPaymentRepo;
+import core.payment.IPaymentService;
+import core.payment.PaymentController;
+import core.payment.PaymentService;
+import core.payment.PaymentXMLRepo;
 import core.pricelist.IPricelistRepo;
 import core.pricelist.IPricelistService;
 import core.pricelist.PricelistController;
@@ -38,6 +43,11 @@ import core.station.location.ILocationRepo;
 import core.station.location.ILocationService;
 import core.station.location.LocationService;
 import core.station.location.LocationXMLRepo;
+import core.ticket.ITicketRepo;
+import core.ticket.ITicketService;
+import core.ticket.TicketController;
+import core.ticket.TicketService;
+import core.ticket.TicketXMLRepo;
 
 public class AppContext {
 	IAccountRepo accountRepo;
@@ -68,7 +78,15 @@ public class AppContext {
 	PricelistController pricelistController;
 	
 	IMalfunctionService malfunctionService;
+	
+	ITicketRepo ticketRepo;
+	ITicketService ticketService;
+	TicketController ticketController;
 
+	IPaymentRepo paymentRepo;
+	IPaymentService paymentService;
+	PaymentController paymentController;
+	
 	public AppContext(MasterXMLRepo masterRepo) {
 		accountRepo = new AccountXMLRepo(masterRepo);
 		accountService = new AccountService(accountRepo);
@@ -98,6 +116,14 @@ public class AppContext {
 		pricelistController = new PricelistController(pricelistService);
 		
 		malfunctionService = new MalfunctionService(new MalfunctionXMLRepo(masterRepo));
+		
+		ticketRepo = new TicketXMLRepo(masterRepo);
+		ticketService = new TicketService(ticketRepo);
+		ticketController = new TicketController(ticketService);
+		
+		paymentRepo = new PaymentXMLRepo(masterRepo);
+		paymentService = new PaymentService(paymentRepo);
+		paymentController = new PaymentController(paymentService);
 	}
 	
 	public IBoothRepo getBoothRepo() {
@@ -182,5 +208,29 @@ public class AppContext {
 
 	public IMalfunctionService getMalfunctionService() {
 		return malfunctionService;
+	}
+
+	public ITicketRepo getTicketRepo() {
+		return ticketRepo;
+	}
+
+	public ITicketService getTicketService() {
+		return ticketService;
+	}
+
+	public TicketController getTicketController() {
+		return ticketController;
+	}
+
+	public IPaymentRepo getPaymentRepo() {
+		return paymentRepo;
+	}
+
+	public IPaymentService getPaymentService() {
+		return paymentService;
+	}
+
+	public PaymentController getPaymentController() {
+		return paymentController;
 	}
 }
