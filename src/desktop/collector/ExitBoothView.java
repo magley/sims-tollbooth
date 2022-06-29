@@ -161,6 +161,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				processPayment();
+				simulateVehiclePassing();
 			}
 		});
 		add(btnConfirm, "flowx,cell 0 9");
@@ -181,14 +182,15 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 	public void onShow() {
 
 	}
-	
+
 	private void updateChange() {
-		if (this.entryForTicket == null) return;
+		if (this.entryForTicket == null)
+			return;
 		int change = (int) spnPaid.getValue() - this.entryForTicket.getPrice();
 		txtChange.setText(String.valueOf(change));
 		checkIfCanProcess();
 	}
-	
+
 	private void checkIfCanProcess() {
 		if (Integer.decode(txtChange.getText()) >= 0) {
 			btnConfirm.setEnabled(true);
@@ -282,10 +284,11 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver {
 		processedTicket = null;
 		entryForTicket = null;
 		resetFields();
+	}
 
-		// simulate vehicle passing
-		JOptionPane waitOpt = new JOptionPane("Please wait while vehicle is passing",
-				JOptionPane.PLAIN_MESSAGE, JOptionPane.DEFAULT_OPTION);
+	private void simulateVehiclePassing() {
+		JOptionPane waitOpt = new JOptionPane("Please wait while vehicle is passing", JOptionPane.PLAIN_MESSAGE,
+				JOptionPane.DEFAULT_OPTION);
 		JDialog waitDialog = waitOpt.createDialog("Please wait");
 		waitDialog.setModalityType(ModalityType.APPLICATION_MODAL);
 		waitDialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
