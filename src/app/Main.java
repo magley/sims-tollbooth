@@ -98,41 +98,26 @@ public class Main {
 		List<Station> entryStations = ctx.getStationService().getByType(Station.Type.ENTER);
 		List<Station> exitStations = ctx.getStationService().getByType(Station.Type.EXIT);
 
-		for (int i = 0; i < 10; ++i) {
-			int price;
-			PricelistEntry.Currency currency;
-			if (i % 2 == 0) {
-				price = Math.abs(rnd.nextInt()) % 1000;
-				currency = PricelistEntry.Currency.RSD;
-			} else {
-				price = Math.abs(rnd.nextInt()) % 10;
-				currency = PricelistEntry.Currency.EUR;
+		for (Station entry : entryStations) {
+			for (Station exit : exitStations) {
+				for (PricelistEntry.VehicleCategory category : PricelistEntry.VehicleCategory.values()) {
+					for (PricelistEntry.Currency currency : PricelistEntry.Currency.values()) {
+						int price;
+						if (currency == PricelistEntry.Currency.EUR) {
+							price = Math.abs(rnd.nextInt()) % 10;
+						} else {
+							price = Math.abs(rnd.nextInt()) % 1000;
+						}
+						ctx.getPricelistEntryService().add(new PricelistEntry(entry, exit, category, currency, price));
+					}
+				}
 			}
-
-			PricelistEntry.VehicleCategory category = PricelistEntry.VehicleCategory.values()[i
-					% PricelistEntry.VehicleCategory.values().length];
-			Station entry = entryStations.get(i % entryStations.size());
-			Station exit = exitStations.get(i % exitStations.size());
-
-			ctx.getPricelistEntryService().add(new PricelistEntry(entry, exit, category, currency, price));
 		}
 	}
 
 	private static void generatePricelistData(AppContext ctx) {
-		Random rnd = new Random();
-		List<PricelistEntry> allEntries = new ArrayList<PricelistEntry>(ctx.getPricelistEntryService().getAll());
-		for (int i = 0; i < 3; ++i) {
-			List<PricelistEntry> entries = new ArrayList<PricelistEntry>();
+		List<PricelistEntry> entries = new ArrayList<PricelistEntry>(ctx.getPricelistEntryService().getAll());
 
-			PricelistEntry entry = allEntries.get(Math.abs(rnd.nextInt()) % allEntries.size());
-			entries.add(entry);
-
-			allEntries.remove(entry);
-
-			entry = allEntries.get(Math.abs(rnd.nextInt()) % allEntries.size());
-			entries.add(entry);
-
-			ctx.getPricelistService().add(new Pricelist(LocalDateTime.now().plusDays(i), entries, Pricelist.Active.NO));
-		}
+		ctx.getPricelistService().add(new Pricelist(LocalDateTime.now(), entries, Pricelist.Active.YES));
 	}
 }
