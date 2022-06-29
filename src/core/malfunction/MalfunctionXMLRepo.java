@@ -1,7 +1,7 @@
 package core.malfunction;
 
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.function.Predicate;
 
 import core.common.DefaultXMLRepo;
 import core.common.MasterXMLRepo;
@@ -15,5 +15,10 @@ public class MalfunctionXMLRepo extends DefaultXMLRepo<Malfunction> implements I
 	@Override
 	public List<Malfunction> getAll() {
 		return master.getMalfunctions();
+	}
+
+	@Override
+	public List<Malfunction> getAllPastDay() {
+		return getAll(m -> m.getWhenCreated().isAfter(LocalDateTime.now().minusDays(1)));
 	}
 }

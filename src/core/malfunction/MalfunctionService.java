@@ -1,11 +1,12 @@
 package core.malfunction;
 
-import core.common.IRepo;
+import java.util.List;
+
 import core.common.ServiceAdapter;
 
 public class MalfunctionService extends ServiceAdapter<Malfunction> implements IMalfunctionService {
 
-	public MalfunctionService(IRepo<Malfunction> repo) {
+	public MalfunctionService(IMalfunctionRepo repo) {
 		super(repo);
 	}
 
@@ -13,6 +14,11 @@ public class MalfunctionService extends ServiceAdapter<Malfunction> implements I
 	public Malfunction add(Malfunction obj) {
 		obj.getBooth().malfunctionOccurred(obj);
 		return super.add(obj);
+	}
+
+	@Override
+	public List<Malfunction> getAllPastDay() {
+		return ((IMalfunctionRepo) repo).getAllPastDay();
 	}
 	
 }

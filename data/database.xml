@@ -589,5 +589,45 @@
       </status>
       <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
     </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>22</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T14:17:22.916806013</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>23</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T14:31:58.00329824</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[3]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>24</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T14:33:08.700278536</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth[2]"/>
+    </core.malfunction.Malfunction>
+    <core.malfunction.Malfunction>
+      <id>25</id>
+      <removed>false</removed>
+      <whenCreated>2022-06-29T14:33:08.86070971</whenCreated>
+      <status>
+        <type>TAG_READER</type>
+        <status>WORKING</status>
+      </status>
+      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+    </core.malfunction.Malfunction>
   </malfunctions>
 </core.common.MasterXMLRepo>

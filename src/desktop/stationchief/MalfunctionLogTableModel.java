@@ -1,6 +1,5 @@
 package desktop.stationchief;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
@@ -8,6 +7,7 @@ import javax.swing.table.AbstractTableModel;
 import core.booth.Booth;
 import core.booth.observer.IObserver;
 import core.employee.Employee;
+import core.malfunction.IMalfunctionService;
 import core.malfunction.Malfunction;
 import core.station.Station;
 
@@ -18,8 +18,8 @@ public class MalfunctionLogTableModel extends AbstractTableModel implements IObs
 	
 	private List<Malfunction> malfunctions;
 	
-	public MalfunctionLogTableModel(Station station) {
-		malfunctions = new ArrayList<Malfunction>();
+	public MalfunctionLogTableModel(Station station, IMalfunctionService malfunctionService) {
+		malfunctions = malfunctionService.getAllPastDay();
 		for (Booth booth : station.getTollBooths()) {
 			booth.initDeviceStatus();
 			booth.addObserver(this);
