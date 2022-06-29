@@ -42,6 +42,7 @@ public class EmployeeLoginView extends JFrame {
 		this.employeeController = ctx.getEmployeeController();
 
 		getContentPane().setLayout(new MigLayout("", "[20%][10%][grow][20%]", "[30%,grow][][][20%,grow][20%,grow][20%]"));
+		setTitle("Login - Toll System");
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);

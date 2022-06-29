@@ -41,6 +41,7 @@ public class GenericEmployeeView extends JFrame {
 		this.ctx = ctx;
 		this.parent = parent;
 		this.employee = employee;
+		setTitle("Employee Menu - Toll System");
 
 		getContentPane().setLayout(new MigLayout("", "[grow]", "[][grow]"));
 		
