@@ -74,7 +74,7 @@ public class Main {
 		UIManager.put("CheckBox.font", new FontUIResource(UIManager.getFont("CheckBox.font").deriveFont((float) 22)));
 
 		JFrame frame = new EmployeeLoginView(ctx);	
-		frame.setSize(800, 600);
+		frame.setSize(1024, 768);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
