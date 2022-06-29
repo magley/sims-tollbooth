@@ -1,5 +1,7 @@
 package desktop.pricelist;
 
+import java.time.format.DateTimeFormatter;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -67,7 +69,9 @@ public class PricelistDashboardView extends JPanel implements ITabbedPanel {
 
 	private void tableSelectedRow(int row) {
 		Pricelist p = tableModel.getPricelist(row);
-		txtStart.setText(p.getStart().toString());
+		String datetime = p.getStart().toLocalDate().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " "
+				+ p.getStart().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm"));
+		txtStart.setText(datetime);
 	}
 
 	private void tableDeselectRow() {
