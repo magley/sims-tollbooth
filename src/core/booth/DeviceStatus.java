@@ -18,7 +18,7 @@ public class DeviceStatus {
 	private int flags = 0;  // 0 is down, 1 is up
 	
 	public void flipFlags() {
-		flags = (flags + 1) % 2;
+		flags = flags - 1;
 	}
 	
 	public int getFlags() {
