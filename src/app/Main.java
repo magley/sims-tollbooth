@@ -58,23 +58,20 @@ public class Main {
 	
 	private static void startApp(MasterXMLRepo masterRepo, AppContext ctx) {
 		try {
-		    UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+		    UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
 		} catch (Exception e) {
-		    // If Nimbus is not available, you can set the GUI to another look and feel.
 		}
 		
-		Font f = new Font("Dialog", Font.PLAIN, 22);
-		
-		UIManager.put("Label.font", new FontUIResource(f));
-		UIManager.put("Button.font", new FontUIResource(f));
-		UIManager.put("TextField.font", new FontUIResource(f));
-		UIManager.put("PasswordField.font", new FontUIResource(f));
-		UIManager.put("Table.font", new FontUIResource(f));
-		UIManager.put("TableHeader.font", new FontUIResource(f));
-		UIManager.put("TabbedPane.font", new FontUIResource(f));
-		UIManager.put("ComboBox.font", new FontUIResource(f));
-		UIManager.put("Spinner.font", new FontUIResource(f));
-		UIManager.put("CheckBox.font", new FontUIResource(f));
+		UIManager.put("Label.font", new FontUIResource(UIManager.getFont("Label.font").deriveFont((float) 22)));
+		UIManager.put("Button.font", new FontUIResource(UIManager.getFont("Button.font").deriveFont((float) 22)));
+		UIManager.put("TextField.font", new FontUIResource(UIManager.getFont("TextField.font").deriveFont((float) 22)));
+		UIManager.put("PasswordField.font", new FontUIResource(UIManager.getFont("PasswordField.font").deriveFont((float) 22)));
+		UIManager.put("Table.font", new FontUIResource(UIManager.getFont("Table.font").deriveFont((float) 22)));
+		UIManager.put("TableHeader.font", new FontUIResource(UIManager.getFont("TableHeader.font").deriveFont((float) 22)));
+		UIManager.put("TabbedPane.font", new FontUIResource(UIManager.getFont("TabbedPane.font").deriveFont((float) 22)));
+		UIManager.put("ComboBox.font", new FontUIResource(UIManager.getFont("ComboBox.font").deriveFont((float) 22)));
+		UIManager.put("Spinner.font", new FontUIResource(UIManager.getFont("Spinner.font").deriveFont((float) 22)));
+		UIManager.put("CheckBox.font", new FontUIResource(UIManager.getFont("CheckBox.font").deriveFont((float) 22)));
 
 		JFrame frame = new EmployeeLoginView(ctx);	
 		frame.setSize(800, 600);
