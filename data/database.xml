@@ -2686,188 +2686,11 @@
     <core.malfunction.Malfunction>
       <id>26</id>
       <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:00.066877485</whenCreated>
+      <whenCreated>2022-06-29T17:04:48.061081648</whenCreated>
       <status>
         <type>RAMP</type>
         <status>WORKING</status>
       </status>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>27</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:08.199648202</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>28</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:14.767788345</whenCreated>
-      <status>
-        <type>SEMAPHORE</type>
-        <status>WORKING</status>
-      </status>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>29</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:16.211024203</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>30</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:16.351435001</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>31</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:16.494595837</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>32</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:16.635462199</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>33</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:16.775775842</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>34</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:16.906652826</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>35</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:17.043121671</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>36</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:17.184694052</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>37</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:17.337406436</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>38</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:17.496740412</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>39</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:17.641505978</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>40</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:17.805728381</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>41</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:17.96055575</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>42</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:18.117830125</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>43</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:26:18.280713683</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[27]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>44</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:27:44.038304517</whenCreated>
-      <status>
-        <type>RAMP</type>
-        <status>WORKING</status>
-      </status>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>45</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:27:49.248437105</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[45]/status"/>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>46</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:27:50.399206403</whenCreated>
-      <status>
-        <type>SEMAPHORE</type>
-        <status>WORKING</status>
-      </status>
-      <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <whoReported reference="../../../employees/core.employee.Employee[3]"/>
-    </core.malfunction.Malfunction>
-    <core.malfunction.Malfunction>
-      <id>47</id>
-      <removed>false</removed>
-      <whenCreated>2022-06-29T16:27:52.394366883</whenCreated>
-      <status reference="../../core.malfunction.Malfunction[45]/status"/>
       <booth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <whoReported reference="../../../employees/core.employee.Employee[3]"/>
     </core.malfunction.Malfunction>
@@ -3366,98 +3189,99 @@
     <core.ticket.Ticket>
       <id>60</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
-      <enteredAt>2022-06-29T16:13:08.604111415</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T16:11:00.576792401</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <leftAt>2022-06-29T16:13:15.272709069</leftAt>
+      <leftAt>2022-06-29T16:11:05.866091128</leftAt>
       <licensePlate>0</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>61</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
-      <enteredAt>2022-06-29T16:13:10.604944164</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T16:11:02.578245407</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>1</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>62</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
-      <enteredAt>2022-06-29T16:13:12.605197303</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T16:11:04.578561333</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>63</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
-      <enteredAt>2022-06-29T16:15:48.010537894</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T17:00:02.561381355</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
-      <leftAt>2022-06-29T16:15:53.274538409</leftAt>
+      <leftAt>2022-06-29T17:00:14.572869872</leftAt>
       <licensePlate>0</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>64</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
-      <enteredAt>2022-06-29T16:15:50.010894257</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-29T17:00:04.563778197</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>1</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>65</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
-      <enteredAt>2022-06-29T16:15:52.011161853</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:00:06.564406106</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>66</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
-      <enteredAt>2022-06-29T16:25:56.740079346</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T17:00:56.724061699</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-29T17:01:07.00018049</leftAt>
       <licensePlate>0</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>67</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
-      <enteredAt>2022-06-29T16:25:58.741371033</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:00:58.726067635</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>1</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>68</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
-      <enteredAt>2022-06-29T16:26:00.741667975</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:01:00.726548245</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>69</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
-      <enteredAt>2022-06-29T16:27:41.28321125</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-29T17:04:31.828916677</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>0</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>70</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
-      <enteredAt>2022-06-29T16:27:43.285273483</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T17:04:33.830969127</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>1</licensePlate>
     </core.ticket.Ticket>
     <core.ticket.Ticket>
       <id>71</id>
       <removed>false</removed>
-      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
-      <enteredAt>2022-06-29T16:27:45.285648918</enteredAt>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-29T17:04:35.831304118</enteredAt>
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>
@@ -3556,20 +3380,29 @@
     <core.payment.Payment>
       <id>10</id>
       <removed>false</removed>
-      <time>2022-06-29T16:13:15.272709069</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
+      <time>2022-06-29T16:11:05.866091128</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[148]"/>
       <ticket reference="../../../tickets/core.ticket.Ticket[61]"/>
       <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>942</amount>
+      <amount>1</amount>
     </core.payment.Payment>
     <core.payment.Payment>
       <id>11</id>
       <removed>false</removed>
-      <time>2022-06-29T16:15:53.274538409</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[78]"/>
+      <time>2022-06-29T17:00:14.572869872</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
       <ticket reference="../../../tickets/core.ticket.Ticket[64]"/>
       <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>10</amount>
+      <amount>970</amount>
+    </core.payment.Payment>
+    <core.payment.Payment>
+      <id>12</id>
+      <removed>false</removed>
+      <time>2022-06-29T17:01:07.00018049</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[67]"/>
+      <collector reference="../../../employees/core.employee.Employee[3]"/>
+      <amount>1786</amount>
     </core.payment.Payment>
   </payments>
 </core.common.MasterXMLRepo>

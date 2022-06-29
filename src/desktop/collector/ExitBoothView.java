@@ -80,6 +80,9 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		lblSemaphore = new JLabel();
 		lblRamp = new JLabel();
 		lblScreen = new JLabel();
+		txtChange = new JTextField();
+		btnConfirm = new JButton("Confirm");
+		btnConfirm.setEnabled(false);
 
 		booth.activate();
 		this.processedTicket = null;
@@ -168,13 +171,10 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		JLabel lblChange = new JLabel("Change:");
 		add(lblChange, "flowx,cell 0 8, span 3");
 
-		txtChange = new JTextField();
 		txtChange.setEnabled(false);
 		add(txtChange, "cell 0 8,growx, span 3");
 		txtChange.setColumns(10);
 
-		btnConfirm = new JButton("Confirm");
-		btnConfirm.setEnabled(false);
 		btnConfirm.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -288,7 +288,13 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	}
 
 	private void checkIfCanProcess() {
-		if (Integer.decode(txtChange.getText()) >= 0) {
+		int change;
+		try {
+			change = Integer.decode(txtChange.getText());
+		} catch (NumberFormatException e) {
+			change = -1;
+		}
+		if (booth.isActive() && change >= 0) {
 			btnConfirm.setEnabled(true);
 		} else {
 			btnConfirm.setEnabled(false);
@@ -405,13 +411,11 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 
 	@Override
 	public void notify(Malfunction malf) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void notifyState() {
-		// TODO Auto-generated method stub
+		checkIfCanProcess();
 	}
 
 	@Override
