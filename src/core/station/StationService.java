@@ -15,4 +15,13 @@ public class StationService extends ServiceAdapter<Station> implements IStationS
 	public List<Station> getByType(Type type) {
 		return repo.getAll(s -> s.getType() == type);
 	}
+
+	@Override
+	public Station getByString(String item) {
+		for (Station s: repo.getAll()) {
+			if (s.toString().equals(item)) 
+				return s;
+		}
+		return null;
+	}
 }

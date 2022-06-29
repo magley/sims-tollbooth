@@ -19,6 +19,7 @@ import desktop.booth.BoothDashboardView;
 import desktop.collector.ExitBoothView;
 import desktop.pricelist.PricelistDashboardView;
 import desktop.pricelist.entry.PricelistEntryDashboardView;
+import desktop.report.ReportDashboardView;
 import desktop.station.StationDashboardView;
 import desktop.stationchief.BoothStatusView;
 import desktop.stationchief.MalfunctionLogView;
@@ -101,8 +102,10 @@ public class GenericEmployeeView extends JFrame {
 	private void initManagerGUI() {
 		PricelistEntryDashboardView pricelistEntryDashboardView = new PricelistEntryDashboardView(ctx);
 		PricelistDashboardView pricelistDashboardView = new PricelistDashboardView(ctx);
+		ReportDashboardView reportDashboardView = new ReportDashboardView(ctx);
 		tabbedPane.add("Active pricelist entries", pricelistEntryDashboardView);
 		tabbedPane.add("Pricelists", pricelistDashboardView);
+		tabbedPane.add("Reports", reportDashboardView);
 	}
 	
 	private void initStationChiefGUI() {
@@ -110,8 +113,10 @@ public class GenericEmployeeView extends JFrame {
 		BoothStatusView boothStatusView = new BoothStatusView(station,
 				ctx.getMalfunctionService(), ctx.getEmployeeService());
 		MalfunctionLogView malfunctionLogView = new MalfunctionLogView(station, ctx.getMalfunctionService());
+		ReportDashboardView reportDashboardView = new ReportDashboardView(ctx, station);
 		tabbedPane.add("Booths", boothStatusView);
 		tabbedPane.add("Malfunctions", malfunctionLogView);
+		tabbedPane.add("Reports", reportDashboardView);
 	}
 
 	private void initCollectorGUI() {
