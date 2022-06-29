@@ -22,6 +22,7 @@ import javax.swing.event.ChangeListener;
 
 import core.AppContext;
 import core.booth.Booth;
+import core.booth.DeviceStatus.Status;
 import core.booth.DeviceStatus.Type;
 import core.booth.observer.IBoothObserver;
 import core.employee.Employee;
@@ -60,6 +61,9 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	private JLabel lblSemaphore;
 	private JLabel lblRamp;
 	private JLabel lblScreen;
+	private JLabel lblSemaphoreWorking;
+	private JLabel lblRampWorking;
+	private JLabel lblScreenWorking;
 
 	private Ticket processedTicket;
 	private PricelistEntry entryForTicket;
@@ -78,6 +82,9 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		lblSemaphore = new JLabel();
 		lblRamp = new JLabel();
 		lblScreen = new JLabel();
+		lblSemaphoreWorking = new JLabel();
+		lblRampWorking = new JLabel();
+		lblScreenWorking = new JLabel();
 		txtChange = new JTextField();
 		btnConfirm = new JButton("Confirm");
 		btnConfirm.setEnabled(false);
@@ -258,18 +265,27 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		add(lblSemaphore, "cell 0 10");
 		add(lblRamp, "cell 1 10");
 		add(lblScreen, "cell 2 10");
-		add(btnFlipSemaphore, "cell 0 11");
-		add(btnFlipRamp, "cell 1 11");
-		add(btnFlipScreen, "cell 2 11");
-		add(btnMalfunctionSemaphore, "cell 0 12");
-		add(btnMalfunctionRamp, "cell 1 12");
-		add(btnMalfunctionScreen, "cell 2 12");
+		add(lblSemaphoreWorking, "cell 0 11");
+		add(lblRampWorking, "cell 1 11");
+		add(lblScreenWorking, "cell 2 11");
+		add(btnFlipSemaphore, "cell 0 12");
+		add(btnFlipRamp, "cell 1 12");
+		add(btnFlipScreen, "cell 2 12");
+		add(btnMalfunctionSemaphore, "cell 0 13");
+		add(btnMalfunctionRamp, "cell 1 13");
+		add(btnMalfunctionScreen, "cell 2 13");
 	}
 	
 	private void updateDeviceLabels() {
 		lblSemaphore.setText("Semaphore: " + (booth.getDeviceFlags(Type.SEMAPHORE) == 1 ? "Green" : "Red"));
 		lblRamp.setText("Ramp: " + (booth.getDeviceFlags(Type.RAMP) == 1 ? "Raised" : "Lowered"));
 		lblScreen.setText("Screen: " + (booth.getDeviceFlags(Type.SCREEN) == 1 ? "Active" : "Inactive"));
+		lblSemaphoreWorking.setText(booth.getDeviceStatus(Type.SEMAPHORE).getStatus()
+				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
+		lblRampWorking.setText(booth.getDeviceStatus(Type.RAMP).getStatus()
+				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
+		lblScreenWorking.setText(booth.getDeviceStatus(Type.SCREEN).getStatus()
+				.equals(Status.WORKING) ? "Working" : "NOT WORKING");
 	}
 
 	@Override
