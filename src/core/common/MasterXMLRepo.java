@@ -44,12 +44,12 @@ public class MasterXMLRepo {
 	private List<Location> locations = new ArrayList<Location>();
 	private List<Station> stations = new ArrayList<Station>();
 	private List<Booth> booths = new ArrayList<Booth>();
+	private List<TollSegment> tollSegments = new ArrayList<TollSegment>();
 	private List<PricelistEntry> pricelistEntries = new ArrayList<PricelistEntry>();
 	private List<Pricelist> pricelists = new ArrayList<Pricelist>();
 	private List<Malfunction> malfunctions = new ArrayList<Malfunction>();
 	private List<Ticket> tickets = new ArrayList<Ticket>();
 	private List<Payment> payments = new ArrayList<Payment>();
-	private List<TollSegment> tollSegments = new ArrayList<TollSegment>();
 
 	public MasterXMLRepo(String directory, String filename) {
 		this.directory = directory;
