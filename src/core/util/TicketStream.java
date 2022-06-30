@@ -26,7 +26,7 @@ public class TicketStream implements Runnable {
 
 	public void simulateTicketStream() {
 		Random rnd = new Random();
-		List<Station> entryStations = ctx.getStationService().getByType(Station.Type.ENTER);
+		List<Station> entryStations = ctx.getTollSegmentService().getEntriesFor(this.exitBooth.getStation());
 		for (int i = 0; i < 3; ++i) {
 			int idx = Math.abs(rnd.nextInt()) % entryStations.size();
 			Station entryStation = entryStations.get(idx);
