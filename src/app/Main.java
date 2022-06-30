@@ -55,7 +55,7 @@ public class Main {
 	
 	private static void startApp(MasterXMLRepo masterRepo, AppContext ctx) {
 		try {
-		    UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
+		    UIManager.setLookAndFeel("com.jtattoo.plaf.luna.LunaLookAndFeel");
 		} catch (Exception e) {
 		}
 
