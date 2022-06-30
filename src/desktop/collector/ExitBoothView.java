@@ -408,6 +408,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		this.processedTicket = this.queuedTickets.remove(0);
 		btnNextTicket.setEnabled(false);
 		fillFields();
+		cbVehicleCategory.requestFocus();
 	}
 	
 	@Override
@@ -493,6 +494,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 				booth.vehiclePassed();
 				JOptionPane.showMessageDialog(null, "Vehicle passed successfully.");
 				resetFields();
+				btnNextTicket.requestFocus();
 			}
 		});
 		t.setRepeats(false);
