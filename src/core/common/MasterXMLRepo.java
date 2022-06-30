@@ -27,6 +27,7 @@ import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
 import core.ticket.Ticket;
+import core.tollsegment.TollSegment;
 
 public class MasterXMLRepo {
 	@XStreamOmitField
@@ -48,6 +49,7 @@ public class MasterXMLRepo {
 	private List<Malfunction> malfunctions = new ArrayList<Malfunction>();
 	private List<Ticket> tickets = new ArrayList<Ticket>();
 	private List<Payment> payments = new ArrayList<Payment>();
+	private List<TollSegment> tollSegments = new ArrayList<TollSegment>();
 
 	public MasterXMLRepo(String directory, String filename) {
 		this.directory = directory;
@@ -129,5 +131,9 @@ public class MasterXMLRepo {
 		xstream = new XStream(new DomDriver());
 		xstream.autodetectAnnotations(true);
 		xstream.addPermission(AnyTypePermission.ANY);
+	}
+
+	public List<TollSegment> getTollSegments() {
+		return tollSegments;
 	}
 }
