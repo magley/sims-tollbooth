@@ -440,8 +440,8 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		} else {
 			Duration timeElapsed = Duration.between(enteredAt, LocalDateTime.now());
 			// multiply by 3600 to get from km/s -> km/h
-			txtAverageSpeed.setText(String.valueOf(
-					3600 * segment.getDistance() / ((double) timeElapsed.toSeconds()))
+			txtAverageSpeed.setText(String.format(
+					"%.2f", 3600 * segment.getDistance() / ((double) timeElapsed.toSeconds()))
 					+ " km/h");
 		}
 	}
