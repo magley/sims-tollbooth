@@ -6,7 +6,7 @@ import core.common.IService;
 import core.pricelist.entry.PricelistEntry;
 import core.pricelist.entry.PricelistEntry.Currency;
 import core.pricelist.entry.PricelistEntry.VehicleCategory;
-import core.station.Station;
+import core.tollsegment.TollSegment;
 
 public interface IPricelistService extends IService<Pricelist> {
 
@@ -16,5 +16,5 @@ public interface IPricelistService extends IService<Pricelist> {
 	
 	public boolean isActive(Pricelist p);
 
-	public PricelistEntry getFor(Station entry, Station exit, VehicleCategory category, Currency currency);
+	public PricelistEntry getFor(TollSegment segment, VehicleCategory category, Currency currency);
 }

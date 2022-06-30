@@ -120,8 +120,8 @@ public class PricelistEntryDashboardView extends JPanel implements ITabbedPanel 
 
 		selectPricelistIndices(entry);
 
-		cbEntry.setSelectedItem(entry.getEntry());
-		cbExit.setSelectedItem(entry.getExit());
+		cbEntry.setSelectedItem(entry.getSegment().getEntry());
+		cbExit.setSelectedItem(entry.getSegment().getEntry());
 		cbCategory.setSelectedItem(entry.getCategory());
 		cbCurrency.setSelectedItem(entry.getCurrency());
 		spnPrice.setValue(entry.getPrice());

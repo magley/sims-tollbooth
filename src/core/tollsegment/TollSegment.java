@@ -6,11 +6,21 @@ import core.station.Station;
 public class TollSegment extends Entity {
 	private Station entry;
 	private Station exit;
+	private int distance;  // measured in km
 
-	public TollSegment(Station entry, Station exit) {
+	public TollSegment(Station entry, Station exit, int distance) {
 		super();
 		this.entry = entry;
 		this.exit = exit;
+		this.distance = distance;
+	}
+
+	public int getDistance() {
+		return distance;
+	}
+
+	public void setDistance(int distance) {
+		this.distance = distance;
 	}
 
 	public Station getEntry() {
@@ -27,6 +37,12 @@ public class TollSegment extends Entity {
 
 	public void setExit(Station exit) {
 		this.exit = exit;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO: might have to make a custom
+		return super.equals(obj);
 	}
 	
 }

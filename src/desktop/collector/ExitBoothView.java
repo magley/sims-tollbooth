@@ -34,6 +34,7 @@ import core.payment.Payment;
 import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.ticket.Ticket;
+import core.tollsegment.TollSegment;
 import core.util.IObserver;
 import desktop.ITabbedPanel;
 import net.miginfocom.swing.MigLayout;
@@ -473,8 +474,9 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		Station exitStation = booth.getStation();
 		PricelistEntry.VehicleCategory category = (PricelistEntry.VehicleCategory) cbVehicleCategory.getSelectedItem();
 		PricelistEntry.Currency currency = (PricelistEntry.Currency) cbCurrency.getSelectedItem();
+		TollSegment segment = ctx.getTollSegmentService().getFor(entryStation, exitStation);
 
-		this.entryForTicket = ctx.getPricelistService().getFor(entryStation, exitStation, category, currency);
+		this.entryForTicket = ctx.getPricelistService().getFor(segment, category, currency);
 	}
 
 	private void processPayment() {
