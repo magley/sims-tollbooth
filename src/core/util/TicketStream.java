@@ -36,7 +36,7 @@ public class TicketStream implements Runnable {
 			Booth entryBooth = entryBooths.get(idx);
 
 			ctx.getTicketService()
-					.add(new Ticket(entryBooth, LocalDateTime.now(), this.exitBooth, null, String.valueOf(i)));
+					.add(new Ticket(entryBooth, LocalDateTime.now().minusHours(2), this.exitBooth, null, String.valueOf(i)));
 
 			try {
 				Thread.sleep(2000);
