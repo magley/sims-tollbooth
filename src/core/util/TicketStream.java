@@ -26,7 +26,7 @@ public class TicketStream implements Runnable {
 
 	public void simulateTicketStream() {
 		Random rnd = new Random();
-		List<Station> entryStations = ctx.getStationService().getByType(Station.Type.ENTER);
+		List<Station> entryStations = ctx.getTollSegmentService().getEntriesFor(this.exitBooth.getStation());
 		for (int i = 0; i < 3; ++i) {
 			int idx = Math.abs(rnd.nextInt()) % entryStations.size();
 			Station entryStation = entryStations.get(idx);
@@ -36,7 +36,7 @@ public class TicketStream implements Runnable {
 			Booth entryBooth = entryBooths.get(idx);
 
 			ctx.getTicketService()
-					.add(new Ticket(entryBooth, LocalDateTime.now(), this.exitBooth, null, String.valueOf(i)));
+					.add(new Ticket(entryBooth, LocalDateTime.now().minusHours(2), this.exitBooth, null, String.valueOf(i)));
 
 			try {
 				Thread.sleep(2000);

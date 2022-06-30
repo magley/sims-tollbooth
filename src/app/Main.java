@@ -20,6 +20,7 @@ import core.pricelist.Pricelist;
 import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
+import core.tollsegment.TollSegment;
 import desktop.employee.EmployeeLoginView;
 
 public class Main {
@@ -27,11 +28,10 @@ public class Main {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
 		AppContext ctx = new AppContext(masterRepo);
 		boolean runApp = true;
-
+		
 		if (runApp) {
 			startApp(masterRepo, ctx);
 		} else {	
-			
 			Booth b = new Booth("123", null);
 			ctx.getBoothService().add(b);
 			ctx.getStationService().get(0).addTollBooth(b);
@@ -110,29 +110,39 @@ public class Main {
 		}
 	}
 
-	private static void generatePricelistEntryData(AppContext ctx) {
+	private static void generateTollSegments(AppContext ctx) {
 		Random rnd = new Random();
 
 		List<Station> entryStations = ctx.getStationService().getByType(Station.Type.ENTER);
 		List<Station> exitStations = ctx.getStationService().getByType(Station.Type.EXIT);
-
+		
 		for (Station entry : entryStations) {
 			for (Station exit : exitStations) {
-				for (PricelistEntry.VehicleCategory category : PricelistEntry.VehicleCategory.values()) {
-					for (PricelistEntry.Currency currency : PricelistEntry.Currency.values()) {
-						int price;
-						if (currency == PricelistEntry.Currency.EUR) {
-							price = Math.abs(rnd.nextInt()) % 10;
-						} else {
-							price = Math.abs(rnd.nextInt()) % 1000;
-						}
-						ctx.getPricelistEntryService().add(new PricelistEntry(entry, exit, category, currency, price));
-					}
-				}
+				TollSegment segment = new TollSegment(entry, exit, Math.abs(rnd.nextInt()) % 100 + 15);
+				ctx.getTollSegmentService().add(segment);
 			}
 		}
 	}
 
+	private static void generatePricelistEntryData(AppContext ctx) {
+		Random rnd = new Random();
+
+		List<TollSegment> tollSegments = ctx.getTollSegmentService().getAll();
+		for (TollSegment segment : tollSegments) {
+			for (PricelistEntry.VehicleCategory category : PricelistEntry.VehicleCategory.values()) {
+				for (PricelistEntry.Currency currency : PricelistEntry.Currency.values()) {
+					int price;
+					if (currency == PricelistEntry.Currency.EUR) {
+						price = Math.abs(rnd.nextInt()) % 10 + 1;
+					} else {
+						price = Math.abs(rnd.nextInt()) % 1000 + 1;
+					}
+					ctx.getPricelistEntryService().add(new PricelistEntry(segment, category, currency, price));
+				}
+			}
+		}
+	}
+	
 	private static void generateNewPricelist(AppContext ctx) {
 		int halfSize = ctx.getPricelistEntryService().getAll().size() / 2;
 		List<PricelistEntry> firstHalf = ctx.getPricelistEntryRepo().getAll(p -> p.getId() < halfSize);

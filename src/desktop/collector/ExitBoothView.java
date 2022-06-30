@@ -5,11 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -34,6 +34,7 @@ import core.payment.Payment;
 import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.ticket.Ticket;
+import core.tollsegment.TollSegment;
 import core.util.IObserver;
 import desktop.ITabbedPanel;
 import net.miginfocom.swing.MigLayout;
@@ -421,13 +422,28 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 	}
 
 	private void fillFields() {
+		// assumes ticket is loaded
 		txtEntryBooth.setText(this.processedTicket.getEntryBooth().getCode());
 
 		LocalDateTime enteredAt = this.processedTicket.getEnteredAt();
 		String datetime = enteredAt.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-
 		txtArrivedAt.setText(datetime);
-		txtAverageSpeed.setText(String.valueOf(Math.abs(new Random().nextInt()) % 60 + 1));
+
+		Station entryStation = processedTicket.getEntryBooth().getStation();
+		Station exitStation = booth.getStation();
+		TollSegment segment = ctx.getTollSegmentService().getFor(entryStation, exitStation);
+
+		if (segment == null) {
+			JOptionPane.showMessageDialog(null, "Fraud detected! Invalid segment!", "Fraud detected", JOptionPane.WARNING_MESSAGE);
+			resetFields();
+			btnNextTicket.requestFocus();
+		} else {
+			Duration timeElapsed = Duration.between(enteredAt, LocalDateTime.now());
+			// multiply by 3600 to get from km/s -> km/h
+			txtAverageSpeed.setText(String.format(
+					"%.2f", 3600 * segment.getDistance() / ((double) timeElapsed.toSeconds()))
+					+ " km/h");
+		}
 	}
 
 	private void resetFields() {
@@ -473,8 +489,15 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		Station exitStation = booth.getStation();
 		PricelistEntry.VehicleCategory category = (PricelistEntry.VehicleCategory) cbVehicleCategory.getSelectedItem();
 		PricelistEntry.Currency currency = (PricelistEntry.Currency) cbCurrency.getSelectedItem();
+		TollSegment segment = ctx.getTollSegmentService().getFor(entryStation, exitStation);
 
-		this.entryForTicket = ctx.getPricelistService().getFor(entryStation, exitStation, category, currency);
+		if (segment == null) {
+			JOptionPane.showMessageDialog(null, "Fraud detected! Invalid segment!", "Fraud detected", JOptionPane.WARNING_MESSAGE);
+			resetFields();
+			btnNextTicket.requestFocus();
+		} else {
+			this.entryForTicket = ctx.getPricelistService().getFor(segment, category, currency);
+		}
 	}
 
 	private void processPayment() {

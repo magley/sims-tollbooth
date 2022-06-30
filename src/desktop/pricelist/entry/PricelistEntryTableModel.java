@@ -41,9 +41,9 @@ public class PricelistEntryTableModel extends AbstractTableModel {
 		case 0:
 			return p.getId();
 		case 1:
-			return p.getEntry().getCode();
+			return p.getSegment().getEntry().getCode();
 		case 2:
-			return p.getExit().getCode();
+			return p.getSegment().getExit().getCode();
 		case 3:
 			return p.getCategory();
 		case 4:

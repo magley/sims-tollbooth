@@ -51,7 +51,7 @@ public class PaymentService extends ServiceAdapter<Payment> implements IPaymentS
 	private List<Payment> getByStations(List<Payment> payments, List<Station> stations) {
 		List<Payment> ps = new ArrayList<Payment>();
 		for (Payment p: payments) {
-			if (stations.contains(p.getPricelistEntry().getExit())) {
+			if (stations.contains(p.getPricelistEntry().getSegment().getExit())) {
 				ps.add(p);
 			}
 		}
