@@ -27,6 +27,7 @@ import core.pricelist.entry.PricelistEntry;
 import core.station.Station;
 import core.station.location.Location;
 import core.ticket.Ticket;
+import core.tollsegment.TollSegment;
 
 public class MasterXMLRepo {
 	@XStreamOmitField
@@ -43,6 +44,7 @@ public class MasterXMLRepo {
 	private List<Location> locations = new ArrayList<Location>();
 	private List<Station> stations = new ArrayList<Station>();
 	private List<Booth> booths = new ArrayList<Booth>();
+	private List<TollSegment> tollSegments = new ArrayList<TollSegment>();
 	private List<PricelistEntry> pricelistEntries = new ArrayList<PricelistEntry>();
 	private List<Pricelist> pricelists = new ArrayList<Pricelist>();
 	private List<Malfunction> malfunctions = new ArrayList<Malfunction>();
@@ -129,5 +131,9 @@ public class MasterXMLRepo {
 		xstream = new XStream(new DomDriver());
 		xstream.autodetectAnnotations(true);
 		xstream.addPermission(AnyTypePermission.ANY);
+	}
+
+	public List<TollSegment> getTollSegments() {
+		return tollSegments;
 	}
 }

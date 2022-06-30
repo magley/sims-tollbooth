@@ -277,1957 +277,1806 @@
     <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth[2]"/>
     <core.booth.Booth reference="../../stations/core.station.Station[6]/tollbooths/core.booth.Booth[3]"/>
   </booths>
-  <pricelistEntries>
-    <core.pricelist.entry.PricelistEntry>
+  <tollSegments>
+    <core.tollsegment.TollSegment>
       <id>0</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station"/>
       <exit reference="../../../stations/core.station.Station[2]"/>
+      <distance>99</distance>
+    </core.tollsegment.TollSegment>
+    <core.tollsegment.TollSegment>
+      <id>1</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
+      <distance>41</distance>
+    </core.tollsegment.TollSegment>
+    <core.tollsegment.TollSegment>
+      <id>2</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
+      <distance>76</distance>
+    </core.tollsegment.TollSegment>
+    <core.tollsegment.TollSegment>
+      <id>3</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
+      <distance>94</distance>
+    </core.tollsegment.TollSegment>
+    <core.tollsegment.TollSegment>
+      <id>4</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
+      <distance>81</distance>
+    </core.tollsegment.TollSegment>
+    <core.tollsegment.TollSegment>
+      <id>5</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[3]"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
+      <distance>37</distance>
+    </core.tollsegment.TollSegment>
+    <core.tollsegment.TollSegment>
+      <id>6</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[2]"/>
+      <distance>54</distance>
+    </core.tollsegment.TollSegment>
+    <core.tollsegment.TollSegment>
+      <id>7</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[4]"/>
+      <distance>109</distance>
+    </core.tollsegment.TollSegment>
+    <core.tollsegment.TollSegment>
+      <id>8</id>
+      <removed>false</removed>
+      <entry reference="../../../stations/core.station.Station[5]"/>
+      <exit reference="../../../stations/core.station.Station[6]"/>
+      <distance>46</distance>
+    </core.tollsegment.TollSegment>
+  </tollSegments>
+  <pricelistEntries>
+    <core.pricelist.entry.PricelistEntry>
+      <id>0</id>
+      <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>560</price>
+      <price>994</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>1</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>4</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>2</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>867</price>
+      <price>282</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>3</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>4</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>84</price>
+      <price>371</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>5</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>6</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>250</price>
+      <price>164</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>7</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>8</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>426</price>
+      <price>846</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>9</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>10</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>481</price>
+      <price>35</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>11</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>12</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>110</price>
+      <price>672</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>13</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>14</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>468</price>
+      <price>430</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>15</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>16</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>717</price>
+      <price>473</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>17</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>18</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>200</price>
+      <price>389</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>19</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>20</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>982</price>
+      <price>600</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>21</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>22</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>628</price>
+      <price>668</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>23</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>24</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>603</price>
+      <price>697</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>25</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>26</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>176</price>
+      <price>737</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>27</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>28</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>51</price>
+      <price>586</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>29</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>30</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>970</price>
+      <price>639</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>31</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>32</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>732</price>
+      <price>419</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>33</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>34</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>599</price>
+      <price>967</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>35</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>36</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>231</price>
+      <price>932</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>37</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>38</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>488</price>
+      <price>900</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>39</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>EUR</currency>
       <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>40</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>711</price>
+      <price>739</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>41</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>42</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>13</price>
+      <price>173</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>43</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>5</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>44</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>205</price>
+      <price>133</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>45</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>46</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>958</price>
+      <price>314</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>47</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>48</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>940</price>
+      <price>751</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>49</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>50</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>303</price>
+      <price>863</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>51</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>52</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>241</price>
+      <price>343</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>53</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>54</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>596</price>
+      <price>410</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>55</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>56</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>563</price>
+      <price>932</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>57</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>58</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>805</price>
+      <price>420</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>59</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>60</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>92</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>61</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>62</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>135</price>
+      <price>12</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>63</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>64</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>352</price>
+      <price>433</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>65</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>EUR</currency>
       <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>66</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>349</price>
+      <price>369</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>67</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>5</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>68</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>419</price>
+      <price>11</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>69</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>70</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>475</price>
+      <price>445</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>71</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>5</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>72</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>261</price>
+      <price>782</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>73</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>74</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>931</price>
+      <price>187</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>75</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>76</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>935</price>
+      <price>893</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>77</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>78</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>135</price>
+      <price>96</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>79</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>80</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>361</price>
+      <price>668</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>81</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>82</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>300</price>
+      <price>107</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>83</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>84</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>133</price>
+      <price>239</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>85</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>86</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>422</price>
+      <price>891</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>87</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>88</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>766</price>
+      <price>329</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>89</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>90</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>886</price>
+      <price>846</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>91</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>EUR</currency>
       <price>4</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>92</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>607</price>
+      <price>866</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>93</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>94</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>740</price>
+      <price>481</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>95</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>96</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>443</price>
+      <price>155</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>97</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>98</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>259</price>
+      <price>126</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>99</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>100</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>61</price>
+      <price>537</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>101</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>102</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>153</price>
+      <price>601</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>103</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>104</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>548</price>
+      <price>375</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>105</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>106</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>72</price>
+      <price>351</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>107</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>108</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>37</price>
+      <price>32</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>109</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>110</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>850</price>
+      <price>259</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>111</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>112</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>195</price>
+      <price>537</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>113</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>114</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>75</price>
+      <price>625</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>115</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>116</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>134</price>
+      <price>884</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>117</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>118</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>705</price>
+      <price>996</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>119</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>120</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>165</price>
+      <price>164</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>121</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>122</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>289</price>
+      <price>468</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>123</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>124</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>443</price>
+      <price>432</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>125</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>126</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>808</price>
+      <price>384</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>127</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>128</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>891</price>
+      <price>424</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>129</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>5</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>130</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>862</price>
+      <price>208</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>131</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>132</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>172</price>
+      <price>32</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>133</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>134</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>735</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>135</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>136</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>949</price>
+      <price>423</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>137</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>138</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>652</price>
+      <price>237</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>139</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>140</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>906</price>
+      <price>459</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>141</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>4</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>142</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>232</price>
+      <price>640</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>143</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>144</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>165</price>
+      <price>489</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>145</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>EUR</currency>
       <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>146</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>876</price>
+      <price>603</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>147</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>148</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>626</price>
+      <price>419</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>149</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>150</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>817</price>
+      <price>535</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>151</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>152</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>473</price>
+      <price>370</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>153</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>4</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>154</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>39</price>
+      <price>114</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>155</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>156</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>781</price>
+      <price>899</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>157</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>158</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>96</price>
+      <price>65</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>159</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>EUR</currency>
       <price>4</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>160</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>221</price>
+      <price>450</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>161</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>5</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>162</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>594</price>
+      <price>425</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>163</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>5</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>164</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>196</price>
+      <price>426</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>165</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>166</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>11</price>
+      <price>904</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>167</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>168</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>796</price>
+      <price>751</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>169</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>170</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>940</price>
+      <price>225</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>171</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>172</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>888</price>
+      <price>26</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>173</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>174</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>948</price>
+      <price>419</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>175</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>176</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>73</price>
+      <price>51</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>177</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>178</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>314</price>
+      <price>879</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>179</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[3]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>180</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>728</price>
+      <price>722</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>181</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>182</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>978</price>
+      <price>267</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>183</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>184</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>343</price>
+      <price>82</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>185</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>8</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>186</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>4</price>
+      <price>203</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>187</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>D</category>
       <currency>EUR</currency>
       <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>188</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>649</price>
+      <price>719</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>189</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>190</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>681</price>
+      <price>508</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>191</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[2]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>9</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>192</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>573</price>
+      <price>681</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>193</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>194</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>675</price>
+      <price>182</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>195</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>10</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>196</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>667</price>
+      <price>790</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>197</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>198</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>79</price>
+      <price>102</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>199</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>D</category>
       <currency>EUR</currency>
       <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>200</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>584</price>
+      <price>934</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>201</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>1</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>202</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>61</price>
+      <price>289</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>203</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[4]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>7</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>204</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>RSD</currency>
-      <price>211</price>
+      <price>271</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>205</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>A</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>206</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>RSD</currency>
-      <price>35</price>
+      <price>163</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>207</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>B</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>208</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>RSD</currency>
-      <price>299</price>
+      <price>145</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>209</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>C</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>3</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>210</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>RSD</currency>
-      <price>67</price>
+      <price>138</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>211</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>D</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>2</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>212</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>RSD</currency>
-      <price>447</price>
+      <price>344</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>213</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>F</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>4</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>214</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>RSD</currency>
-      <price>3</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
       <id>215</id>
       <removed>false</removed>
-      <entry reference="../../../stations/core.station.Station[5]"/>
-      <exit reference="../../../stations/core.station.Station[6]"/>
       <category>M</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>6</price>
+      <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
   </pricelistEntries>
   <pricelists>
     <core.pricelist.Pricelist>
       <id>0</id>
       <removed>false</removed>
-      <start>2022-06-28T17:39:00.1221549</start>
+      <start>2022-06-30T10:07:12.888579377</start>
       <entries>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[2]"/>
@@ -2239,8 +2088,123 @@
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[8]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[9]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[10]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[11]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[119]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[12]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[13]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[14]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[15]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[16]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[17]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[18]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[127]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[20]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[21]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[22]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[23]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[132]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[133]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[26]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[27]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[28]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[137]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[30]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[31]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[32]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[33]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[34]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[35]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[144]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[37]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[38]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[40]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[41]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[42]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[43]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[44]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[153]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[46]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[47]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[48]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[49]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[50]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[159]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[52]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[53]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[162]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[163]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[56]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[165]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[166]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[167]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[60]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[169]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[62]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[63]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[64]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[65]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[66]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[67]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[68]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[177]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[178]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[71]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[72]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[73]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[182]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[184]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[185]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[78]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[79]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[188]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[81]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[82]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[83]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[84]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[193]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[86]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[87]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[88]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[89]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[90]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[91]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[92]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[201]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[94]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[95]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[96]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[97]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[206]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[207]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[100]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[101]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[102]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[103]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[104]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[105]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[106]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[107]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[216]"/>
+      </entries>
+    </core.pricelist.Pricelist>
+    <core.pricelist.Pricelist>
+      <id>1</id>
+      <removed>false</removed>
+      <start>2022-06-30T10:07:12.889943021</start>
+      <entries>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[2]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[111]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[4]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[5]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[6]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[115]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[116]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[117]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[118]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[11]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[120]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[13]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[14]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[15]"/>
@@ -2250,80 +2214,80 @@
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[19]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[20]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[21]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[22]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[23]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[130]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[131]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[24]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[25]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[133]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[26]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[27]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[135]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[28]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[29]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[30]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[31]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[139]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[32]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[33]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[141]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[34]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[35]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[36]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[37]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[38]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[146]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[40]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[41]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[42]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[149]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[150]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[43]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[44]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[45]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[153]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[46]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[47]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[48]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[49]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[157]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[50]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[51]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[52]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[53]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[54]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[55]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[56]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[162]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[163]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[164]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[57]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[58]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[59]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[167]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[60]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[61]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[62]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[63]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[171]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[64]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[65]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[66]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[67]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[68]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[176]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[69]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[70]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[71]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[179]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[72]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[73]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[181]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[74]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[76]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[77]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[78]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[186]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[79]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[80]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[188]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[81]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[82]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[83]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[84]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[85]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[86]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[87]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[195]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[88]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[89]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[90]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[198]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[91]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[92]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[200]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[93]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[94]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[95]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[203]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[96]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[97]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[98]"/>
@@ -2335,121 +2299,6 @@
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[104]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[105]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[106]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[107]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[108]"/>
-      </entries>
-    </core.pricelist.Pricelist>
-    <core.pricelist.Pricelist>
-      <id>1</id>
-      <removed>false</removed>
-      <start>2022-06-29T13:04:13.7443379</start>
-      <entries>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[2]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[3]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[112]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[5]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[6]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[115]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[8]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[117]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[118]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[119]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[120]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[13]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[14]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[15]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[16]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[125]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[126]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[19]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[20]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[21]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[22]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[131]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[24]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[25]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[26]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[27]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[28]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[29]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[30]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[31]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[32]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[141]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[34]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[143]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[36]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[37]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[146]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[148]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[41]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[150]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[43]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[152]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[45]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[154]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[155]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[156]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[49]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[158]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[51]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[52]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[161]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[54]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[55]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[56]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[57]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[166]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[59]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[60]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[169]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[62]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[63]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[64]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[65]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[66]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[67]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[68]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[69]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[70]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[179]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[72]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[73]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[182]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[76]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[77]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[78]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[79]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[80]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[189]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[190]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[191]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[84]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[193]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[194]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[87]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[88]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[89]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[90]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[199]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[92]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[93]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[94]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[95]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[96]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[97]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[98]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[207]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[100]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[209]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[102]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[103]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[212]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[105]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[214]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[107]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[108]"/>
       </entries>
@@ -5314,205 +5163,720 @@
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>247</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T09:14:02.783951237</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-30T09:14:10.173486232</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>248</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:14:04.784428751</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>249</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:14:06.785052024</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>250</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T09:15:23.179070492</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>251</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T09:15:25.180491137</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>252</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T09:19:14.91840398</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-30T09:19:31.574328497</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>253</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:19:16.919979882</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>254</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T09:19:18.920414933</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>255</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T09:20:28.047844984</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>256</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:20:30.049760383</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>257</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:20:32.050490372</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>258</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T09:24:32.589231281</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>259</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T09:24:34.59112985</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>260</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T09:24:36.59149157</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>261</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T09:26:19.606520152</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>262</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:26:21.608117078</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>263</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:26:23.608344075</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>264</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T09:34:09.658849347</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-30T09:34:20.154775776</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>265</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T09:34:11.660779759</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>266</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:34:13.66117388</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>267</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T09:43:00.813829709</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>268</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T09:43:02.815546363</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>269</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:43:04.816194381</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>270</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:43:12.938323466</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>271</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T09:43:14.938661948</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>272</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T09:43:16.939348867</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>273</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:47:30.139749214</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>274</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:47:32.141473271</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>275</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:47:34.141737582</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>276</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:49:18.192021168</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>277</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:49:20.193876666</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>278</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:49:22.194278005</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>279</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:49:25.786397852</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>280</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:49:27.787074085</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>281</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:49:29.787594364</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>282</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:49:34.879922885</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>283</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:49:36.88044896</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>284</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:49:38.880789189</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>285</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:49:44.062374613</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>286</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:49:46.063080179</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>287</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:49:48.0634195</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>288</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:57:54.584468348</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-30T09:58:03.022454069</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>289</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:57:56.585650299</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>290</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:57:58.585897569</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>291</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:58:11.776601353</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>292</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:58:13.776872858</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>293</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:58:15.777095404</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>294</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:19.407298835</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>295</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:21.407610987</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>296</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:23.40812938</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>297</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:41.778102242</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>298</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:43.778370884</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>299</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:58:45.778707899</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>300</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:48.408570908</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>301</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:50.409280177</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>302</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:52.410021432</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>303</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:58:57.468788293</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>304</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:58:59.46908096</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>305</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:59:01.469962956</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>306</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:59:05.737494906</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>307</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:59:07.738168421</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>308</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:59:09.738539665</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>309</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:59:13.188965438</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>310</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:59:15.189496479</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>311</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:59:17.190176559</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>312</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T07:59:43.06190266</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>313</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T07:59:45.062175498</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>314</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T07:59:47.062450362</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>315</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:01:28.85432558</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>316</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T08:01:30.855689194</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>317</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T08:01:32.856010362</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>318</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:02:02.469864018</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>319</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:02:04.471186844</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>320</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:02:06.472006397</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>321</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:02:16.525596849</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>322</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:02:18.526275323</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>323</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:02:20.527306144</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>324</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:03:15.851408282</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-30T10:03:34.260288024</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>325</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:03:17.853294864</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>326</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:03:19.853638382</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>327</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:07:50.756088792</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-30T10:08:00.500382861</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>328</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:07:52.757667934</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>329</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:07:54.758449843</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>330</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:18:21.000037497</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-30T10:18:29.064258397</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>331</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:18:23.001207249</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>332</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth"/>
+      <enteredAt>2022-06-30T08:18:25.001517121</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
   </tickets>
   <payments>
     <core.payment.Payment>
       <id>0</id>
       <removed>false</removed>
-      <time>2022-06-29T14:45:12.235050426</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[76]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket"/>
+      <time>2022-06-30T10:08:00.500382861</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[328]"/>
       <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>123</amount>
+      <amount>1545</amount>
     </core.payment.Payment>
     <core.payment.Payment>
       <id>1</id>
       <removed>false</removed>
-      <time>2022-06-29T15:23:11.600937988</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[77]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[7]"/>
+      <time>2022-06-30T10:18:29.064258397</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[111]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[331]"/>
       <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>1819</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>2</id>
-      <removed>false</removed>
-      <time>2022-06-29T15:24:40.248982653</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[148]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[10]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>1</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>3</id>
-      <removed>false</removed>
-      <time>2022-06-29T15:26:30.869340778</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[13]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>541</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>4</id>
-      <removed>false</removed>
-      <time>2022-06-29T15:27:17.702284122</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[3]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[16]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>1400</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>5</id>
-      <removed>false</removed>
-      <time>2022-06-29T15:29:06.987623936</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[77]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[19]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>1081</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>6</id>
-      <removed>false</removed>
-      <time>2022-06-29T15:33:17.448835425</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[43]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[22]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>24</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>7</id>
-      <removed>false</removed>
-      <time>2022-06-29T16:04:55.070007589</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[46]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>548</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>8</id>
-      <removed>false</removed>
-      <time>2022-06-29T16:07:34.101485216</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[76]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[55]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>16</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>9</id>
-      <removed>false</removed>
-      <time>2022-06-29T16:10:23.258941217</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[58]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>642</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>10</id>
-      <removed>false</removed>
-      <time>2022-06-29T16:11:05.866091128</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[148]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[61]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>1</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>11</id>
-      <removed>false</removed>
-      <time>2022-06-29T17:00:14.572869872</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[64]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>970</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>12</id>
-      <removed>false</removed>
-      <time>2022-06-29T17:01:07.00018049</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[67]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>1786</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>13</id>
-      <removed>false</removed>
-      <time>2022-06-29T17:11:31.226112905</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[148]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[73]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>1</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>14</id>
-      <removed>false</removed>
-      <time>2022-06-29T17:12:58.199493031</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[6]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[76]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>2</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>15</id>
-      <removed>false</removed>
-      <time>2022-06-29T17:13:34.824673973</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[79]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>1414</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>16</id>
-      <removed>false</removed>
-      <time>2022-06-29T17:13:46.569249992</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[41]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[80]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>891</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>17</id>
-      <removed>false</removed>
-      <time>2022-06-29T17:13:54.69720806</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[78]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[81]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>12</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>18</id>
-      <removed>false</removed>
-      <time>2022-06-29T20:16:00.4408641</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[37]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[141]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>403</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>19</id>
-      <removed>false</removed>
-      <time>2022-06-29T20:25:10.8036205</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[156]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>797</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>20</id>
-      <removed>false</removed>
-      <time>2022-06-29T21:01:35.788921673</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[79]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[190]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>181</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>21</id>
-      <removed>false</removed>
-      <time>2022-06-29T22:57:22.791977203</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[76]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[239]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>15</amount>
+      <amount>415</amount>
     </core.payment.Payment>
   </payments>
 </core.common.MasterXMLRepo>

@@ -48,6 +48,9 @@ import core.ticket.ITicketService;
 import core.ticket.TicketController;
 import core.ticket.TicketService;
 import core.ticket.TicketXMLRepo;
+import core.tollsegment.ITollSegmentService;
+import core.tollsegment.TollSegmentService;
+import core.tollsegment.TollSegmentXMLRepo;
 
 public class AppContext {
 	IAccountRepo accountRepo;
@@ -87,6 +90,8 @@ public class AppContext {
 	IPaymentService paymentService;
 	PaymentController paymentController;
 	
+	ITollSegmentService tollSegmentService;
+	
 	public AppContext(MasterXMLRepo masterRepo) {
 		accountRepo = new AccountXMLRepo(masterRepo);
 		accountService = new AccountService(accountRepo);
@@ -124,6 +129,8 @@ public class AppContext {
 		paymentRepo = new PaymentXMLRepo(masterRepo);
 		paymentService = new PaymentService(paymentRepo);
 		paymentController = new PaymentController(paymentService);
+		
+		tollSegmentService = new TollSegmentService(new TollSegmentXMLRepo(masterRepo));
 	}
 	
 	public IBoothRepo getBoothRepo() {
@@ -232,5 +239,9 @@ public class AppContext {
 
 	public PaymentController getPaymentController() {
 		return paymentController;
+	}
+
+	public ITollSegmentService getTollSegmentService() {
+		return tollSegmentService;
 	}
 }

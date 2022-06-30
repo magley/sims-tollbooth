@@ -1,7 +1,7 @@
 package core.pricelist.entry;
 
 import core.Entity;
-import core.station.Station;
+import core.tollsegment.TollSegment;
 
 public class PricelistEntry extends Entity {
 
@@ -13,35 +13,25 @@ public class PricelistEntry extends Entity {
 		A, B, C, D, F, M
 	}
 
-	private Station entry;
-	private Station exit;
 	private VehicleCategory category;
 	private Currency currency;
 	private int price;
+	private TollSegment segment;
 
-	public PricelistEntry(Station entry, Station exit, VehicleCategory category, Currency currency, int price) {
+	public PricelistEntry(TollSegment segment, VehicleCategory category, Currency currency, int price) {
 		super();
-		this.entry = entry;
-		this.exit = exit;
+		this.segment = segment;
 		this.category = category;
 		this.currency = currency;
 		this.price = price;
 	}
 
-	public Station getEntry() {
-		return entry;
+	public TollSegment getSegment() {
+		return segment;
 	}
 
-	public void setEntry(Station entry) {
-		this.entry = entry;
-	}
-
-	public Station getExit() {
-		return exit;
-	}
-
-	public void setExit(Station exit) {
-		this.exit = exit;
+	public void setSegment(TollSegment segment) {
+		this.segment = segment;
 	}
 
 	public VehicleCategory getCategory() {
@@ -70,8 +60,8 @@ public class PricelistEntry extends Entity {
 
 	@Override
 	public String toString() {
-		return "PricelistEntry [entry=" + entry + ", exit=" + exit + ", category=" + category + ", currency=" + currency
-				+ ", price=" + price + "]";
+		return "PricelistEntry [entry=" + segment.getEntry() + ", exit=" + segment.getExit() + 
+				", category=" + category + ", currency=" + currency + ", price=" + price + "]";
 	}
 
 }
