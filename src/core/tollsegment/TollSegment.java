@@ -42,8 +42,19 @@ public class TollSegment extends Entity {
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO: might have to make a custom
-		return super.equals(obj);
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof TollSegment)) {
+			return false;
+		}
+		TollSegment other = (TollSegment) obj;
+		if (other.getEntry().getId() == this.getEntry().getId()
+				&& other.getExit().getId() == this.getExit().getId()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 }
