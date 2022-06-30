@@ -28,7 +28,7 @@ public class Main {
 		MasterXMLRepo masterRepo = new MasterXMLRepo("data", "database.xml");
 		AppContext ctx = new AppContext(masterRepo);
 		boolean runApp = true;
-
+		
 		if (runApp) {
 			startApp(masterRepo, ctx);
 		} else {	
