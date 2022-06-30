@@ -32,7 +32,6 @@ public class Main {
 		if (runApp) {
 			startApp(masterRepo, ctx);
 		} else {	
-			
 			Booth b = new Booth("123", null);
 			ctx.getBoothService().add(b);
 			ctx.getStationService().get(0).addTollBooth(b);
