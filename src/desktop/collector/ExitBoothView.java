@@ -476,7 +476,13 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 		PricelistEntry.Currency currency = (PricelistEntry.Currency) cbCurrency.getSelectedItem();
 		TollSegment segment = ctx.getTollSegmentService().getFor(entryStation, exitStation);
 
-		this.entryForTicket = ctx.getPricelistService().getFor(segment, category, currency);
+		if (segment == null) {
+			JOptionPane.showMessageDialog(null, "Fraud detected! Invalid segment!", "Fraud detected", JOptionPane.WARNING_MESSAGE);
+			resetFields();
+			btnNextTicket.requestFocus();
+		} else {
+			this.entryForTicket = ctx.getPricelistService().getFor(segment, category, currency);
+		}
 	}
 
 	private void processPayment() {

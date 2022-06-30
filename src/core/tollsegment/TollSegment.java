@@ -10,6 +10,7 @@ public class TollSegment extends Entity {
 
 	public TollSegment(Station entry, Station exit, int distance) {
 		super();
+		// TODO: maybe check if they are really entry and exit stations
 		this.entry = entry;
 		this.exit = exit;
 		this.distance = distance;
