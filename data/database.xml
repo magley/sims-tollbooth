@@ -283,63 +283,63 @@
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station"/>
       <exit reference="../../../stations/core.station.Station[2]"/>
-      <distance>45</distance>
+      <distance>99</distance>
     </core.tollsegment.TollSegment>
     <core.tollsegment.TollSegment>
       <id>1</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station"/>
       <exit reference="../../../stations/core.station.Station[4]"/>
-      <distance>42</distance>
+      <distance>41</distance>
     </core.tollsegment.TollSegment>
     <core.tollsegment.TollSegment>
       <id>2</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station"/>
       <exit reference="../../../stations/core.station.Station[6]"/>
-      <distance>63</distance>
+      <distance>76</distance>
     </core.tollsegment.TollSegment>
     <core.tollsegment.TollSegment>
       <id>3</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station[3]"/>
       <exit reference="../../../stations/core.station.Station[2]"/>
-      <distance>101</distance>
+      <distance>94</distance>
     </core.tollsegment.TollSegment>
     <core.tollsegment.TollSegment>
       <id>4</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station[3]"/>
       <exit reference="../../../stations/core.station.Station[4]"/>
-      <distance>42</distance>
+      <distance>81</distance>
     </core.tollsegment.TollSegment>
     <core.tollsegment.TollSegment>
       <id>5</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station[3]"/>
       <exit reference="../../../stations/core.station.Station[6]"/>
-      <distance>17</distance>
+      <distance>37</distance>
     </core.tollsegment.TollSegment>
     <core.tollsegment.TollSegment>
       <id>6</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station[5]"/>
       <exit reference="../../../stations/core.station.Station[2]"/>
-      <distance>111</distance>
+      <distance>54</distance>
     </core.tollsegment.TollSegment>
     <core.tollsegment.TollSegment>
       <id>7</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station[5]"/>
       <exit reference="../../../stations/core.station.Station[4]"/>
-      <distance>58</distance>
+      <distance>109</distance>
     </core.tollsegment.TollSegment>
     <core.tollsegment.TollSegment>
       <id>8</id>
       <removed>false</removed>
       <entry reference="../../../stations/core.station.Station[5]"/>
       <exit reference="../../../stations/core.station.Station[6]"/>
-      <distance>93</distance>
+      <distance>46</distance>
     </core.tollsegment.TollSegment>
   </tollSegments>
   <pricelistEntries>
@@ -348,7 +348,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>511</price>
+      <price>994</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -356,7 +356,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>4</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -364,7 +364,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>547</price>
+      <price>282</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -372,7 +372,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -380,7 +380,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>132</price>
+      <price>371</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -388,7 +388,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -396,7 +396,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>320</price>
+      <price>164</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -404,7 +404,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -412,7 +412,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>904</price>
+      <price>846</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -420,7 +420,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -428,7 +428,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>425</price>
+      <price>35</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -436,7 +436,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -444,7 +444,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>416</price>
+      <price>672</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -452,7 +452,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -460,7 +460,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>553</price>
+      <price>430</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -468,7 +468,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -476,7 +476,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>989</price>
+      <price>473</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -484,7 +484,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -492,7 +492,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>797</price>
+      <price>389</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -508,7 +508,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>796</price>
+      <price>600</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -516,7 +516,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -524,7 +524,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>558</price>
+      <price>668</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -532,7 +532,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -540,7 +540,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>46</price>
+      <price>697</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -548,7 +548,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -556,7 +556,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>17</price>
+      <price>737</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -564,7 +564,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -572,7 +572,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>712</price>
+      <price>586</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -588,7 +588,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>443</price>
+      <price>639</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -596,7 +596,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -604,7 +604,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>538</price>
+      <price>419</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -612,7 +612,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -620,7 +620,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>827</price>
+      <price>967</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -628,7 +628,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -636,7 +636,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>201</price>
+      <price>932</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -644,7 +644,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -652,7 +652,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>458</price>
+      <price>900</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -660,7 +660,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -668,7 +668,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>66</price>
+      <price>739</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -676,7 +676,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -684,7 +684,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>252</price>
+      <price>173</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -700,7 +700,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>645</price>
+      <price>133</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -708,7 +708,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -716,7 +716,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>631</price>
+      <price>314</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -724,7 +724,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -732,7 +732,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>444</price>
+      <price>751</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -740,7 +740,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -748,7 +748,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>263</price>
+      <price>863</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -756,7 +756,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -764,7 +764,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>534</price>
+      <price>343</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -772,7 +772,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -780,7 +780,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>571</price>
+      <price>410</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -788,7 +788,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -796,7 +796,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>694</price>
+      <price>932</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -804,7 +804,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -812,7 +812,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>464</price>
+      <price>420</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -820,7 +820,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -828,7 +828,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>569</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -836,7 +836,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -844,7 +844,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>945</price>
+      <price>12</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -860,7 +860,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>485</price>
+      <price>433</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -868,7 +868,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -876,7 +876,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>114</price>
+      <price>369</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -884,7 +884,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>5</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -892,7 +892,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>472</price>
+      <price>11</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -900,7 +900,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -908,7 +908,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>392</price>
+      <price>445</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -916,7 +916,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>5</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -924,7 +924,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>135</price>
+      <price>782</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -932,7 +932,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -940,7 +940,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>979</price>
+      <price>187</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -948,7 +948,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -956,7 +956,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>358</price>
+      <price>893</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -964,7 +964,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -972,7 +972,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>900</price>
+      <price>96</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -980,7 +980,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -988,7 +988,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>78</price>
+      <price>668</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -996,7 +996,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1004,7 +1004,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>178</price>
+      <price>107</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1012,7 +1012,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1020,7 +1020,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>573</price>
+      <price>239</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1028,7 +1028,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1036,7 +1036,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>796</price>
+      <price>891</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1044,7 +1044,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1052,7 +1052,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>287</price>
+      <price>329</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1060,7 +1060,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1068,7 +1068,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>981</price>
+      <price>846</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1076,7 +1076,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>4</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1084,7 +1084,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>891</price>
+      <price>866</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1092,7 +1092,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1100,7 +1100,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>6</price>
+      <price>481</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1108,7 +1108,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1116,7 +1116,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>299</price>
+      <price>155</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1124,7 +1124,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1132,7 +1132,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>995</price>
+      <price>126</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1140,7 +1140,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1148,7 +1148,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>542</price>
+      <price>537</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1156,7 +1156,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1164,7 +1164,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>501</price>
+      <price>601</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1172,7 +1172,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1180,7 +1180,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>353</price>
+      <price>375</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1188,7 +1188,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1196,7 +1196,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>996</price>
+      <price>351</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1204,7 +1204,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1212,7 +1212,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>709</price>
+      <price>32</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1220,7 +1220,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1228,7 +1228,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>100</price>
+      <price>259</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1236,7 +1236,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1244,7 +1244,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>116</price>
+      <price>537</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1252,7 +1252,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1260,7 +1260,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>352</price>
+      <price>625</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1268,7 +1268,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1276,7 +1276,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>449</price>
+      <price>884</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1284,7 +1284,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1292,7 +1292,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>700</price>
+      <price>996</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1300,7 +1300,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1308,7 +1308,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>393</price>
+      <price>164</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1316,7 +1316,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1324,7 +1324,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>64</price>
+      <price>468</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1332,7 +1332,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1340,7 +1340,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>388</price>
+      <price>432</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1348,7 +1348,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1356,7 +1356,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>698</price>
+      <price>384</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1364,7 +1364,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1372,7 +1372,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>370</price>
+      <price>424</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1380,7 +1380,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>5</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1388,7 +1388,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>372</price>
+      <price>208</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1396,7 +1396,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[2]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1404,7 +1404,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>626</price>
+      <price>32</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1412,7 +1412,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1420,7 +1420,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>54</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1428,7 +1428,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1436,7 +1436,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>901</price>
+      <price>423</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1444,7 +1444,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1452,7 +1452,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>406</price>
+      <price>237</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1460,7 +1460,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1468,7 +1468,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>812</price>
+      <price>459</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1476,7 +1476,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>4</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1484,7 +1484,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>153</price>
+      <price>640</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1492,7 +1492,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[3]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1500,7 +1500,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>319</price>
+      <price>489</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1508,7 +1508,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1516,7 +1516,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>543</price>
+      <price>603</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1524,7 +1524,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1532,7 +1532,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>5</price>
+      <price>419</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1540,7 +1540,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1548,7 +1548,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>949</price>
+      <price>535</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1556,7 +1556,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1564,7 +1564,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>333</price>
+      <price>370</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1572,7 +1572,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>4</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1580,7 +1580,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>330</price>
+      <price>114</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1588,7 +1588,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[4]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1596,7 +1596,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>966</price>
+      <price>899</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1604,7 +1604,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>4</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1612,7 +1612,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>310</price>
+      <price>65</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1620,7 +1620,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>4</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1628,7 +1628,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>379</price>
+      <price>450</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1636,7 +1636,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>9</price>
+      <price>5</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1644,7 +1644,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>354</price>
+      <price>425</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1652,7 +1652,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>5</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1660,7 +1660,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>6</price>
+      <price>426</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1668,7 +1668,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1676,7 +1676,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>514</price>
+      <price>904</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1684,7 +1684,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[5]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1692,7 +1692,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>136</price>
+      <price>751</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1708,7 +1708,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>481</price>
+      <price>225</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1716,7 +1716,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>0</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1724,7 +1724,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>997</price>
+      <price>26</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1732,7 +1732,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1740,7 +1740,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>50</price>
+      <price>419</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1748,7 +1748,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1756,7 +1756,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>199</price>
+      <price>51</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1764,7 +1764,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1772,7 +1772,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>789</price>
+      <price>879</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[6]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1788,7 +1788,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>107</price>
+      <price>722</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1796,7 +1796,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1804,7 +1804,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>476</price>
+      <price>267</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1812,7 +1812,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>3</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1820,7 +1820,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>602</price>
+      <price>82</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1828,7 +1828,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>8</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1836,7 +1836,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>342</price>
+      <price>203</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1844,7 +1844,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1852,7 +1852,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>908</price>
+      <price>719</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1860,7 +1860,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>2</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1868,7 +1868,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>91</price>
+      <price>508</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1876,7 +1876,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>9</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[7]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1884,7 +1884,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>558</price>
+      <price>681</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1892,7 +1892,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1900,7 +1900,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>479</price>
+      <price>182</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1908,7 +1908,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>10</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1916,7 +1916,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>959</price>
+      <price>790</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1924,7 +1924,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1932,7 +1932,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>514</price>
+      <price>102</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1940,7 +1940,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1948,7 +1948,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>261</price>
+      <price>934</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1956,7 +1956,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>6</price>
+      <price>1</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1964,7 +1964,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>725</price>
+      <price>289</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1972,7 +1972,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>7</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[8]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1980,7 +1980,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>RSD</currency>
-      <price>782</price>
+      <price>271</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1988,7 +1988,7 @@
       <removed>false</removed>
       <category>A</category>
       <currency>EUR</currency>
-      <price>1</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -1996,7 +1996,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>RSD</currency>
-      <price>584</price>
+      <price>163</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -2004,7 +2004,7 @@
       <removed>false</removed>
       <category>B</category>
       <currency>EUR</currency>
-      <price>7</price>
+      <price>2</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -2012,7 +2012,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>RSD</currency>
-      <price>303</price>
+      <price>145</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -2020,7 +2020,7 @@
       <removed>false</removed>
       <category>C</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>3</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -2028,7 +2028,7 @@
       <removed>false</removed>
       <category>D</category>
       <currency>RSD</currency>
-      <price>563</price>
+      <price>138</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -2044,7 +2044,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>RSD</currency>
-      <price>324</price>
+      <price>344</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -2052,7 +2052,7 @@
       <removed>false</removed>
       <category>F</category>
       <currency>EUR</currency>
-      <price>8</price>
+      <price>4</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -2060,7 +2060,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>RSD</currency>
-      <price>344</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
     <core.pricelist.entry.PricelistEntry>
@@ -2068,7 +2068,7 @@
       <removed>false</removed>
       <category>M</category>
       <currency>EUR</currency>
-      <price>5</price>
+      <price>6</price>
       <segment reference="../../../tollSegments/core.tollsegment.TollSegment[9]"/>
     </core.pricelist.entry.PricelistEntry>
   </pricelistEntries>
@@ -2076,19 +2076,19 @@
     <core.pricelist.Pricelist>
       <id>0</id>
       <removed>false</removed>
-      <start>2022-06-30T09:33:32.106598244</start>
+      <start>2022-06-30T10:07:12.888579377</start>
       <entries>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[2]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[3]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[4]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[5]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[114]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[115]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[6]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[7]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[8]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[9]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[10]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[11]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[119]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[12]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[13]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[14]"/>
@@ -2096,51 +2096,51 @@
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[16]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[17]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[18]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[19]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[127]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[20]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[21]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[22]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[23]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[24]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[25]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[134]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[132]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[133]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[26]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[27]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[28]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[29]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[137]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[30]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[31]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[140]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[32]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[33]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[34]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[35]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[144]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[37]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[38]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[147]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[40]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[41]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[42]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[43]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[152]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[45]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[154]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[44]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[153]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[46]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[47]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[48]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[157]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[49]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[50]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[51]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[159]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[52]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[53]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[54]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[162]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[163]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[56]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[165]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[58]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[59]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[166]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[167]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[60]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[61]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[169]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[62]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[171]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[63]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[64]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[65]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[66]"/>
@@ -2151,18 +2151,18 @@
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[71]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[72]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[73]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[74]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[182]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[76]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[77]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[184]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[185]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[78]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[79]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[80]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[189]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[188]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[81]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[82]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[83]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[84]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[85]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[193]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[86]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[87]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[88]"/>
@@ -2170,21 +2170,136 @@
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[90]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[91]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[92]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[93]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[201]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[94]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[95]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[96]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[205]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[97]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[206]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[207]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[100]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[101]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[102]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[103]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[104]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[105]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[106]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[107]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[216]"/>
+      </entries>
+    </core.pricelist.Pricelist>
+    <core.pricelist.Pricelist>
+      <id>1</id>
+      <removed>false</removed>
+      <start>2022-06-30T10:07:12.889943021</start>
+      <entries>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[2]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[111]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[4]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[5]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[6]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[115]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[116]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[117]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[118]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[11]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[120]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[13]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[14]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[15]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[16]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[17]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[18]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[19]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[20]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[21]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[130]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[131]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[24]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[133]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[26]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[135]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[28]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[29]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[30]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[139]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[32]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[141]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[34]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[35]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[36]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[37]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[146]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[40]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[149]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[150]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[43]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[44]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[153]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[46]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[47]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[48]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[157]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[50]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[51]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[52]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[53]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[162]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[163]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[164]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[57]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[58]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[167]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[60]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[61]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[62]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[171]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[64]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[65]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[66]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[67]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[176]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[69]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[70]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[179]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[72]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[181]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[74]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[75]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[76]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[77]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[186]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[79]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[188]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[81]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[82]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[83]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[84]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[85]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[86]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[195]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[88]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[89]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[198]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[91]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[200]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[93]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[94]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[203]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[96]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[97]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[98]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[99]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[100]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[209]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[101]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[102]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[211]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[103]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[104]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[213]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[105]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[106]"/>
-        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[215]"/>
+        <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[107]"/>
         <core.pricelist.entry.PricelistEntry reference="../../../../pricelistEntries/core.pricelist.entry.PricelistEntry[108]"/>
       </entries>
     </core.pricelist.Pricelist>
@@ -5693,34 +5808,41 @@
       <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
       <licensePlate>2</licensePlate>
     </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>327</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:07:50.756088792</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <leftAt>2022-06-30T10:08:00.500382861</leftAt>
+      <licensePlate>0</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>328</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[5]/tollbooths/core.booth.Booth[2]"/>
+      <enteredAt>2022-06-30T08:07:52.757667934</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>1</licensePlate>
+    </core.ticket.Ticket>
+    <core.ticket.Ticket>
+      <id>329</id>
+      <removed>false</removed>
+      <entryBooth reference="../../../stations/core.station.Station[3]/tollbooths/core.booth.Booth[3]"/>
+      <enteredAt>2022-06-30T08:07:54.758449843</enteredAt>
+      <exitBooth reference="../../../stations/core.station.Station[2]/tollbooths/core.booth.Booth"/>
+      <licensePlate>2</licensePlate>
+    </core.ticket.Ticket>
   </tickets>
   <payments>
     <core.payment.Payment>
       <id>0</id>
       <removed>false</removed>
-      <time>2022-06-30T09:34:20.154775776</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[48]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[265]"/>
+      <time>2022-06-30T10:08:00.500382861</time>
+      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[39]"/>
+      <ticket reference="../../../tickets/core.ticket.Ticket[328]"/>
       <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>4</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>1</id>
-      <removed>false</removed>
-      <time>2022-06-30T09:58:03.022454069</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[37]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[289]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>204</amount>
-    </core.payment.Payment>
-    <core.payment.Payment>
-      <id>2</id>
-      <removed>false</removed>
-      <time>2022-06-30T10:03:34.260288024</time>
-      <pricelistEntry reference="../../../pricelistEntries/core.pricelist.entry.PricelistEntry[74]"/>
-      <ticket reference="../../../tickets/core.ticket.Ticket[325]"/>
-      <collector reference="../../../employees/core.employee.Employee[3]"/>
-      <amount>0</amount>
+      <amount>1545</amount>
     </core.payment.Payment>
   </payments>
 </core.common.MasterXMLRepo>

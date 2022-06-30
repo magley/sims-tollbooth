@@ -133,9 +133,9 @@ public class Main {
 				for (PricelistEntry.Currency currency : PricelistEntry.Currency.values()) {
 					int price;
 					if (currency == PricelistEntry.Currency.EUR) {
-						price = Math.abs(rnd.nextInt()) % 10;
+						price = Math.abs(rnd.nextInt()) % 10 + 1;
 					} else {
-						price = Math.abs(rnd.nextInt()) % 1000;
+						price = Math.abs(rnd.nextInt()) % 1000 + 1;
 					}
 					ctx.getPricelistEntryService().add(new PricelistEntry(segment, category, currency, price));
 				}
