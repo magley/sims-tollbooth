@@ -335,7 +335,7 @@ public class ExitBoothView extends JPanel implements ITabbedPanel, IObserver, IB
 			lblScreen.setForeground(Color.BLACK);
 		} else {
 			lblScreen.setText("Screen: Inactive");
-			lblScreen.setForeground(Color.YELLOW);
+			lblScreen.setForeground(new Color(139, 69, 19));
 		}
 
 		if (!booth.getDeviceStatus(Type.SEMAPHORE).getStatus().equals(Status.WORKING)) {
